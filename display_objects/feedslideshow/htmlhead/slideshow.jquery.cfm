@@ -44,23 +44,7 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
-<cfsilent>
-<cfset rsArchive=$.getBean('contentGateway').getReleaseCountByMonth($.event('siteID'),arguments.objectID)>
-<cfset hasArchiveFilter=listFindNoCase("releaseMonth,releaseDate,releaseYear",$.event("filterBy"))>
-<cfif arguments.objectID eq $.content("contentID")>
-	<cfset archive=$.content()>
-<cfelse>
-	<cfset archive=$.getBean("content").loadBy(contentID=arguments.objectID)>
-</cfif>
-</cfsilent>
 <cfoutput>
-<#$.getHeaderTag('subHead1')#>#$.rbKey('list.archive')#</#$.getHeaderTag('subHead1')#>
-<div class="navArchive">
-<ul class="#this.ulTopClass#">
-	<cfloop query="rsArchive">
-		<cfset isCurrentArchive=hasArchiveFilter and $.event("month") eq rsArchive.month and $.event("year") eq rsArchive.year>
-		<li<cfif isCurrentArchive> class="#this.liCurrentClass#"</cfif>><a href="#$.createHREF(filename='#archive.getFilename()#/date/#rsArchive.year#/#rsArchive.month#/')#"<cfif isCurrentArchive> class="current"</cfif>>#monthasstring(rsArchive.month)# #rsArchive.year# (#rsArchive.items#)</a></li>
-	</cfloop>
-</ul>
-</div>
+<script src="#event.getSite().getAssetPath()#/includes/display_objects/feedslideshow/js/jquery.cycle.js" type="text/javascript"></script>
+<script src="#event.getSite().getAssetPath()#/includes/display_objects/feedslideshow/js/slideshow.jquery.min.js" type="text/javascript"></script>
 </cfoutput>

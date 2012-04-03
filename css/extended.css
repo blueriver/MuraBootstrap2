@@ -46,7 +46,7 @@ form legend+p {
 	border-bottom: 1px solid #eeeeee;
 }
 
-.svIndex dd {
+.svIndex dd, .svSlideshow dd {
 	margin-left: 0;
 }
 
@@ -63,6 +63,32 @@ form legend+p {
 
 .pagination {
 	margin: 24px 0 18px !important;
+}
+
+.svSlideshow dt.releaseDate {
+	font-size: 12px;
+	margin-bottom: .25em;
+}
+
+.svSlideshow dt.title {
+	font-size: 22px;
+	margin-bottom: .25em;
+}
+
+ol.svPager {
+	text-align: center;
+}
+
+ol.svPager li {
+	margin:0 .25em;
+	display:inline-block;
+	*display:inline;
+	background: #eee;
+}
+
+ol.svPager li.activeLI a {
+	background: #08c;
+	color: #fff;
 }
 
 /* @group Globals - Forms (from Mura's reset.css)

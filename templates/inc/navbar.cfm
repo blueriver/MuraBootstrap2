@@ -13,7 +13,7 @@
         <div class="nav-collapse">
           <cf_CacheOMatic key="dspPrimaryNav#request.contentBean.getcontentID()#">
           	#$.dspPrimaryNav(
-          		viewDepth="1", <!--- Bootstrap only supports 1 level of dropdowns as of this version --->
+          		viewDepth="1", 
           		id="navPrimary",
           		displayHome="Never",
           		closePortals="false",
@@ -25,7 +25,7 @@
               	aHasKidsCustomString='data-toggle="dropdown"'
           	)#
          </cf_cacheomatic>
-		
+		<!--- Bootstrap only supports 1 level of dropdowns --->
 		<!--- 
 			Optional named arguments for Primary Nav are: 
 			displayHome="Always/Never/Conditional"
