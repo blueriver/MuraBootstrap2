@@ -13,8 +13,8 @@
 	<cfset renderer.subHead5="h6"/>
 	<cfset renderer.liCurrentClass="active">
 	<cfset renderer.aCurrentClass="active">
-	<cfset renderer.ulTopClass="navSecondary nav">
-	<cfset renderer.ulNestedClass="nav">
+	<cfset renderer.ulTopClass="nav nav-list">
+	<cfset renderer.ulNestedClass="nav nav-list">
 	<cfset renderer.ulPaginationClass="pagination">
 
 </cffunction>

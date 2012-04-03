@@ -9,9 +9,7 @@
 		
       		<div class="row-fluid">
 				<div class="span3">
-				  <div class="well sidebar-nav">
 				    #$.dspObjects(1)#
-				  </div><!--/.well -->
 				</div><!--/span-->
 			
 				<div class="span9">

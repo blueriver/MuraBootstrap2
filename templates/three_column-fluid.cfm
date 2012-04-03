@@ -8,9 +8,7 @@
 		<cfinclude template="inc/navbar.cfm">
       		<div class="row-fluid">
       		<div class="span3">
-      		  <div class="well sidebar-nav">
       		    #$.dspObjects(1)#
-      		  </div><!--/.well -->
       		</div><!--/span-->
 				<div class="span6">
 				<cfinclude template="inc/breadcrumb.cfm">
@@ -18,9 +16,7 @@
 				#$.dspObjects(2)#
 		        </div><!--/span-->
 		        <div class="span3">
-				  <div class="well sidebar-nav">
 				    #$.dspObjects(3)#
-				  </div><!--/.well -->
 				</div><!--/span-->
 			</div><!--/row-->
       

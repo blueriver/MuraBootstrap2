@@ -13,9 +13,7 @@
 				#$.dspObjects(2)#
 		        </div><!--/span-->
 		        <div class="span3">
-				  <div class="well sidebar-nav">
-				    #$.dspObjects(1)#
-				  </div><!--/.well -->
+				    #$.dspObjects(3)#
 				</div><!--/span-->
 			</div><!--/row-->
       

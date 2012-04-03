@@ -1,5 +1,14 @@
 /* @override 
-	http://localhost:8500/themes/bootstrap/includes/themes/bootstrap/css/extended.css */
+	http://localhost:8500/themes/bootstrap/includes/themes/MuraBootstrap/css/extended.css */
+
+body {
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+.sidebar-nav {
+    padding: 9px 0;
+}
+
 h2 {
   margin-bottom: 18px;
 }
@@ -10,6 +19,10 @@ ul.nav li:hover ul.dropdown-menu {
 
 a.menu:after, .dropdown-toggle:after {
   content: none;
+}
+
+ul.nav {
+	margin-bottom: 0;
 }
 
 .navbar .nav > li {
@@ -25,6 +38,31 @@ form legend+p {
 	line-height: 1.2;
 	padding-top: 1em !important;
 	margin-bottom: 1em !important;
+}
+
+.svIndex dl {
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.svIndex dd {
+	margin-left: 0;
+}
+
+.svIndex dt.releaseDate {
+	font-size: 12px;
+	margin-bottom: .25em;
+	line-height: 1;
+}
+
+.comments, .tags, .rating {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.pagination {
+	margin: 24px 0 18px !important;
 }
 
 /* @group Globals - Forms (from Mura's reset.css)

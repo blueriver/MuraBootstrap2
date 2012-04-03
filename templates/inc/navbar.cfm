@@ -18,6 +18,7 @@
           		displayHome="Never",
           		closePortals="false",
           		showCurrentChildrenOnly="false",
+          		ulTopClass="nav",
           		ulNestedClass="dropdown-menu",
               	liHasKidsClass="dropdown",
              	aHasKidsClass="dropdown-toggle",
