@@ -65,6 +65,15 @@ form legend+p {
 	margin: 24px 0 18px !important;
 }
 
+.pagination a {
+padding: 0 14px;
+}
+
+.moreResults dt {
+	font-size: 12px;
+	font-weight: normal;
+}
+
 .svSlideshow dt.releaseDate {
 	font-size: 12px;
 	margin-bottom: .25em;
