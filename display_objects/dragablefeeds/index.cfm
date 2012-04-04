@@ -100,7 +100,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 		<fieldset id="rssExternal" class="pull-right">
 			<!---<label class="block">#$.rbKey('dragablefeeds.addyourown')#</label>--->
 			<input type="text" class="text span3" name="rssURLtext" size="30" placeholder="#$.rbKey('dragablefeeds.addyourown')#" value="" maxlength="255">
-			<button class="btn icon-plus-sign" type="button" onclick="createFeed(this.form)" value="#$.rbKey('dragablefeeds.addfeed')#"><i class="icon-plus-sign"></i> #$.rbKey('dragablefeeds.addfeed')#</button>
+			<button class="btn" type="button" onclick="createFeed(this.form)" value="#$.rbKey('dragablefeeds.addfeed')#"><i class="icon-plus-sign"></i> #$.rbKey('dragablefeeds.addfeed')#</button>
 		</fieldset>
 	</form>
 </div>

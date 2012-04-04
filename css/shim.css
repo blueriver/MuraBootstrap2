@@ -171,10 +171,12 @@ p.required {
 	position: absolute;
 	left: -9999px;
 	}
-
-
 /* @end Globals - Forms - Required Fields
 -------------------------------- */
+
+.dragableBoxHeader { /* Header inside dragable RSS box */
+	background-color: #f2f2f2 !important;
+}
 
 .block {
 	display: block !important;
