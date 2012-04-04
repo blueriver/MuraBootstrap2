@@ -9,14 +9,25 @@
     <cfif request.contentBean.getCredits() neq ""><meta name="author" content="#HTMLEditFormat($.content('credits'))#" /></cfif>
     <meta name="generator" content="Mura CMS #$.globalConfig('version')#" />
 	
-    <!-- Le styles -->
-    <link href="#$.siteConfig('themeAssetPath')#/css/bootstrap.css" rel="stylesheet">
-    <link href="#$.siteConfig('themeAssetPath')#/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Le Basic CSS styles -->
+   <!---<link href="#$.siteConfig('themeAssetPath')#/css/bootstrap/bootstrap.css" rel="stylesheet">
+   <link href="#$.siteConfig('themeAssetPath')#/css/bootstrap/bootstrap-responsive.css" rel="stylesheet">--->
+    
+    <!--- ** Preferred method using cfStatic, but CURRENTLY BROKEN ** --->
+    <!--- ** Will use when cfStatic gets updated to latest less lib ** --->
+	<!--- <cf_CacheOMatic key="globalheadercss">
+    #$.static()
+    	.include("/css/core/")
+    	.renderIncludes("css")#
+    </cf_CacheOMatic> --->
     
     <!--- Le Mura styles --->
     <link href="#$.siteConfig('assetPath')#/css/mura.min.css" rel="stylesheet">
-    <link href="#$.siteConfig('themeAssetPath')#/css/shim.css" rel="stylesheet">
-
+    
+    <!-- Le Less styles -->
+    <link href="#$.siteConfig('themeAssetPath')#/css/core/site.less" rel="stylesheet/less">
+  	<script src="#$.siteConfig('themeAssetPath')#/js/less.js"></script>
+   
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,7 +42,6 @@
     <cfset rs=$.getBean('feedManager').getFeeds($.event('siteID'),'Local',true,true) />
     <cfloop query="rs">
     <link rel="alternate" type="application/rss+xml" title="#HTMLEditFormat($.siteConfig('site'))# - #HTMLEditFormat(rs.name)#" href="#XMLFormat('http://#listFirst(cgi.http_host,":")##$.globalConfig('context')#/tasks/feed/?feedID=#rs.feedID#')#" />
-    </cfloop>
-    
+    </cfloop>  
   </head>
 </cfoutput>
