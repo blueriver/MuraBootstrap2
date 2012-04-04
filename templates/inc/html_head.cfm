@@ -15,7 +15,7 @@
     
     <!--- Le Mura styles --->
     <link href="#$.siteConfig('assetPath')#/css/mura.min.css" rel="stylesheet">
-    <link href="#$.siteConfig('themeAssetPath')#/css/extended.css" rel="stylesheet">
+    <link href="#$.siteConfig('themeAssetPath')#/css/shim.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
