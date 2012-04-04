@@ -100,6 +100,50 @@ ol.svPager li.activeLI a {
 	color: #fff;
 }
 
+/* @group Calendar
+===================================== */
+
+.svCalendar thead {
+	background: #eee;
+}
+
+.svCalendar thead th, .svCalendar thead th a {
+	padding: 0;
+	line-height: 1.5;
+}
+
+.svCalendar table #previousMonth a,
+.svCalendar table #nextMonth a {
+	font-size: 150%;
+	font-weight: normal;
+	padding: 0;
+	line-height: 1.1;
+}
+.svCalendar .table tbody tr:hover td,
+.svCalendar .table tbody tr:hover th {
+	background: #fff;
+}
+
+.svCalendar td, .svCalendar th {
+border-bottom: 0;
+border-right: 0;
+font-size: 12px;
+}
+
+.table-bordered th,
+.table-bordered td {
+border-left: 1px solid #DDD;
+}
+
+.table th, .table td {
+padding: 8px;
+line-height: 18px;
+text-align: left;
+vertical-align: top;
+border-top: 1px solid #DDD;
+}
+
+
 /* @group Globals - Forms (from Mura's reset.css)
 ===================================== */
 #svLoginContainer {
