@@ -79,7 +79,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 <div class="well clearfix">
 	<form method="post" action="##" class="form-inline">
 		<fieldset id="rssInternal" class="pull-left">
-			<!---<label class="block">#$.rbKey('dragablefeeds.selectafeed')#</label>--->
+			<!---<label class="force-block">#$.rbKey('dragablefeeds.selectafeed')#</label>--->
 			<select name="rssURL" class="span3">
 				<option value="">#$.rbKey('dragablefeeds.selectafeed')#</option>
 				<cfoutput>
@@ -98,7 +98,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 			<button class="btn" type="button" onclick="createFeed(this.form)" value="#$.rbKey('dragablefeeds.addfeed')#"><i class="icon-plus-sign"></i> #$.rbKey('dragablefeeds.addfeed')#</button>
 			</fieldset>
 		<fieldset id="rssExternal" class="pull-right">
-			<!---<label class="block">#$.rbKey('dragablefeeds.addyourown')#</label>--->
+			<!---<label class="force-block">#$.rbKey('dragablefeeds.addyourown')#</label>--->
 			<input type="text" class="text span3" name="rssURLtext" size="30" placeholder="#$.rbKey('dragablefeeds.addyourown')#" value="" maxlength="255">
 			<button class="btn" type="button" onclick="createFeed(this.form)" value="#$.rbKey('dragablefeeds.addfeed')#"><i class="icon-plus-sign"></i> #$.rbKey('dragablefeeds.addfeed')#</button>
 		</fieldset>
