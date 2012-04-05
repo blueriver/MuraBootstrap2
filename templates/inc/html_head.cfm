@@ -10,8 +10,8 @@
     <meta name="generator" content="Mura CMS #$.globalConfig('version')#" />
 	
     <!-- Le Basic CSS styles -->
-   <!---<link href="#$.siteConfig('themeAssetPath')#/css/bootstrap/bootstrap.css" rel="stylesheet">
-   <link href="#$.siteConfig('themeAssetPath')#/css/bootstrap/bootstrap-responsive.css" rel="stylesheet">--->
+   <!---<link href="#$.siteConfig('themeAssetPath')#/css/bootstrap-static/bootstrap.css" rel="stylesheet">
+   <link href="#$.siteConfig('themeAssetPath')#/css/bootstrap-static/responsive.css" rel="stylesheet">--->
     
     <!--- ** Preferred method using cfStatic, but CURRENTLY BROKEN ** --->
     <!--- ** Will use when cfStatic gets updated to latest less lib ** --->

@@ -7,12 +7,12 @@
 		<div class="container-fluid">
 		<cfinclude template="inc/navbar.cfm">
       		<div class="row-fluid">
-				<div class="span9">
+				<div class="span9 content">
 				<cfinclude template="inc/breadcrumb.cfm">
 				#$.dspBody(body=$.content('body'),pageTitle=$.content('title'),crumbList=0,showMetaImage=1)#
 				#$.dspObjects(2)#
 		        </div><!--/span-->
-		        <div class="span3">
+		        <div class="span3 sidebar">
 				    #$.dspObjects(3)#
 				</div><!--/span-->
 			</div><!--/row-->

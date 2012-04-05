@@ -164,9 +164,18 @@ form li {
 
 /* @group Globals - Forms (from Mura's reset.css)
 ===================================== */
-/*#svLoginContainer {
-	width: auto;
-}*/
+.well form, .navbar form {
+	margin-bottom: 0;
+}
+
+.navbar form {
+	padding: 8px 0;
+}
+
+.navbar input.search-query {
+	padding: 2px 10px;
+	line-height: 1;
+}
 
 #svLoginContainer legend {
 	border-bottom: 0;
@@ -174,6 +183,10 @@ form li {
 
 #svLoginContainer label.control-label {
     display: inline-block;
+}
+
+.sidebar input.text, .sidebar textarea {
+	width: 95%;
 }
 
 p.required {
