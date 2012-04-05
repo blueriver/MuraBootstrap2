@@ -1,3 +1,7 @@
+@import "../../bootstrap/less/bootstrap.less";
+@import "../../bootstrap/less/responsive.less";
+@import "variables-override.less";
+
 /* This file is used to shim the vector between default Mura CMS styles and Bootstrap */
 
 body {
@@ -36,48 +40,40 @@ ul.nav {
   position: relative;
 }
 
+/* Nested ULs need to go full width */
 .nav-list li.active ul {
-	margin-left: -@horzPadding+@horzPadding;
-	margin-right: -@horzPadding+@horzPadding;
 	padding: 0;
 }
 
-.nav-list li.active ul ul {
-	margin-left: -@horzPadding+@horzPadding+@horzPadding;
-	margin-right: -@horzPadding+@horzPadding+@horzPadding;
-}
 
-.nav-list li.active li {
-	padding-left: @horzPadding+@horzPadding;
-	padding-right: @horzPadding+@horzPadding;
-}
-
-.nav-list li.active li li {
-	padding-left: @horzPadding+@horzPadding+@horzPadding;
-	padding-right: @horzPadding+@horzPadding+@horzPadding;
-}
-
-.nav-list li.active li.active a.active {
+.nav-list li li a.active {
 	background: transparent;
 	color: @linkColor;
 	text-shadow: 0 0 0;
 }
 
-.nav-list li.active li.active a.active {
-	padding-left: @horzPadding;
-	padding-right: @horzPadding;
-	/*margin-left: -@horzPadding;
-	margin-right: -@horzPadding;*/
+/* Anchors need to be fullwidth but padded */
+.nav-list li.active li a {
+	.indent(2);
 }
 
-/*.nav-list li.active li.active li.active a.active {
-	margin-left: -@horzPadding+@horzPadding;
-	margin-right: -@horzPadding+@horzPadding;
-}*/
+.nav-list li.active li li a {
+	.indent(3);
+}
 
-.nav-list li.active li.active a.active:hover {
-	background: @grayLighter;
+.nav-list li.active li li li a {
+	.indent(4);
+}
+
+.nav-list li.active li li li li a {
+	.indent(5);
+}
+
+.nav-list li.active li.active a,
+.nav-list li.active li.active a:hover {
+	background: transparent;
 	color: @linkColorHover;
+	text-shadow: 0 0 0 transparent !important;
 }
 
 form ol {
@@ -159,8 +155,9 @@ ol.svPager li.activeLI a {
 }
 
 .svCalendar thead th, .svCalendar thead th a {
-	padding: 0;
+	padding: .5em;
 	line-height: 1.5;
+	text-align: center;
 }
 
 .svCalendar table #previousMonth a,
@@ -176,14 +173,13 @@ ol.svPager li.activeLI a {
 }
 
 .svCalendar td, .svCalendar th {
-border-bottom: 0;
-border-right: 0;
-font-size: 12px;
+	border: 0;
+	font-size: 12px;
 }
 
 .table-bordered th,
 .table-bordered td {
-border-left: 1px solid #DDD;
+border-left: 1px solid #ddd;
 }
 
 .table th, .table td {
@@ -191,7 +187,7 @@ padding: 8px;
 line-height: 18px;
 text-align: left;
 vertical-align: top;
-border-top: 1px solid #DDD;
+border-top: 1px solid #ddd;
 }
 
 form legend+ul, form legend+ol {

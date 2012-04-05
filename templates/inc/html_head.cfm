@@ -9,9 +9,13 @@
     <cfif request.contentBean.getCredits() neq ""><meta name="author" content="#HTMLEditFormat($.content('credits'))#" /></cfif>
     <meta name="generator" content="Mura CMS #$.globalConfig('version')#" />
 	
-    <!-- Le Basic CSS styles -->
+    <!--- Le Mura styles --->
+    <link href="#$.siteConfig('assetPath')#/css/mura.min.css" rel="stylesheet">
+    
+    <!-- Le static Bootstrap styles -->
    <!---<link href="#$.siteConfig('themeAssetPath')#/css/bootstrap-static/bootstrap.css" rel="stylesheet">
    <link href="#$.siteConfig('themeAssetPath')#/css/bootstrap-static/responsive.css" rel="stylesheet">--->
+    
     
     <!--- ** Preferred method using cfStatic, but CURRENTLY BROKEN ** --->
     <!--- ** Will use when cfStatic gets updated to latest less lib ** --->
@@ -21,8 +25,6 @@
     	.renderIncludes("css")#
     </cf_CacheOMatic>
     
-    <!--- Le Mura styles --->
-    <link href="#$.siteConfig('assetPath')#/css/mura.min.css" rel="stylesheet">
     
     <!-- Le Less styles -->
     <!---<link href="#$.siteConfig('themeAssetPath')#/css/core/site.less" rel="stylesheet/less">
