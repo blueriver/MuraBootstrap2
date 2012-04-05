@@ -15,18 +15,18 @@
     
     <!--- ** Preferred method using cfStatic, but CURRENTLY BROKEN ** --->
     <!--- ** Will use when cfStatic gets updated to latest less lib ** --->
-	<!--- <cf_CacheOMatic key="globalheadercss">
+	<cf_CacheOMatic key="globalheadercss">
     #$.static()
     	.include("/css/core/")
     	.renderIncludes("css")#
-    </cf_CacheOMatic> --->
+    </cf_CacheOMatic>
     
     <!--- Le Mura styles --->
     <link href="#$.siteConfig('assetPath')#/css/mura.min.css" rel="stylesheet">
     
     <!-- Le Less styles -->
-    <link href="#$.siteConfig('themeAssetPath')#/css/core/site.less" rel="stylesheet/less">
-  	<script src="#$.siteConfig('themeAssetPath')#/js/less.js"></script>
+    <!---<link href="#$.siteConfig('themeAssetPath')#/css/core/site.less" rel="stylesheet/less">
+  	<script src="#$.siteConfig('themeAssetPath')#/js/less.js"></script>--->
    
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

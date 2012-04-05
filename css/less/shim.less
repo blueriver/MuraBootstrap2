@@ -36,6 +36,50 @@ ul.nav {
   position: relative;
 }
 
+.nav-list li.active ul {
+	margin-left: -@horzPadding+@horzPadding;
+	margin-right: -@horzPadding+@horzPadding;
+	padding: 0;
+}
+
+.nav-list li.active ul ul {
+	margin-left: -@horzPadding+@horzPadding+@horzPadding;
+	margin-right: -@horzPadding+@horzPadding+@horzPadding;
+}
+
+.nav-list li.active li {
+	padding-left: @horzPadding+@horzPadding;
+	padding-right: @horzPadding+@horzPadding;
+}
+
+.nav-list li.active li li {
+	padding-left: @horzPadding+@horzPadding+@horzPadding;
+	padding-right: @horzPadding+@horzPadding+@horzPadding;
+}
+
+.nav-list li.active li.active a.active {
+	background: transparent;
+	color: @linkColor;
+	text-shadow: 0 0 0;
+}
+
+.nav-list li.active li.active a.active {
+	padding-left: @horzPadding;
+	padding-right: @horzPadding;
+	/*margin-left: -@horzPadding;
+	margin-right: -@horzPadding;*/
+}
+
+/*.nav-list li.active li.active li.active a.active {
+	margin-left: -@horzPadding+@horzPadding;
+	margin-right: -@horzPadding+@horzPadding;
+}*/
+
+.nav-list li.active li.active a.active:hover {
+	background: @grayLighter;
+	color: @linkColorHover;
+}
+
 form ol {
 	list-style: none;
 	margin: 0;
