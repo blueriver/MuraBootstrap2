@@ -6927,6 +6927,7 @@ body {
   padding-top: 60px;
 }
 @media (max-width: 979px) {
+  /* fixes additional padding display issue when the nav collapses for smaller devices */
   body {
     padding-top: 0;
     padding-left: 0;
