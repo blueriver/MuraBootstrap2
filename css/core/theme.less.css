@@ -1,3 +1,5 @@
+/* All of these are needed for Bootstrap. Edit at your own risk */
+/* ------------------------------------------------------------ */
 /*!
  * Bootstrap v2.0.2
  *
@@ -7209,3 +7211,5 @@ ul.dragableFeeds {
   float: none;
   clear: both;
 }
+/*** Add all theme-specific styles below ***/
+/* ------------------------------------------------------------ */

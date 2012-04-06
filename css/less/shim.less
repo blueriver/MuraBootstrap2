@@ -25,47 +25,49 @@ body {
     padding: 9px 0;
 }
 
+/* @group Headings */
+
 h2 {
   margin-bottom: 12px;
   line-height: 1.1;
 }
 
-/*.sidebar h1 {
-  font-size: 30px;
-  line-height: @baseLineHeight * 2;
-  small {
-    font-size: 18px;
-  }
+.sidebar h1 {
+  font-size: 22px;
+  line-height: 1.1;
+  margin-bottom: .5em;
 }
 .sidebar h2 {
-  font-size: 24px;
-  line-height: @baseLineHeight * 2;
-  small {
-    font-size: 18px;
-  }
+  font-size: 19px;
+  line-height: 1.1;
+  margin-bottom: .5em;
 }
 .sidebar h3 {
-  line-height: @baseLineHeight * 1.5;
-  font-size: 18px;
-  small {
-    font-size: 14px;
-  }
-}
-.sidebar h4, .sidebar h5, .sidebar h6 {
-  line-height: @baseLineHeight;
+  font-size: 16px;
+  line-height: 1.1;
+  margin-bottom: .5em;
 }
 .sidebar h4 {
   font-size: 14px;
-  small {
-    font-size: 12px;
-  }
+  margin-bottom: .5em;
+  line-height: 1.1;
 }
 .sidebar h5 {
   font-size: 12px;
+  margin-bottom: .75em;
+  line-height: 1.2;
 }
 .sidebar h6 {
   font-size: 11px;
-}*/
+  margin-bottom: .5em;
+  line-height: 1.2;
+}
+
+.navArchive h2, .navArchive h3 {
+	margin-bottom: 0;
+}
+
+/* @end */
 
 ul.nav li:hover ul.dropdown-menu {
     display: inline-block;   
@@ -124,7 +126,7 @@ ul.nav {
 	text-shadow: 0 0 0 transparent !important;
 }
 
-form ol {
+form ol, #svTagCloud ol {
 	list-style: none;
 	margin: 0;
 }
@@ -253,6 +255,9 @@ vertical-align: top;
 border-top: 1px solid #ddd;
 }
 
+/* @group Globals - Forms (from Mura's reset.css)
+===================================== */
+
 form legend+ul, form legend+ol {
 	padding-top: 1em;
 }
@@ -264,14 +269,6 @@ form ol, form ul {
 form li {
 	list-style: none;
 }
-
-
-
-/* @group Globals - Forms (from Mura's reset.css)
-===================================== */
-/*input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input {
-	width: 90%;
-}*/
 
 .well form, .navbar form {
 	margin-bottom: 0;
@@ -290,10 +287,6 @@ form li {
 	border-bottom: 0;
 }
 
-/*label.control-label {
-    display: inline-block;
-}*/
-
 .sidebar input.text, .sidebar textarea, .sidebar select {
 	width: 95%;
 }
@@ -301,7 +294,6 @@ form li {
 p.required {
     display: inline-block;
     margin-bottom: 1em !important;
-    /*float: right;*/
 }
 
 .req label, p.required { 

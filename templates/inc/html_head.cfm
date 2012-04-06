@@ -27,7 +27,7 @@
     
     
     <!-- Le Less styles -->
-    <!---<link href="#$.siteConfig('themeAssetPath')#/css/core/site.less" rel="stylesheet/less">
+    <!---<link href="#$.siteConfig('themeAssetPath')#/css/core/theme.less" rel="stylesheet/less">
   	<script src="#$.siteConfig('themeAssetPath')#/js/less.js"></script>--->
    
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
