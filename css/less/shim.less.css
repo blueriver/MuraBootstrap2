@@ -6924,6 +6924,17 @@ body {
   padding-bottom: 40px;
   padding-top: 60px;
 }
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-fixed-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
 .sidebar-nav {
   padding: 9px 0;
 }
@@ -7129,6 +7140,9 @@ form li {
 }
 /* @group Globals - Forms (from Mura's reset.css)
 ===================================== */
+/*input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input {
+	width: 90%;
+}*/
 .well form,
 .navbar form {
   margin-bottom: 0;
@@ -7143,12 +7157,21 @@ form li {
 #svLoginContainer legend {
   border-bottom: 0;
 }
+<<<<<<< HEAD
 label.control-label {
   display: inline-block;
 }
 .sidebar input.text,
 .sidebar textarea,
 select {
+=======
+/*label.control-label {
+    display: inline-block;
+}*/
+.sidebar input.text,
+.sidebar textarea,
+.sidebar select {
+>>>>>>> shimmin'
   width: 95%;
 }
 p.required {
@@ -7158,8 +7181,19 @@ p.required {
 }
 .req label,
 p.required {
+<<<<<<< HEAD
   background: url(../../images/icon_star.png) no-repeat 100% 0;
   padding-right: 7px;
+=======
+  /*background: url(../../images/icon_star.png) no-repeat;
+    padding-left: 7px;*/
+
+}
+.req label:after,
+p.required:after {
+  content: "*";
+  color: red;
+>>>>>>> shimmin'
 }
 .req ins {
   position: absolute;

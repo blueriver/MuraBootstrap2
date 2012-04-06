@@ -6926,6 +6926,17 @@ body {
   padding-bottom: 40px;
   padding-top: 60px;
 }
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-fixed-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
 .sidebar-nav {
   padding: 9px 0;
 }
@@ -6933,7 +6944,42 @@ h2 {
   margin-bottom: 12px;
   line-height: 1.1;
 }
-/* Need sidebar heading styles */
+/*.sidebar h1 {
+  font-size: 30px;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 18px;
+  }
+}
+.sidebar h2 {
+  font-size: 24px;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 18px;
+  }
+}
+.sidebar h3 {
+  line-height: @baseLineHeight * 1.5;
+  font-size: 18px;
+  small {
+    font-size: 14px;
+  }
+}
+.sidebar h4, .sidebar h5, .sidebar h6 {
+  line-height: @baseLineHeight;
+}
+.sidebar h4 {
+  font-size: 14px;
+  small {
+    font-size: 12px;
+  }
+}
+.sidebar h5 {
+  font-size: 12px;
+}
+.sidebar h6 {
+  font-size: 11px;
+}*/
 ul.nav li:hover ul.dropdown-menu {
   display: inline-block;
 }
@@ -7096,6 +7142,9 @@ form li {
 }
 /* @group Globals - Forms (from Mura's reset.css)
 ===================================== */
+/*input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input {
+	width: 90%;
+}*/
 .well form,
 .navbar form {
   margin-bottom: 0;
@@ -7110,11 +7159,18 @@ form li {
 #svLoginContainer legend {
   border-bottom: 0;
 }
+<<<<<<< HEAD
 label.control-label {
   display: inline-block;
 }
+=======
+/*label.control-label {
+    display: inline-block;
+}*/
+>>>>>>> shimmin'
 .sidebar input.text,
-.sidebar textarea {
+.sidebar textarea,
+.sidebar select {
   width: 95%;
 }
 p.required {
@@ -7124,8 +7180,19 @@ p.required {
 }
 .req label,
 p.required {
+<<<<<<< HEAD
   background: url(../../images/icon_star.png) no-repeat 100% 0;
   padding-right: 7px;
+=======
+  /*background: url(../../images/icon_star.png) no-repeat;
+    padding-left: 7px;*/
+
+}
+.req label:after,
+p.required:after {
+  content: "*";
+  color: red;
+>>>>>>> shimmin'
 }
 .req ins {
   position: absolute;

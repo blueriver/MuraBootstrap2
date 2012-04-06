@@ -8,6 +8,19 @@ body {
     padding-bottom: 40px;
     padding-top: 60px;
 }
+
+@media (max-width: 979px) { /* fixes additional padding display issue when the nav collapses for smaller devices */
+  body {
+  	padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-fixed-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
 .sidebar-nav {
     padding: 9px 0;
 }
@@ -241,6 +254,10 @@ form li {
 
 /* @group Globals - Forms (from Mura's reset.css)
 ===================================== */
+/*input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input {
+	width: 90%;
+}*/
+
 .well form, .navbar form {
 	margin-bottom: 0;
 }
@@ -258,11 +275,19 @@ form li {
 	border-bottom: 0;
 }
 
+<<<<<<< HEAD
 label.control-label {
+=======
+/*label.control-label {
+>>>>>>> shimmin'
     display: inline-block;
-}
+}*/
 
+<<<<<<< HEAD
 .sidebar input.text, .sidebar textarea, select {
+=======
+.sidebar input.text, .sidebar textarea, .sidebar select {
+>>>>>>> shimmin'
 	width: 95%;
 }
 
@@ -276,9 +301,21 @@ p.required {
     float: right;
 }
 
+<<<<<<< HEAD
 .req label, p.required { background: url(../../images/icon_star.png) no-repeat 100% 0;
     padding-right: 7px; }
 
+=======
+.req label, p.required { 
+	/*background: url(../../images/icon_star.png) no-repeat;
+    padding-left: 7px;*/
+    
+}
+.req label:after, p.required:after { 
+	content: "*";
+    color: red;
+}
+>>>>>>> shimmin'
 .req ins {
 	position: absolute;
 	left: -9999px;
