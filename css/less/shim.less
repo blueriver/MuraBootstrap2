@@ -135,6 +135,11 @@ form legend+p {
 	margin-bottom: 1em !important;
 }
 
+.content .svIndex {
+	padding-top: 0;
+	border-top: 0;
+}
+
 .svIndex dl {
 	padding-bottom: 12px;
 	margin-bottom: 12px;
@@ -225,6 +230,16 @@ ol.svPager li.activeLI a {
 	font-size: 12px;
 }
 
+#svCalendarNav th {
+	padding: 0;
+	line-height: 1;
+}
+
+#svCalendarNav th a {
+	padding: 2px;
+	line-height: 1;
+}
+
 .table-bordered th,
 .table-bordered td {
 border-left: 1px solid #ddd;
@@ -286,18 +301,23 @@ form li {
 p.required {
     display: inline-block;
     margin-bottom: 1em !important;
-    float: right;
+    /*float: right;*/
 }
 
 .req label, p.required { 
-	/*background: url(../../images/icon_star.png) no-repeat;
-    padding-left: 7px;*/
-    
+	background: none;
 }
-.req label:after, p.required:after { 
-	content: "*";
+.req label:after { 
+	content: " *";
     color: red;
 }
+
+p.required:before { 
+	content: "* ";
+    color: red;
+}
+
+
 .req ins {
 	position: absolute;
 	left: -9999px;
