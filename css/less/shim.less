@@ -1,0 +1,320 @@
+@import "../../bootstrap/less/bootstrap.less";
+@import "../../bootstrap/less/responsive.less";
+@import "variables-override.less";
+
+/* This file is used to shim the vector between default Mura CMS styles and Bootstrap */
+
+body {
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+
+@media (max-width: 979px) { /* fixes additional padding display issue when the nav collapses for smaller devices */
+  body {
+  	padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-fixed-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+h2 {
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+/*.sidebar h1 {
+  font-size: 30px;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 18px;
+  }
+}
+.sidebar h2 {
+  font-size: 24px;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 18px;
+  }
+}
+.sidebar h3 {
+  line-height: @baseLineHeight * 1.5;
+  font-size: 18px;
+  small {
+    font-size: 14px;
+  }
+}
+.sidebar h4, .sidebar h5, .sidebar h6 {
+  line-height: @baseLineHeight;
+}
+.sidebar h4 {
+  font-size: 14px;
+  small {
+    font-size: 12px;
+  }
+}
+.sidebar h5 {
+  font-size: 12px;
+}
+.sidebar h6 {
+  font-size: 11px;
+}*/
+
+ul.nav li:hover ul.dropdown-menu {
+    display: inline-block;   
+}
+
+.navbar .nav .dropdown .active > a { /* Overriding bootstrap default becasue it looks weird to have the dropdown "active" nav item highlighted */
+  color: #222;
+  background-color: #fff;
+}
+
+a.menu:after, .dropdown-toggle:after {
+  content: none;
+}
+
+ul.nav {
+	margin-bottom: 0;
+}
+
+.navbar .nav > li {
+  position: relative;
+}
+
+/* Nested ULs need to go full width */
+.nav-list li.active ul {
+	padding: 0;
+}
+
+
+.nav-list li li a.active {
+	background: transparent;
+	color: @linkColor;
+	text-shadow: 0 0 0;
+}
+
+/* Anchors need to be fullwidth but padded */
+.nav-list li.active li a {
+	.indent(2);
+}
+
+.nav-list li.active li li a {
+	.indent(3);
+}
+
+.nav-list li.active li li li a {
+	.indent(4);
+}
+
+.nav-list li.active li li li li a {
+	.indent(5);
+}
+
+.nav-list li.active li.active a,
+.nav-list li.active li.active a:hover {
+	background: transparent;
+	color: @linkColorHover;
+	text-shadow: 0 0 0 transparent !important;
+}
+
+form ol {
+	list-style: none;
+	margin: 0;
+}
+
+form legend+p {
+	line-height: 1.2;
+	padding-top: 1em !important;
+	margin-bottom: 1em !important;
+}
+
+.svIndex dl {
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+dd {
+	margin-left: 0;
+}
+
+.svIndex dt.releaseDate {
+	font-size: 12px;
+	margin-bottom: .25em;
+	line-height: 1;
+}
+
+.comments, .tags, .rating {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.pagination {
+	margin: 24px 0 18px !important;
+}
+
+.pagination a {
+padding: 0 14px;
+}
+
+.moreResults dt {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.svSlideshow dt.releaseDate {
+	font-size: 12px;
+	margin-bottom: .25em;
+}
+
+.svSlideshow dt.title {
+	font-size: 22px;
+	margin-bottom: .25em;
+}
+
+ol.svPager {
+	text-align: center;
+}
+
+ol.svPager li {
+	margin:0 .25em;
+	display:inline-block;
+	*display:inline;
+	background: #eee;
+}
+
+ol.svPager li.activeLI a {
+	background: #08c;
+	color: #fff;
+}
+
+/* @group Calendar
+===================================== */
+
+.svCalendar thead {
+	background: #eee;
+}
+
+.svCalendar thead th, .svCalendar thead th a {
+	padding: .5em;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.svCalendar table #previousMonth a,
+.svCalendar table #nextMonth a {
+	font-size: 150%;
+	font-weight: normal;
+	padding: 0;
+	line-height: 1.1;
+}
+.svCalendar .table tbody tr:hover td,
+.svCalendar .table tbody tr:hover th {
+	background: #fff;
+}
+
+.svCalendar td, .svCalendar th {
+	border: 0;
+	font-size: 12px;
+}
+
+.table-bordered th,
+.table-bordered td {
+border-left: 1px solid #ddd;
+}
+
+.table th, .table td {
+padding: 8px;
+line-height: 18px;
+text-align: left;
+vertical-align: top;
+border-top: 1px solid #ddd;
+}
+
+form legend+ul, form legend+ol {
+	padding-top: 1em;
+}
+
+form ol, form ul {
+	margin: 0;
+}
+
+form li {
+	list-style: none;
+}
+
+
+
+/* @group Globals - Forms (from Mura's reset.css)
+===================================== */
+/*input[class*="span"], select[class*="span"], textarea[class*="span"], .uneditable-input {
+	width: 90%;
+}*/
+
+.well form, .navbar form {
+	margin-bottom: 0;
+}
+
+.navbar form {
+	padding: 8px 0;
+}
+
+.navbar input.search-query {
+	padding: 2px 10px;
+	line-height: 1;
+}
+
+#svLoginContainer legend {
+	border-bottom: 0;
+}
+
+/*label.control-label {
+    display: inline-block;
+}*/
+
+.sidebar input.text, .sidebar textarea, .sidebar select {
+	width: 95%;
+}
+
+p.required {
+    display: inline-block;
+    margin-bottom: 1em !important;
+    float: right;
+}
+
+.req label, p.required { 
+	/*background: url(../../images/icon_star.png) no-repeat;
+    padding-left: 7px;*/
+    
+}
+.req label:after, p.required:after { 
+	content: "*";
+    color: red;
+}
+.req ins {
+	position: absolute;
+	left: -9999px;
+	}
+/* @end Globals - Forms - Required Fields
+-------------------------------- */
+ul.dragableFeeds {
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.dragableBoxHeader { /* Header inside dragable RSS box */
+	background-color: #f2f2f2 !important;
+}
+
+.force-block {
+	display: block !important;
+	float: none;
+	clear: both;
+}
