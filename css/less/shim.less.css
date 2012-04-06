@@ -6931,7 +6931,42 @@ h2 {
   margin-bottom: 12px;
   line-height: 1.1;
 }
-/* Need sidebar heading styles */
+/*.sidebar h1 {
+  font-size: 30px;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 18px;
+  }
+}
+.sidebar h2 {
+  font-size: 24px;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 18px;
+  }
+}
+.sidebar h3 {
+  line-height: @baseLineHeight * 1.5;
+  font-size: 18px;
+  small {
+    font-size: 14px;
+  }
+}
+.sidebar h4, .sidebar h5, .sidebar h6 {
+  line-height: @baseLineHeight;
+}
+.sidebar h4 {
+  font-size: 14px;
+  small {
+    font-size: 12px;
+  }
+}
+.sidebar h5 {
+  font-size: 12px;
+}
+.sidebar h6 {
+  font-size: 11px;
+}*/
 ul.nav li:hover ul.dropdown-menu {
   display: inline-block;
 }
@@ -7108,11 +7143,12 @@ form li {
 #svLoginContainer legend {
   border-bottom: 0;
 }
-#svLoginContainer label.control-label {
+label.control-label {
   display: inline-block;
 }
 .sidebar input.text,
-.sidebar textarea {
+.sidebar textarea,
+select {
   width: 95%;
 }
 p.required {
@@ -7122,7 +7158,7 @@ p.required {
 }
 .req label,
 p.required {
-  background: url(../images/icon_star.png) no-repeat 100% 0;
+  background: url(../../images/icon_star.png) no-repeat 100% 0;
   padding-right: 7px;
 }
 .req ins {
