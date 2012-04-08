@@ -17,6 +17,7 @@
           		id="navPrimary",
           		displayHome="Never",
           		closePortals="false",
+							class="nav",
           		showCurrentChildrenOnly="false",
           		ulTopClass="nav",
           		ulNestedClass="dropdown-menu",
