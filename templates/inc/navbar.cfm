@@ -22,9 +22,9 @@
           		ulNestedClass="dropdown-menu",
               	liHasKidsClass="dropdown",
              	aHasKidsClass="dropdown-toggle",
-              	aHasKidsCustomString='data-toggle="dropdown",
+              	aHasKidsCustomString='data-toggle="dropdown"',
               	liCurrentClass="",
-              	aCurrentClass=""'
+              	aCurrentClass=""
           	)#
          </cf_cacheomatic>
 		<!--- Bootstrap only supports 1 level of dropdowns --->
