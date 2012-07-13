@@ -16,5 +16,5 @@
 <script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-collapse.js"></script>
 <script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-carousel.js"></script>
 <script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-typeahead.js"></script>
-<!---<script src="#$.siteConfig('themeAssetPath')#/js/application.js"></script>--->
+<!--- <script src="#$.siteConfig('themeAssetPath')#/js/application.js"></script> --->
 </cfoutput>
