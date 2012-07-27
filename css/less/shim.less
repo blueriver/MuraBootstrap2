@@ -4,29 +4,26 @@
 
 // This file is used to shim the vector between default Mura CMS styles and Bootstrap
 
+
 body {
 	padding-bottom: 40px;
-
-	// ONLY when content is wider than 979px, the nav bar is sticky, so we need some padding on the top to initially shift the body below the navbar.
-	@media (min-width: 980px) {
-		padding-top: 70px;
-	}
 }
 
 .sidebar-nav {
-    padding: 9px 0;
+	padding: 9px 0;
 }
 
 // @group Headings
 
 h2 {
-  margin-bottom: 12px;
-  line-height: 1.1;
+	margin-bottom: 12px;
+	line-height: 1.1;
 }
 
-.sidebar { 
+.sidebar {
+
 	h1 {
-		font-size: 22px;
+		font-size: 24px;
 		line-height: 1.1;
 		margin-bottom: .5em;
 	}
@@ -60,21 +57,25 @@ h2 {
 		margin-bottom: .5em;
 		line-height: 1.2;
 	}
+
 }
 
-.navArchive { 
+.navArchive {
+
 	h2, h3 {
 		margin-bottom: 0;
 	}
+
 }
+
 
 // @end
 
 ul.nav li:hover ul.dropdown-menu {
-    display: inline-block;   
+    display: inline-block;
 }
 
-.navbar .nav .dropdown .active > a { 
+.navbar .nav .dropdown .active > a {
 	//Overriding bootstrap default becasue it looks weird to have the dropdown "active" nav item highlighted
 	color: #222;
 	background-color: #fff;
@@ -240,7 +241,7 @@ ol.svPager {
 
 }
 
-#svCalendarNav { 
+#svCalendarNav {
 	th {
 		padding: 0;
 		line-height: 1;
@@ -252,13 +253,13 @@ ol.svPager {
 	}
 }
 
-.table-bordered { 
+.table-bordered {
 	th, td {
 		border-left: 1px solid #ddd;
 	}
 }
 
-.table { 
+.table {
 	th, td {
 		padding: 8px;
 		line-height: 18px;
@@ -311,10 +312,10 @@ form {
 	width: 95%;
 }
 
-.req label { 
+.req label {
 	background: none;
 
-	&:after { 
+	&:after {
 		content: " *";
     	color: red;
     }
@@ -325,7 +326,7 @@ p.required {
     margin-bottom: 1em !important;
 	background: none;
 
-	&:before { 
+	&:before {
 		content: "* ";
     	color: red;
 	}
@@ -345,7 +346,7 @@ ul.dragableFeeds {
 	margin-right: 12px;
 }
 
-.dragableBoxHeader { 
+.dragableBoxHeader {
 	//Header inside dragable RSS box
 	background-color: #f2f2f2 !important;
 }
