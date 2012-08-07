@@ -5,17 +5,13 @@
 
 @import "../../bootstrap/less/bootstrap.less";
 @import "../../bootstrap/less/responsive.less";
-@import "variables-override.less"; // This should be moved to the Theme Folder as it is to be customized by the Theme, not Bootstrap or Mura
-@import "mura.less";
+// @import "mura.less";
 
 // This file is used to shim the vector between default Mura CMS styles and Bootstrap
 
-// The shim would be far better off it were just added into the theme/theme.less file, like every other file in this direcotyr. Then, the Variables file could be pulled out of here
-// and moved to the theme/ path where it can be customized like all of the files there.
-
 
 body {
-	padding-bottom: 40px;
+	padding-bottom: 50px;
 }
 
 .sidebar-nav {
@@ -114,22 +110,22 @@ ul.nav {
 	text-shadow: 0 0 0;
 }
 
-// Anchors need to be fullwidth but padded
-.nav-list li.active li a {
-	.indent(2);
-}
+// // Anchors need to be fullwidth but padded
+// .nav-list li.active li a {
+// 	.indent(2);
+// }
 
-.nav-list li.active li li a {
-	.indent(3);
-}
+// .nav-list li.active li li a {
+// 	.indent(3);
+// }
 
-.nav-list li.active li li li a {
-	.indent(4);
-}
+// .nav-list li.active li li li a {
+// 	.indent(4);
+// }
 
-.nav-list li.active li li li li a {
-	.indent(5);
-}
+// .nav-list li.active li li li li a {
+// 	.indent(5);
+// }
 
 .nav-list li.active li.active a,
 .nav-list li.active li.active a:hover {
