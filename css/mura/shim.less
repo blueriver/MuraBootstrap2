@@ -12,12 +12,20 @@
 // Make all Bootstrap main mixins PIE compatible
 // NOTE: you need to add the themepath to find the PIE file
 // --------------------------------------------------------
-
-.border-radius, .box-shadow , .transition , .rotate , .scale , .translate , .skew , .translate3d ,
-.background-clip , .background-size , .box-sizing , .user-select , .resizable , .content-columns ,
+.border-radius, .box-shadow, .transition, .rotate, .scale, .translate, .skew, .translate3d,
+.background-clip, .background-size, .box-sizing, .user-select, .resizable, .content-columns,
 .hyphens, .opacity  {
-	behavior: url(/default/includes/themes/mura-bootrap/css/PIE.htc);
+	behavior: url(/default/includes/themes/mura-bootrap/css/PIE.htc); // change this to your needs
 }
+
+
+
+// NAV ELEMENTS
+#navStandard, #navMultilevel, #navPortal, #svTagCloud, #navSub  {
+	.well;
+	padding: 8px 0;
+}
+
 
 
 
