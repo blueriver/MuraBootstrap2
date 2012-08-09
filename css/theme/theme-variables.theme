@@ -4,123 +4,120 @@
 	  and saves them into the theme-variables.less file. --->
 
 
-
-// Grays
-// -------------------------
-@black:                 #$.siteConfig('mbt-grays-Black')#;
-<!--- @grayDarker:            #222;
-@grayDark:              #333;
-@gray:                  #555;
-@grayLight:             #999;
-@grayLighter:           #eee;
-@white:                 #fff;
-
-
-// Accent colors
-// -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
-@green:                 #46a546;
-@red:                   #9d261d;
-@yellow:                #ffc40d;
-@orange:                #f89406;
-@pink:                  #c3325f;
-@purple:                #7a43b6;
+<!--- Grays
+--------------------------------------------------------------------------------------------------------------------->
+@black:                 #$.siteConfig('mbt-grays-black')#;
+@grayDarker:            #$.siteConfig('mbt-grays-grayDarker')#;
+@grayDark:              #$.siteConfig('mbt-grays-grayDark')#;
+@gray:                  #$.siteConfig('mbt-grays-gray')#;
+@grayLight:             #$.siteConfig('mbt-grays-grayLight')#;
+@grayLighter:           #$.siteConfig('mbt-grays-grayLighter')#;
+@white:           		#$.siteConfig('mbt-grays-white')#;
 
 
-// Scaffolding
-// -------------------------
-@bodyBackground:        @white;
-@textColor:             @grayDark;
+<!--- Accent colors
+--------------------------------------------------------------------------------------------------------------------->
+@blue:                  #$.siteConfig('mbt-accents-blue')#;
+@blueDark:              #$.siteConfig('mbt-accents-blueDark')#;
+@green:                 #$.siteConfig('mbt-accents-green')#;
+@red:                   #$.siteConfig('mbt-accents-red')#;
+@yellow:                #$.siteConfig('mbt-accents-yellow')#;
+@orange:                #$.siteConfig('mbt-accents-orange')#;
+@pink:                  #$.siteConfig('mbt-accents-pink')#;
+@purple:                #$.siteConfig('mbt-accents-purple')#;
 
 
-// Links
-// -------------------------
-@linkColor:             #08c;
-@linkColorHover:        darken(@linkColor, 15%);
+<!--- Scaffolding
+--------------------------------------------------------------------------------------------------------------------->
+@bodyBackground:        #$.siteConfig('mbt-scaffolding-bodyBackground')#;
+@textColor:             #$.siteConfig('mbt-scaffolding-textColor')#;
 
 
-// Typography
-// -------------------------
-@baseFontSize:          13px;
-@baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@baseLineHeight:        18px;
-@altFontFamily:         Georgia, "Times New Roman", Times, serif;
-
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
-@headingsColor:         inherit; // empty to use BS default, @textColor
+<!--- Links
+--------------------------------------------------------------------------------------------------------------------->
+@linkColor:             #$.siteConfig('mbt-links-linkColor')#;
+@linkColorHover:        #$.siteConfig('mbt-links-linkColorHover')#;
 
 
-// Tables
-// -------------------------
-@tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #f9f9f9; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
-@tableBorder:                       #ddd; // table and cell border
+<!--- Typography
+--------------------------------------------------------------------------------------------------------------------->
+@sansFontFamily:        #$.siteConfig('mbt-typography-sansFontFamily')#;
+@serifFontFamily:       #$.siteConfig('mbt-typography-serifFontFamily')#;
+@monoFontFamily:        #$.siteConfig('mbt-typography-monoFontFamily')#;
+
+@baseFontSize:          #$.siteConfig('mbt-typography-baseFontSize')#;
+@baseFontFamily:        #$.siteConfig('mbt-typography-baseFontFamily')#;
+@baseLineHeight:        #$.siteConfig('mbt-typography-baseLineHeight')#;
+@altFontFamily:         #$.siteConfig('mbt-typography-altFontFamily')#;
+
+@headingsFontFamily:    #$.siteConfig('mbt-typography-headingsFontFamily')#;<!--- empty to use BS default, @baseFontFamily --->
+@headingsFontWeight:    #$.siteConfig('mbt-typography-headingsFontWeight')#;<!--- instead of browser default, bold --->
+@headingsColor:         #$.siteConfig('mbt-typography-headingsColor')#;<!--- empty to use BS default, @textColor --->
 
 
-// Buttons
-// -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         darken(@white, 20%);
-
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
-
-@btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
-
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
-
-@btnWarningBackground:              lighten(@orange, 15%);
-@btnWarningBackgroundHighlight:     @orange;
-
-@btnDangerBackground:               #ee5f5b;
-@btnDangerBackgroundHighlight:      #bd362f;
-
-@btnInverseBackground:              @gray;
-@btnInverseBackgroundHighlight:     @grayDarker;
+<!--- Tables
+--------------------------------------------------------------------------------------------------------------------->
+@tableBackground:                   #$.siteConfig('mbt-tables-tableBackground')#;<!--- overall background-color --->
+@tableBackgroundAccent:             #$.siteConfig('mbt-tables-tableBackgroundAccent')#;<!--- for striping --->
+@tableBackgroundHover:              #$.siteConfig('mbt-tables-tableBackgroundHover')#;<!--- for hover --->
+@tableBorder:                       #$.siteConfig('mbt-tables-tableBorder')#;<!--- table and cell border --->
 
 
-// Forms
-// -------------------------
-@inputBackground:               @white;
-@inputBorder:                   #ccc;
-@inputDisabledBackground:       @grayLighter;
+<!--- Buttons
+--------------------------------------------------------------------------------------------------------------------->
+@btnBackground:                     #$.siteConfig('mbt-buttons-btnBackground')#;
+@btnBackgroundHighlight:            #$.siteConfig('mbt-buttons-btnBackgroundHighlight')#;
+@btnBorder:                         #$.siteConfig('mbt-buttons-btnBorder')#;
+
+@btnPrimaryBackground:              #$.siteConfig('mbt-buttons-btnPrimaryBackground')#;
+@btnPrimaryBackgroundHighlight:     #$.siteConfig('mbt-buttons-btnPrimaryBackgroundHighlight')#;
+
+@btnInfoBackground:                 #$.siteConfig('mbt-buttons-btnInfoBackground')#;
+@btnInfoBackgroundHighlight:        #$.siteConfig('mbt-buttons-btnInfoBackgroundHighlight')#;
+
+@btnSuccessBackground:              #$.siteConfig('mbt-buttons-btnSuccessBackground')#;
+@btnSuccessBackgroundHighlight:     #$.siteConfig('mbt-buttons-btnSuccessBackgroundHighlight')#;
+
+@btnWarningBackground:              #$.siteConfig('mbt-buttons-btnWarningBackground')#;
+@btnWarningBackgroundHighlight:     #$.siteConfig('mbt-buttons-btnWarningBackgroundHighlight')#;
+
+@btnDangerBackground:               #$.siteConfig('mbt-buttons-btnDangerBackground')#;
+@btnDangerBackgroundHighlight:      #$.siteConfig('mbt-buttons-btnDangerBackgroundHighlight')#;
+
+@btnInverseBackground:              #$.siteConfig('mbt-buttons-btnInverseBackground')#;
+@btnInverseBackgroundHighlight:     #$.siteConfig('mbt-buttons-btnInverseBackgroundHighlight')#;
 
 
-// Dropdowns
-// -------------------------
-@dropdownBackground:            @white;
-@dropdownBorder:                rgba(0,0,0,.2);
-@dropdownLinkColor:             @grayDark;
-@dropdownLinkColorHover:        @white;
-@dropdownLinkBackgroundHover:   @linkColor;
+<!--- Forms
+--------------------------------------------------------------------------------------------------------------------->
+@inputBackground:               #$.siteConfig('mbt-forms-inputBackground')#;
+@inputBorder:                   #$.siteConfig('mbt-forms-inputBorder')#;
+@inputBorderRadius:       		#$.siteConfig('mbt-forms-inputBorderRadius')#;
+@inputDisabledBackground:       #$.siteConfig('mbt-forms-inputDisabledBackground')#;
+@formActionsBackground:         #$.siteConfig('mbt-forms-formActionsBackground')#;
 
-// Sidebar Nav
-// -------------------------
-@offsetValue:					15px;
 
-.outdent(@multiplier:1) {
-	margin-left: -@offsetValue*@multiplier;
-	margin-right: -@offsetValue*@multiplier;
-}
+<!--- Dropdowns
+--------------------------------------------------------------------------------------------------------------------->
+@dropdownBackground:            #$.siteConfig('mbt-dropdowns-dropdownBackground')#;
+@dropdownBorder:                #$.siteConfig('mbt-dropdowns-dropdownBorder')#;
+@dropdownLinkColor:             #$.siteConfig('mbt-dropdowns-dropdownLinkColor')#;
+@dropdownLinkColorHover:        #$.siteConfig('mbt-dropdowns-dropdownLinkColorHover')#;
+@dropdownLinkBackgroundHover:   #$.siteConfig('mbt-dropdowns-dropdownLinkBackgroundHover')#;
+@dropdownLinkBackgroundHover:   #$.siteConfig('mbt-dropdowns-dropdownDividerTop')#;
+@dropdownDividerBottom:  		#$.siteConfig('mbt-dropdowns-dropdownDividerBottom')#;
 
-.indent(@multiplier:1) {
-	padding-left: @offsetValue*@multiplier;
-	padding-right: @offsetValue*@multiplier;
-}
 
-// COMPONENT VARIABLES
-// --------------------------------------------------
 
-// Z-index master list
-// -------------------------
-// Used for a bird's eye view of components dependent on the z-axis
-// Try to avoid customizing these :)
+
+<!--- COMPONENT VARIABLES
+--------------------------------------------------------------------------------------------------------------------->
+
+
+<!--- Z-index master list
+--------------------------------------------------------------------------------------------------------------------->
+<!--- Used for a bird's eye view of components dependent on the z-axis --->
+<!--- Try to avoid customizing these :) --->
 @zindexDropdown:          1000;
 @zindexPopover:           1010;
 @zindexTooltip:           1020;
@@ -129,82 +126,85 @@
 @zindexModal:             1050;
 
 
-// Sprite icons path
-// -------------------------
-@iconSpritePath:          "../../bootstrap/img/glyphicons-halflings.png";
-@iconWhiteSpritePath:     "../../bootstrap/img/glyphicons-halflings-white.png";
+<!--- Sprite icons path
+--------------------------------------------------------------------------------------------------------------------->
+@iconSpritePath:          "#$.siteConfig('mbt-sprites-iconSpritePath')#";
+@iconWhiteSpritePath:     "#$.siteConfig('mbt-sprites-iconSpritePath')#";
 
 
-// Input placeholder text color
-// -------------------------
-@placeholderText:         @grayLight;
+<!--- Input placeholder text color
+--------------------------------------------------------------------------------------------------------------------->
+@placeholderText:         #$.siteConfig('mbt-input-placeholderText')#;
 
 
-// Hr border color
-// -------------------------
-@hrBorder:                @grayLighter;
+<!--- Hr border color
+--------------------------------------------------------------------------------------------------------------------->
+@hrBorder:                #$.siteConfig('mbt-hr-hrBorder')#;
 
 
-// Navbar
-// -------------------------
-@navbarHeight:                    40px;
-@navbarBackground:                @grayDarker;
-@navbarBackgroundHighlight:       @grayDark;
+<!--- Navbar
+--------------------------------------------------------------------------------------------------------------------->
+@navbarHeight:                    #$.siteConfig('mbt-navbar-navbarHeight')#;
+@navbarBackground:                #$.siteConfig('mbt-navbar-navbarBackground')#;
+@navbarBackgroundHighlight:       #$.siteConfig('mbt-navbar-navbarBackgroundHighlight')#;
 
-@navbarText:                      @grayLight;
-@navbarLinkColor:                 @grayLight;
-@navbarLinkColorHover:            @white;
-@navbarLinkColorActive:           @navbarLinkColorHover;
-@navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      @navbarBackground;
+@navbarText:                      #$.siteConfig('mbt-navbar-navbarText')#;
+@navbarLinkColor:                 #$.siteConfig('mbt-navbar-navbarLinkColor')#;
+@navbarLinkColorHover:            #$.siteConfig('mbt-navbar-navbarLinkColorHover')#;
+@navbarLinkColorActive:           #$.siteConfig('mbt-navbar-navbarLinkColorActive')#;
+@navbarLinkBackgroundHover:       #$.siteConfig('mbt-navbar-navbarLinkBackgroundHover')#;
+@navbarLinkBackgroundActive:      #$.siteConfig('mbt-navbar-navbarLinkBackgroundActive')#;
 
-@navbarSearchBackground:          lighten(@navbarBackground, 25%);
-@navbarSearchBackgroundFocus:     @white;
-@navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
-@navbarSearchPlaceholderColor:    #ccc;
-
-
-// Hero unit
-// -------------------------
-@heroUnitBackground:              @grayLighter;
-@heroUnitHeadingColor:            inherit;
-@heroUnitLeadColor:               inherit;
+@navbarSearchBackground:          #$.siteConfig('mbt-navbar-navbarSearchBackgroundFocus')#;
+@navbarSearchBackgroundFocus:     #$.siteConfig('mbt-navbar-navbarSearchBackgroundFocus')#;
+@navbarSearchBorder:              #$.siteConfig('mbt-navbar-navbarSearchBorder')#;
+@navbarSearchPlaceholderColor:    #$.siteConfig('mbt-navbar-navbarSearchPlaceholderColor')#;
+@navbarBrandColor:                #$.siteConfig('mbt-navbar-navbarBrandColor')#;
 
 
-// Form states and alerts
-// -------------------------
-@warningText:             #c09853;
-@warningBackground:       #fcf8e3;
-@warningBorder:           darken(spin(@warningBackground, -10), 3%);
-
-@errorText:               #b94a48;
-@errorBackground:         #f2dede;
-@errorBorder:             darken(spin(@errorBackground, -10), 3%);
-
-@successText:             #468847;
-@successBackground:       #dff0d8;
-@successBorder:           darken(spin(@successBackground, -10), 5%);
-
-@infoText:                #3a87ad;
-@infoBackground:          #d9edf7;
-@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+<!--- Hero unit
+--------------------------------------------------------------------------------------------------------------------->
+@heroUnitBackground:              #$.siteConfig('mbt-hero-heroUnitBackground')#;
+@heroUnitHeadingColor:            #$.siteConfig('mbt-hero-heroUnitLeadColor')#;
+@heroUnitLeadColor:               #$.siteConfig('mbt-hero-heroUnitLeadColor')#;
 
 
-// GRID
-// --------------------------------------------------
+<!--- Form states and alerts
+--------------------------------------------------------------------------------------------------------------------->
+@warningText:             #$.siteConfig('mbt-form-warningText')#;
+@warningBackground:       #$.siteConfig('mbt-form-warningBackground')#;
+@warningBorder:           #$.siteConfig('mbt-form-warningBorder')#;
 
-// Default 940px grid
-// -------------------------
-@gridColumns:             12;
-@gridColumnWidth:         60px;
-@gridGutterWidth:         20px;
+@errorText:               #$.siteConfig('mbt-form-errorText')#;
+@errorBackground:         #$.siteConfig('mbt-form-errorBackground')#;
+@errorBorder:             #$.siteConfig('mbt-form-errorBorder')#;
+
+@successText:             #$.siteConfig('mbt-form-successText')#;
+@successBackground:       #$.siteConfig('mbt-form-successBackground')#;
+@successBorder:           #$.siteConfig('mbt-form-successBorder')#;
+
+@infoText:                #$.siteConfig('mbt-form-infoText')#;
+@infoBackground:          #$.siteConfig('mbt-form-infoBackground')#;
+@infoBorder:              #$.siteConfig('mbt-form-infoBorder')#;
+
+
+
+
+<!--- GRID
+--------------------------------------------------------------------------------------------------------------------->
+
+
+<!--- Default 940px grid
+--------------------------------------------------------------------------------------------------------------------->
+@gridColumns:             #$.siteConfig('mbt-grid-gridColumns')#;
+@gridColumnWidth:         #$.siteConfig('mbt-grid-gridColumnWidth')#;
+@gridGutterWidth:         #$.siteConfig('mbt-grid-gridGutterWidth')#;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 
-// Fluid grid
-// -------------------------
-@fluidGridColumnWidth:    6.382978723%;
-@fluidGridGutterWidth:    2.127659574%; --->
-
+<!--- Fluid grid
+--------------------------------------------------------------------------------------------------------------------->
+@fluidGridColumnWidth:    #$.siteConfig('mbt-fluid-fluidGridColumnWidth')#;
+@fluidGridGutterWidth:    #$.siteConfig('mbt-fluid-fluidGridGutterWidth')#;
 
 </cfoutput>
