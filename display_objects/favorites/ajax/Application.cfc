@@ -44,6 +44,16 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
-<cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
-</cfoutput>
+<cfcomponent output="false">
+	<cfset depth=5>
+	<cfinclude template="#repeatString('../',depth)#config/applicationSettings.cfm">
+	<cfinclude template="#repeatString('../',depth)#config/mappings.cfm">
+	<cfinclude template="#repeatString('../',depth)#plugins/mappings.cfm">
+	<cfinclude template="#repeatString('../',depth)#config/appcfc/onApplicationStart_method.cfm">
+	<cfinclude template="#repeatString('../',depth)#config/appcfc/onRequestStart_scriptProtect_method.cfm">
+	<cfinclude template="#repeatString('../',depth)#config/appcfc/onSessionStart_method.cfm">
+	<cfinclude template="#repeatString('../',depth)#config/appcfc/onSessionEnd_method.cfm">
+	<cfinclude template="#repeatString('../',depth)#config/appcfc/onError_method.cfm">
+	<cfinclude template="#repeatString('../',depth)#config/appcfc/onMissingTemplate_method.cfm">
+	
+</cfcomponent>

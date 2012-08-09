@@ -44,6 +44,53 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
+
+<cfsilent>
+<cfset $=application.serviceFactory.getBean('MuraScope').init(form.siteID)>
+<cfset rbFactory=$.siteConfig('RBFactory') />
+<cfparam name="form.ccself" default=0>
+<cfif form.sendto2 neq ''><cfset form.sendto1=listappend(form.sendto1,form.sendto2)></cfif>
+<cfif form.sendto3 neq ''><cfset form.sendto1=listappend(form.sendto1,form.sendto3)></cfif>
+<cfif form.ccself><cfset form.sendto1=listappend(form.sendto1,form.email)></cfif>
+<cfset newline=Chr(13) & Chr(10)>
+<cfset success=true/>
+<cftry>
+<cfsavecontent variable="notifyText"><cfoutput>
+<cfif form.comments neq ''>
+#form.comments##newline##newline#</cfif>
+#rbFactory.getResourceBundle().messageFormat($.rbKey('stf.sentence1'),'#form.fname# #form.lname#')#
+
+#link#
+
+#$.rbKey('stf.sentence2')#
+</cfoutput></cfsavecontent>
+<cfset email=application.serviceFactory.getBean('mailer') />
+<cfset email.sendText(notifyText,
+				form.sendto1,
+				form.email,
+				$.siteConfig('site'),
+				$.event('siteID'),
+				form.email) />
+<cfcatch>
+<cfset success=false/>
+</cfcatch>
+</cftry>
+</cfsilent>
 <cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>#$siteConfig('site')# - #$.rbKey('stf.sendtoafriend')#</title>
+<link rel="stylesheet" href="#$.globalConfig('assetPath')#/css/style.css" type="text/css" media="all" />
+</head>
+
+<body id="svSendToFriend">
+<cfif success>
+<h1 class="success">#$.rbKey('stf.yourlinkhasbeensent')#</h1>   
+<cfelse>
+<h1 class="error">#$.rbKey('stf.error')#</h1>  
+</cfif>
+</body>
+</html>
 </cfoutput>

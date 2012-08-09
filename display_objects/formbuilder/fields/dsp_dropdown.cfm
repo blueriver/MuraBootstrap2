@@ -1,4 +1,4 @@
-<!--- This file is part of Mura CMS.
+﻿<!--- This file is part of Mura CMS.
 
 Mura CMS is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -44,6 +44,26 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
+<cfsilent>
+<cfset variables.strField = "" />
+<cfparam name="arguments.dataset.defaultid" default="" />
+<cfsavecontent variable="variables.strField">
+	<cfoutput>
+	#variables.$.dspObject_Include(thefile='/formbuilder/fields/dsp_label.cfm',field=arguments.field,dataset=arguments.dataset)#</label>
+	<select name="#arguments.field.name#"#variables.$.dspObject_Include(thefile='/formbuilder/fields/dsp_common.cfm',field=arguments.field,dataset=arguments.dataset)#
+	</cfoutput>
+</cfsavecontent>
+</cfsilent>
+<cfsavecontent variable="variables.strField">
+	<cfoutput>
+	#variables.strField#>
+	<cfloop from="1" to="#ArrayLen(dataset.datarecordorder)#" index="variables.iiy">
+		<cfset variables.record = arguments.dataset.datarecords[arguments.dataset.datarecordorder[variables.iiy]] />
+		<option<cfif len(variables.record.value)> value="#variables.record.value#"</cfif><cfif variables.record.datarecordid eq arguments.dataset.defaultid> SELECTED</cfif>>#variables.record.label#</option>
+	</cfloop>
+	</select>
+	</cfoutput>
+</cfsavecontent>
 <cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
+#variables.strField#
 </cfoutput>

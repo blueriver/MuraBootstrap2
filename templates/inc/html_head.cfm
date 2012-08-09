@@ -24,10 +24,10 @@
 
     <!--- BOOTSTRAP DOC STYLES --->
     <link href="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/css/docs.css" rel="stylesheet">
-    <link href="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">--->
 
     <!--- TEMP: Pre-processed css file for faster development --->
-    <link href="#$.siteConfig('themeAssetPath')#/css/theme/theme.css" rel="stylesheet">--->
+    <link href="#$.siteConfig('themeAssetPath')#/css/theme/theme.css" rel="stylesheet">
 
 
     <!--- Le HTML5 shim, for IE6-8 support of HTML5 elements --->
@@ -45,11 +45,11 @@
     <cfloop query="rs">
     <link rel="alternate" type="application/rss+xml" title="#HTMLEditFormat($.siteConfig('site'))# - #HTMLEditFormat(rs.name)#" href="#XMLFormat('http://#listFirst(cgi.http_host,":")##$.globalConfig('context')#/tasks/feed/?feedID=#rs.feedID#')#" />
     </cfloop>
-
+    <!---
     <link href="#$.siteConfig('themeAssetPath')#/css/theme/theme.less" rel="stylesheet/less">
     <script src="#$.siteConfig('themeAssetPath')#/js/less-1.3.0.min.js"></script>
 
-    <!---
+
         <cf_CacheOMatic key="globalheadercss">
             #$.static()
             .include("/css/theme/")

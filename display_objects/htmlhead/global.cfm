@@ -44,6 +44,26 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
+<cfsilent>
+<cfset variables.loginURL=variables.$.siteConfig('LoginURL')>
+<!---
+<cfif find("?",variables.loginURL)>
+<cfset variables.loginURL=variables.LoginURL & "&LinkServID=" & variables.$.content('contentID')>
+<cfelse>
+<cfset variables.loginURL=variables.LoginURL & "?LinkServID=" & variables.$.content('contentID')>
+</cfif>--->
+</cfsilent>
 <cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
-</cfoutput>
+#variables.$.siteConfig('JSDateKey')#	
+<script type="text/javascript" src="#variables.$.siteConfig('AssetPath')#/js/global.min.js"></script>
+<script type="text/javascript">
+var loginURL="#variables.loginURL#";
+var siteid="#variables.$.event('siteID')#"; 
+var siteID="#variables.$.event('siteID')#"; 
+var context="#variables.$.globalConfig('context')#"; 
+var jslib="#variables.$.getJsLib()#";
+var assetpath="#variables.$.siteConfig('assetPath')#";
+var themepath="#variables.$.siteConfig('themeAssetPath')#";
+var htmlEditorType="#variables.$.globalConfig('htmlEditorType')#";
+var rb="#lcase(listFirst(variables.$.siteConfig('JavaLocale'),"_"))#";
+</script></cfoutput>

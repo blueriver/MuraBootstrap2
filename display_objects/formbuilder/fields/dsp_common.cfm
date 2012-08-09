@@ -1,4 +1,4 @@
-<!--- This file is part of Mura CMS.
+﻿<!--- This file is part of Mura CMS.
 
 Mura CMS is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -44,6 +44,40 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
-<cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
-</cfoutput>
+<cfsilent>
+<cfset variables.strField = "" />
+<cfif arguments.field.isrequired>
+	<cfset variables.strField = variables.strField & ' data-required="true"' />
+</cfif>
+<cfif structkeyexists(arguments.field,'size') and len(arguments.field.size)>
+	<cfset variables.strField = strField & ' size="#arguments.field.size#"' />
+</cfif>
+<cfif structkeyexists(arguments.field,'maxlength') and len(arguments.field.maxlength)>
+	<cfset variables.strField = variables.strField & ' maxlength="#arguments.field.maxlength#"' />
+<cfelseif structkeyexists(arguments.field,'size') and len(arguments.field.size)>
+	<cfset variables.strField = variables.strField & ' maxlength="#arguments.field.size#"' />
+</cfif>
+<cfif structkeyexists(arguments.field,'cols') and len(arguments.field.cols)>
+	<cfset variables.strField = variables.strField & ' cols="#arguments.field.cols#"' />
+</cfif>
+<cfif structkeyexists(arguments.field,'cssid') and len(arguments.field.cssid)>
+	<cfset variables.strField = variables.strField & ' id="#arguments.field.cssid#"' />
+</cfif>
+<cfif structkeyexists(arguments.field,'cssclass') and len(arguments.field.cssclass)>
+	<cfset variables.strField = variables.strField & ' class="#arguments.field.cssclass#"' />
+</cfif>
+<cfif len(arguments.field.validatemessage)>
+	<cfset variables.strField = variables.strField & ' data-message="#replace(arguments.field.validatemessage,"""","&quot;","all")#"' />
+</cfif>
+<cfif len(arguments.field.validatetype)>
+	<cfif arguments.field.validatetype eq "regex" and len(arguments.field.validateregex)>
+		<cfset variables.strField = variables.strField & ' data-validate="#arguments.field.validatetype#" data-regex="#arguments.field.validateregex#"' />
+	<cfelse>
+		<cfset variables.strField = variables.strField & ' data-validate="#arguments.field.validatetype#"' />
+	</cfif>
+</cfif>
+<cfif len(arguments.field.remoteid)>
+	<cfset variables.strField = variables.strField & ' data-remoteid="#arguments.field.remoteid#"' />
+</cfif>
+</cfsilent>
+<cfoutput>#variables.strField#</cfoutput>

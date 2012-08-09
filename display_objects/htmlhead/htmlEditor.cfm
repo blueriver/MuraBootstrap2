@@ -44,6 +44,8 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
-<cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
-</cfoutput>
+<cfif application.configBean.getValue("htmlEditorType") eq "fckeditor">
+<cfoutput><script type="text/javascript" src="#variables.$.globalConfig('context')#/wysiwyg/fckeditor.js"></script></cfoutput>
+<cfelse><cfoutput><script type="text/javascript" src="#variables.$.globalConfig('context')#/tasks/widgets/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="#variables.$.globalConfig('context')#/tasks/widgets/ckeditor/adapters/jquery.js"></script></cfoutput>
+</cfif>

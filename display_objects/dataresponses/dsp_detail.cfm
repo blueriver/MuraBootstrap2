@@ -44,6 +44,26 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
+
+<cfsilent>
+<cfset variables.rsData=application.dataCollectionManager.read(request.responseid)/>
+<cfif variables.$.content('ResponseDisplayFields') neq ''>
+<cfset variables.fieldnames=replace(listLast(variables.$.content('ResponseDisplayFields'),"~"),"^",",","ALL")/>
+<cfelse>
+<cfset variables.fieldnames=application.dataCollectionManager.getCurrentFieldList(variables.$.content('contentID'))/>
+</cfif>
+<cfwddx action="wddx2cfml" input="#variables.rsData.data#" output="variables.info">
+</cfsilent>
 <cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
+<div id="dsp_detail" class="dataResponses">
+<#variables.$.getHeaderTag('subHead1')#>#variables.$.content('title')#</#variables.$.getHeaderTag('subHead1')#>
+<a class="actionItem" href="##" onclick="history.go(-1)">Return to List</a>
+<dl>
+<cfloop list="#variables.fieldnames#" index="variables.f">
+	<cftry><cfset variables.fValue=variables.info['#variables.f#']><cfcatch><cfset variables.fValue=""></cfcatch></cftry>
+	<dt>#variables.f#</dt>
+	<dd>#HTMLEditFormat(fvalue)#</dd>
+</cfloop>
+</dl>
 </cfoutput>
+</div>

@@ -7,8 +7,21 @@
 @import "../../bootstrap/less/responsive.less";
 // @import "mura.less";
 
-// This file is used to shim the vector between default Mura CMS styles and Bootstrap
 
+
+// Make all Bootstrap main mixins PIE compatible
+// NOTE: you need to add the themepath to find the PIE file
+// --------------------------------------------------------
+
+.border-radius, .box-shadow , .transition , .rotate , .scale , .translate , .skew , .translate3d ,
+.background-clip , .background-size , .box-sizing , .user-select , .resizable , .content-columns ,
+.hyphens, .opacity  {
+	behavior: url(/default/includes/themes/mura-bootrap/css/PIE.htc);
+}
+
+
+
+// This file is used to shim the vector between default Mura CMS styles and Bootstrap
 
 body {
 	padding-bottom: 50px;

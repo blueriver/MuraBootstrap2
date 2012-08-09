@@ -44,6 +44,63 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
+
+<div id="svPayPalCart">
+<cfif getCart.recordcount> 
 <cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
+<form action="" onSubmit="return validate(this)" method="post">
+<table>
+<tr>
+  <th colspan="2">Your Shopping Cart</th>
+</tr>
+<cfloop query="getCart">
+  <tr>
+    <td>
+   	#getCart.item_name#
+    </td> 
+    <td>
+   
+    Quantity: 
+    <input type="hidden" name="item_number" value="#getCart.item_number#">
+    <input type="text" size="3" name="quant_#getCart.item_number#" 
+           value="#getCart.Quantity#">
+   
+    </td>
+  </tr>
+</cfloop>
+</table>
+<input type="hidden" name="doaction" value="updateCart" />
+<input type="submit" name="submit" value="Update Quantities">
+</form>
+
+
+
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="submit" name="submit" value="Check Out">
+<input type="hidden" name="upload" value="1">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="[EMAIL ADDRESS]">
+<cfloop query="getCart">
+<input type="hidden" name="item_name_#getCart.currentrow#" value="#getCart.item_name#">
+<input type="hidden" name="item_number_#getCart.currentrow#" value="#getCart.item_number#">
+<input type="hidden" name="quantity_#getCart.currentrow#" value="#getCart.quantity#">
+<input type="hidden" name="amount_#getCart.currentrow#" value="#getCart.amount#">
+<input type="hidden" name="handling_#getCart.currentrow#" value="#getCart.handling#">
+<input type="hidden" name="shipping_#getCart.currentrow#" value="#getCart.shipping#">
+<input type="hidden" name="shipping2_#getCart.currentrow#" value="#getCart.shipping2#">
+<input type="hidden" name="on0_#getCart.currentrow#" value="#getCart.on0#">
+<input type="hidden" name="os0_#getCart.currentrow#" value="#getCart.os0#">
+<input type="hidden" name="on1_#getCart.currentrow#" value="#getCart.on1#">
+<input type="hidden" name="os1_#getCart.currentrow#" value="#getCart.os1#">
+</cfloop>
+<input type="hidden" name="page_style" value="PayPal">
+<input type="hidden" name="return" value="http://#listFirst(cgi.http_host,":")##request.path#?doaction=completeCart">
+<input type="hidden" name="cancel_return" value="http://#listFirst(cgi.http_host,":")##request.path#?doaction=cancelCart">
+<input type="hidden" name="cn" value="Comments">
+<input type="hidden" name="currency_code" value="USD">
+</form>
 </cfoutput>
+<cfelse>
+Your shopping cart is currently empty.
+</cfif>
+</div>

@@ -44,6 +44,21 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
-<cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
-</cfoutput>
+
+<cfsetting enablecfoutputonly="yes">
+<cfparam name="url.columnNumber" default="">
+<cfparam name="url.rowNumber" default="">
+<cfparam name="url.maxRssItems" default="">
+<cfset $=application.serviceFactory.getBean("MuraScope").init(url.siteID)>
+<cfset favorite = application.favoriteManager.saveFavorite('', url.userID, url.siteid, url.favoriteName, url.favoriteLocation, url.favoritetype, url.columnNumber, url.rowNumber, url.maxRssItems) />
+<cfset contentLink = "" />
+<cfset lid = replace(favorite.getFavoriteID(), "-", "", "ALL") />
+<cfset contentBean = $.getBean("content").loadBy(contentID=favorite.getFavorite()) />
+<cfset contentLink = $.createHref(contentBean.getType(), contentBean.getFilename(), url.siteid, favorite.getfavorite(), '', '', '', '#$.globalConfig('context')#', '#$.globalConfig('stub')#', '', 'false') />
+<cfset contentLink = "<a href='#contentLink#'>#favoriteName#</a>" />
+<cfset contentLink = "<a href="""" onClick=""return deleteFavorite('#favorite.getfavoriteID()#', 'favorite#lid#');"" title=""#xmlformat($.rbKey('favorites.removefromfavorites'))#"" class=""remove"">[-]</a> " & contentLink />
+<cfset favoriteStruct = structNew() />
+<cfset favoriteStruct.lid = lid />
+<cfset favoriteStruct.link = contentLink />
+<cfset favoriteStruct.favoriteID = favorite.getFavoriteID() />
+<cfoutput>#$.jsonencode(favoriteStruct)#</cfoutput>

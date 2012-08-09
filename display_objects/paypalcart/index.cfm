@@ -44,6 +44,63 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
-<cfoutput>
-<script src="#variables.$.siteConfig('AssetPath')#/includes/display_objects/dragablefeeds/js/dragablefeeds-jquery.js" type="text/javascript"></script>
-</cfoutput>
+
+<cfsilent>
+<cfif not isdefined("session.cart")>
+<cfset session.cart=createObject("component","cart")> 
+</cfif>
+
+<cfparam name="request.item_number" default="" >
+<cfparam name="request.item_name" default="" >
+<cfparam name="request.amount" default="0" >
+<cfparam name="request.quantity" default="0" >
+<cfparam name="request.shipping" default="0" >
+<cfparam name="request.shipping2" default="0" >
+<cfparam name="request.handling" default="0" >
+<cfparam name="request.on0" default="" >
+<cfparam name="request.os0" default="" >
+<cfparam name="request.on1" default="" >
+<cfparam name="request.os1" default="" >
+
+<cfif not isNumeric(request.quantity)>
+	<cfset request.quantity=1>
+</cfif>
+
+<cfif request.doaction eq 'addToCart'>
+ <cfset session.cart.add(
+	request.item_number,
+	request.item_name,
+	request.amount,
+	request.quantity,
+	request.shipping,
+	request.shipping2,
+	request.handling,
+	request.on0,
+	request.os0,
+	request.on1,
+	request.os1) >
+</cfif>
+
+<cfif request.doaction eq 'updateCart'>
+  <cfloop list="#request.item_number#" index="thisItem">
+  	<cfif not isNumeric(request['quant_#thisItem#'])>
+		<cfset request['quant_#thisItem#']=1>
+	</cfif>
+    <cfset session.cart.update(thisItem,request['quant_#thisItem#']) >
+  </cfloop>
+</cfif>
+</cfsilent>
+<cfswitch expression="#request.doaction#">
+<cfcase value="completeCart">
+<cfset session.cart.empty()>
+<cfinclude template="dsp_complete.cfm">
+</cfcase>
+<cfcase value="cancelCart">
+<!---<cfset session.cart.empty()>--->
+<cfinclude template="dsp_cancel.cfm">
+</cfcase>
+<cfdefaultcase>
+<cfset getCart = session.cart.List()>
+<cfinclude template="dsp_basket.cfm">
+</cfdefaultcase>
+</cfswitch>
