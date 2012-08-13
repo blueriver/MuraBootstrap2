@@ -1,5 +1,4 @@
-
-
+<cfoutput>
 // BOOTSTRAP & MURA IMPORTS
 // The imports below bring in a fresh copy
 // of Bootstrap and the core Mura files
@@ -10,8 +9,8 @@
 // @import "mura.less";
 
 // Shim Variables
-@themePath:		'/default/includes/themes/mura-bootstrap';
-@PIE:		'/default/includes/themes/mura-bootstrap/css/PIE.htc';
+@themePath:		'#$.siteConfig('themeAssetPath')#';
+@PIE:		'#$.siteConfig('themeAssetPath')#/css/PIE.htc';
 
 // Make all Bootstrap main mixins PIE compatible
 // --------------------------------------------------------
@@ -26,7 +25,7 @@
 
 
 // NAV ELEMENTS
-#navStandard, #navMultilevel, #navPortal, #svTagCloud, #navSub  {
+##navStandard, ##navMultilevel, ##navPortal, ##svTagCloud, ##navSub  {
 	.well;
 	padding: 8px 0;
 }
@@ -104,8 +103,8 @@ ul.nav li:hover ul.dropdown-menu {
 
 .navbar .nav .dropdown .active > a {
 	//Overriding bootstrap default becasue it looks weird to have the dropdown "active" nav item highlighted
-	color: #222;
-	background-color: #fff;
+	color: ##222;
+	background-color: ##fff;
 }
 
 a.menu:after, .dropdown-toggle:after {
@@ -156,7 +155,7 @@ ul.nav {
 	text-shadow: 0 0 0 transparent !important;
 }
 
-form ol, #svTagCloud ol {
+form ol, ##svTagCloud ol {
 	list-style: none;
 	margin: 0;
 }
@@ -175,7 +174,7 @@ form legend+p {
 .svIndex dl {
 	padding-bottom: 12px;
 	margin-bottom: 12px;
-	border-bottom: 1px solid #eeeeee;
+	border-bottom: 1px solid ##eeeeee;
 }
 
 dd {
@@ -223,12 +222,12 @@ ol.svPager {
 		margin:0 .25em;
 		display:inline-block;
 		*display:inline;
-		background: #eee;
+		background: ##eee;
 
 		&.activeLI {
 			a {
-				background: #08c;
-				color: #fff;
+				background: ##08c;
+				color: ##fff;
 			}
 		}
 	}
@@ -239,7 +238,7 @@ ol.svPager {
 
 .svCalendar {
 	thead {
-		background: #eee;
+		background: ##eee;
 
 		th, th a {
 			padding: .5em;
@@ -253,8 +252,8 @@ ol.svPager {
 		font-size: 12px;
 	}
 
-	table #previousMonth a,
-	table #nextMonth a {
+	table ##previousMonth a,
+	table ##nextMonth a {
 		font-size: 150%;
 		font-weight: normal;
 		padding: 0;
@@ -263,12 +262,12 @@ ol.svPager {
 
 	.table tbody tr:hover td,
 	.table tbody tr:hover th {
-		background: #fff;
+		background: ##fff;
 	}
 
 }
 
-#svCalendarNav {
+##svCalendarNav {
 	th {
 		padding: 0;
 		line-height: 1;
@@ -282,7 +281,7 @@ ol.svPager {
 
 .table-bordered {
 	th, td {
-		border-left: 1px solid #ddd;
+		border-left: 1px solid ##ddd;
 	}
 }
 
@@ -292,7 +291,7 @@ ol.svPager {
 		line-height: 18px;
 		text-align: left;
 		vertical-align: top;
-		border-top: 1px solid #ddd;
+		border-top: 1px solid ##ddd;
 	}
 }
 
@@ -331,7 +330,7 @@ form {
 	}
 }
 
-#svLoginContainer legend {
+##svLoginContainer legend {
 	border-bottom: 0;
 }
 
@@ -375,7 +374,7 @@ ul.dragableFeeds {
 
 .dragableBoxHeader {
 	//Header inside dragable RSS box
-	background-color: #f2f2f2 !important;
+	background-color: ##f2f2f2 !important;
 }
 
 .force-block {
@@ -383,4 +382,4 @@ ul.dragableFeeds {
 	float: none;
 	clear: both;
 }
-
+</cfoutput>
