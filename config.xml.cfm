@@ -514,8 +514,8 @@
 				<attribute
 					name="mbt-sprites-iconWhiteSpritePath"
 					label="@iconWhiteSpritePath"
-					hint="Defaults to ../img/glyphicons-halflings-white.png"
-					defaultValue="../img/glyphicons-halflings-white.png"
+					hint="Defaults to ../../bootstrap/img/glyphicons-halflings-white.png"
+					defaultValue="../../bootstrap/img/glyphicons-halflings-white.png"
 					required="true" />
 
 			</attributeset>
