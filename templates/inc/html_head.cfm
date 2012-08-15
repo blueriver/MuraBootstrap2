@@ -20,15 +20,15 @@
     <link href="#$.siteConfig('assetPath')#/css/mura.min.css" rel="stylesheet">
 
     <!--- Theme styles - includes Twitter Bootstrap & any modifications, along with responsive styles & fonts --->
-   <!---  <link href="#$.siteConfig('themeAssetPath')#/css/theme/theme.css" rel="stylesheet"> --->
+    <link href="#$.siteConfig('themeAssetPath')#/css/theme/theme.css" rel="stylesheet">
 
-
+    <!---
         <cf_CacheOMatic key="globalheadercss">
             #$.static()
             .include("/css/theme/")
             .renderIncludes("css")#
         </cf_CacheOMatic>
-
+    --->
 
 
     <!--- IE SHIM - for IE6-8 support of HTML5 elements

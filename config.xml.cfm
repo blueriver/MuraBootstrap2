@@ -507,8 +507,8 @@
 				<attribute
 					name="mbt-sprites-iconSpritePath"
 					label="@iconSpritePath"
-					hint="Defaults to ../img/glyphicons-halflings.png"
-					defaultValue="../img/glyphicons-halflings.png"
+					hint="Defaults to ../../bootstrap/img/glyphicons-halflings.png"
+					defaultValue="../../bootstrap/img/glyphicons-halflings.png"
 					required="true" />
 
 				<attribute
