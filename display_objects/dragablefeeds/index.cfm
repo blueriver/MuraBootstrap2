@@ -76,11 +76,12 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 
 
 <#$.getHeaderTag('subHead1')# class="addFeeds">#$.rbKey('dragablefeeds.wantmore')#</#$.getHeaderTag('subHead1')#>
-<div class="well clearfix">
-	<form method="post" action="##" class="form-inline">
-		<fieldset id="rssInternal" class="pull-left">
-			<!---<label class="force-block">#$.rbKey('dragablefeeds.selectafeed')#</label>--->
-			<select name="rssURL" class="span3">
+<div id="svAddNewFeed" class="clearfix">
+	<form method="post" action="##">
+		<dl id="rssInternal">
+			<dt>#$.rbKey('dragablefeeds.selectafeed')#</dt>
+			<dd>
+			<select name="rssURL">
 				<option value="">#$.rbKey('dragablefeeds.selectafeed')#</option>
 				<cfoutput>
 				<optgroup label="Our Favorites">
@@ -95,13 +96,16 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 				</cfloop>
 				</cfoutput>
 			</select>
-			<button class="btn" type="button" onclick="createFeed(this.form)" value="#$.rbKey('dragablefeeds.addfeed')#"><i class="icon-plus-sign"></i> #$.rbKey('dragablefeeds.addfeed')#</button>
-			</fieldset>
-		<fieldset id="rssExternal" class="pull-right">
-			<!---<label class="force-block">#$.rbKey('dragablefeeds.addyourown')#</label>--->
-			<input type="text" class="text span3" name="rssURLtext" size="30" placeholder="#$.rbKey('dragablefeeds.addyourown')#" value="" maxlength="255">
-			<button class="btn" type="button" onclick="createFeed(this.form)" value="#$.rbKey('dragablefeeds.addfeed')#"><i class="icon-plus-sign"></i> #$.rbKey('dragablefeeds.addfeed')#</button>
-		</fieldset>
+			<button class="submit" type="button" onclick="createFeed(this.form)" value="Create">#$.rbKey('dragablefeeds.addfeed')#</button>
+			</dd>
+		</dl>
+		<dl id="rssExternal">
+			<dt>#$.rbKey('dragablefeeds.addyourown')#</dt>
+			<dd class="textField">
+			<input type="text" name="rssURLtext" size="30" value="" maxlength="255">
+			<button class="submit" type="button" onclick="createFeed(this.form)" value="Create">#$.rbKey('dragablefeeds.addfeed')#</button>
+			</dd>
+		</dl>
 	</form>
 </div>
 

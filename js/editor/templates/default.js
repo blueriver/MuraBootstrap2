@@ -2,7 +2,7 @@
 Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
-	
+
 // Register a templates definition set named "default".
 CKEDITOR.addTemplates( 'default',
 {
@@ -23,11 +23,11 @@ CKEDITOR.addTemplates( 'default',
                                             '<h3>Edit or Delete Header</h3>'+
                                           '<p>Content for the first column goes here.</p>' +
                                           '</div>' +
-                                            
+
                                             '<div class="col">' +
                                             '<h3>Edit or Delete Header</h3>'+
                                           '<p>Content for the second column goes here.</p>' +
-                                            
+
                                     '</div>'
                     },
                     {
@@ -40,7 +40,7 @@ CKEDITOR.addTemplates( 'default',
                                             '<h3>Edit or Delete Header</h3>'+
                                           '<p>Content for the first column goes here.</p>' +
                                           '</div>' +
-                                            
+
                                             '<div class="col">' +
                                             '<h3>Edit or Delete Header</h3>'+
                                           '<p>Content for the second column goes here.</p>' +
@@ -62,7 +62,7 @@ CKEDITOR.addTemplates( 'default',
                                             '<h3>Edit or Delete Header</h3>'+
                                           '<p>Content for the first column goes here.</p>' +
                                           '</div>' +
-                                            
+
                                             '<div class="col">' +
                                             '<h3>Edit or Delete Header</h3>'+
                                           '<p>Content for the second column goes here.</p>' +

@@ -4,6 +4,13 @@
 <!-- Placed at the end of the document so the pages load faster -->
 
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+<!--- BOOTSTRAP DOC STYLES
+      These should be used only to show sample data --->
+<script src="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/js/google-code-prettify/prettify.js"></script>
+
+
 <script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-transition.js"></script>
 <script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-alert.js"></script>
 <script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-modal.js"></script>
@@ -16,5 +23,6 @@
 <script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-collapse.js"></script>
 <script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-carousel.js"></script>
 <script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-typeahead.js"></script>
-<!--- <script src="#$.siteConfig('themeAssetPath')#/js/application.js"></script> --->
+<script src="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/js/application.js"></script>
+
 </cfoutput>
