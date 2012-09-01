@@ -20,7 +20,7 @@ CKEDITOR.stylesSet.add( 'default',
 	{ name : 'Heading 6'		, element : 'h6' },
 	{ name : 'Preformatted Text', element : 'pre' },
 	{ name : 'Address'			, element : 'address' },
-	*/
+
 
 	{ name : 'Intro Paragraph'		, element : 'p', attributes : { 'class' : 'intro' } },
 	{ name : 'Center Text'          , element : 'p', attributes : { 'class' : 'center' } },

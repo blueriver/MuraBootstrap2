@@ -14,7 +14,7 @@ CKEDITOR.addTemplates( 'default',
     templates :
             [
                     {
-                            title: '2 Columns',
+                            title: 'Testing 123 Columns',
                             image: 'template-cols2.gif',
                             description: 'An area with 2 equally wide columns',
                             html:

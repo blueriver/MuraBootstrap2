@@ -10,7 +10,7 @@
 
 // Shim Variables
 @themePath:		'#$.siteConfig('themeAssetPath')#';
-@PIE:		'#$.siteConfig('themeAssetPath')#/css/PIE.htc';
+@PIE:		'#$.siteConfig('themeAssetPath')#/css/mura/PIE.htc';
 
 // Make all Bootstrap main mixins PIE compatible
 // --------------------------------------------------------
