@@ -20,7 +20,7 @@ CKEDITOR.stylesSet.add( 'default',
 	{ name : 'Heading 6'		, element : 'h6' },
 	{ name : 'Preformatted Text', element : 'pre' },
 	{ name : 'Address'			, element : 'address' },
-	*/
+
 
 	{ name : 'Intro Paragraph'		, element : 'p', attributes : { 'class' : 'intro' } },
 	{ name : 'Center Text'          , element : 'p', attributes : { 'class' : 'center' } },
@@ -38,7 +38,7 @@ CKEDITOR.stylesSet.add( 'default',
 	{ name : 'Subscript'		, element : 'sub' },
 	{ name : 'Superscript'		, element : 'sup' },
 	*/
-	
+
 	{ name : 'Notice'	, element : 'span', styles : { 'class' : 'notice' } },
 	{ name : 'Success'	, element : 'span', styles : { 'class' : 'success' } },
 	{ name : 'Error'	, element : 'span', styles : { 'class' : 'error' } },
@@ -54,7 +54,7 @@ CKEDITOR.stylesSet.add( 'default',
 	{ name : 'Keyboard Phrase'	, element : 'kbd' },
 	{ name : 'Sample Text'		, element : 'samp' },
 	{ name : 'Variable'			, element : 'var' },*/
-	
+
 	{ name : 'Computer Code'	, element : 'code' },
 	{ name : 'Deleted Text'		, element : 'del' },
 	{ name : 'Inserted Text'	, element : 'ins' },

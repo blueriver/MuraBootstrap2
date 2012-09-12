@@ -13,7 +13,7 @@
         <div class="nav-collapse">
           <cf_CacheOMatic key="dspPrimaryNav#$.content('contentid')#">
           	#$.dspPrimaryNav(
-          		viewDepth="1", 
+          		viewDepth="1",
           		id="navPrimary",
           		displayHome="Never",
           		closePortals="false",
@@ -28,8 +28,8 @@
           	)#
          </cf_cacheomatic>
     		<!--- Bootstrap only supports 1 level of dropdowns --->
-		    <!--- 
-          Optional named arguments for Primary Nav are: 
+		    <!---
+          Optional named arguments for Primary Nav are:
           displayHome="Always/Never/Conditional"
           openPortals/closePortals="contentid,contentid" (i.e. show specific sub-content in dropdown nav)
 	       --->
@@ -40,7 +40,7 @@
         		<input type="hidden" name="noCache" value="1" />
         		<!---<input type="submit" class="btn btn-small" value="Search" />--->
           </form>
-        </div> 
+        </div>
       </div>
     </div>
   </div>
