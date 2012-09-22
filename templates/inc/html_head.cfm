@@ -21,6 +21,7 @@
 
     <!--- Theme styles - includes Twitter Bootstrap & any modifications, along with responsive styles & fonts --->
     <link href="#$.siteConfig('themeAssetPath')#/css/theme/theme.css" rel="stylesheet">
+    <!--- <link href="//netdna.bootstrapcdn.com/bootswatch/2.1.0/amelia/bootstrap.min.css" rel="stylesheet"> --->
 
     <!---
         <cf_CacheOMatic key="globalheadercss">
