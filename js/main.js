@@ -6,13 +6,19 @@
 
 $(window).load(function () {
 
+    // make code pretty (optional: you can leave out if you want)
+    window.prettyPrint && prettyPrint()
+
 	//-----------------------------------------------------------------------------------
 	//	Caret to navBar - Append a caret to any submenu in the navigation that has a sub
 	//-----------------------------------------------------------------------------------
 
-		// $('#navPrimary > li.dropdown > a').each(function(index, element) {
-		//     $(this).append('<b class="caret"></b>');
-		// });
+		$('li.dropdown > a.dropdown-toggle').each(function(index, element) {
+		    $(this).append('<b class="caret"></b>');
+		});
+
+		$('.dropdown-toggle').dropdown()
+
 
 
 	// //----------------------------------------------------------------------------------------------------

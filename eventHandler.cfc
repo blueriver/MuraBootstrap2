@@ -10,8 +10,8 @@
 
 
 		<!--- This is where the file that will be dyamically. --->
-		<cfset var shimWithVariables="css/mura/shim.site">
-		<cfset var themeVariables="css/theme/theme-variables.site">
+		<cfset var shimWithVariables="css/mura/shim.cfm">
+		<cfset var themeVariables="css/theme/theme-variables.cfm">
 
 		<!--- This is the resulting output will be saved. --->
 		<cfset var shimVarsToLess="css/mura/shim.less">

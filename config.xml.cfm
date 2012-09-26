@@ -1,15 +1,26 @@
 <!--
 	This will add Theme Specific Extended Attributes
-
-	For additional
-	1) Uncomment the extensions node below
-	2) Reload Application
-	3) That's it!
 -->
 <theme>
 
 	<extensions>
 		<extension type="Site">
+			<!--- Bootswatch Options --->
+			<attributeset name="Bootstrap or Bootswatch Options">
+
+				<attribute
+					name="mbt-bootswatch"
+					label="Which Swatch would you like to use, if any?"
+					type="SelectBox"
+					hint="Provides you with a bootswatch option. Defaults to None, which will use the settings from below"
+					defaultValue="None"
+					required="true"
+					optionList="None^Amelia^Cerulean^Cyborg^Journal^Readable^Simplex^Slate^Spacelab^Spruce^Superhero^United"
+					optionLabelList="None^Amelia^Cerulean^Cyborg^Journal^Readable^Simplex^Slate^Spacelab^Spruce^Superhero^United" />
+
+			</attributeset>
+			<!--- End Bootswatch Options --->
+
 
 			<!--- Gray Options --->
 			<attributeset name="Bootstrap Gray Options">
@@ -41,7 +52,6 @@
 					hint="Defaults to #555"
 					defaultValue="#555"
 					required="true" />
-
 
 				<attribute
 					name="mbt-grays-grayLight"
@@ -517,6 +527,16 @@
 					hint="Defaults to ../../bootstrap/img/glyphicons-halflings-white.png"
 					defaultValue="../../bootstrap/img/glyphicons-halflings-white.png"
 					required="true" />
+
+				<attribute
+					name="mbt-sprites-font-awesome"
+					label="Use Font Awesome Instead of Bootstrap Glyphs?"
+					type="SelectBox"
+					hint="This will bypass using Bootstraps icons, and instead will use Font Awesome. Defaults to No."
+					defaultValue="false"
+					required="true"
+					optionList="false^true"
+					optionLabelList="No^Yes" />
 
 			</attributeset>
 			<!--- End Sprite Icons Path Options --->

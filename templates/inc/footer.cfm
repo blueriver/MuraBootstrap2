@@ -16,19 +16,23 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="#$.siteConfig('themeAssetPath')#/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 
-    <!--- Bootstrap JS --->
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-affix.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-alert.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-button.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-carousel.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-collapse.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-dropdown.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-modal.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-popover.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-scrollspy.js"></script>
-	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-tooltip.js"></script>
+    <!--- Bootstrap JS - Ordered like Bootstrap for loading --->
 	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-button.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-carousel.js"></script>
 	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-affix.js"></script>
+
+	<!--- Prettify if you want code coloring --->
+	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/js/google-code-prettify/prettify.js"></script>
 
     <!--- Main JS - Site Specific Scripts --->
 	<script src="#$.siteConfig('themeAssetPath')#/js/main.js"></script>

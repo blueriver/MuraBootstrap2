@@ -14,5 +14,10 @@ CKEDITOR.editorConfig = function( config )
 {
     // config.language = 'fr';
     // config.uiColor = '#AADC6E';
-   
+
+	config.enterMode = CKEDITOR.ENTER_BR;
+	config.shiftEnterMode = CKEDITOR.ENTER_BR;
+	//config.ProtectedSource.Add( /<br[\s\S]*?\/>/g ) ;   // BR Tags
+	config.ignoreEmptyParagraph = true;
+
 };

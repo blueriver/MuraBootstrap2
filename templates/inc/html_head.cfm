@@ -19,6 +19,9 @@
     <!--- Theme styles - includes Twitter Bootstrap & any modifications, along with responsive styles & fonts --->
     <link href="#$.siteConfig('themeAssetPath')#/css/theme/theme.css" rel="stylesheet">
 
+    <!--- Prettify if you want code coloring --->
+    <link href="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
     <!---
         <cf_CacheOMatic key="globalheadercss">
             #$.static()

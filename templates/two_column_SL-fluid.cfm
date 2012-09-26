@@ -16,9 +16,6 @@
 		        </div><!--/span-->
 			</div><!--/row-->
 		<cfinclude template="inc/footer.cfm">
-		<cfinclude template="inc/footer_js.cfm">
 	</body>
 </html>
 </cfoutput>
-
-
