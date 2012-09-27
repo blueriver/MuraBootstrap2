@@ -7929,72 +7929,6 @@ a#svAsset.zip {
   margin-bottom: 1em;
   margin-left: 1em;
 }
-.svCalendar {
-  text-align: center;
-}
-.svCalendar table {
-  width: 100%;
-}
-.svCalendar th {
-  border: 1px solid;
-  font-size: 1em;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 2.2;
-  padding: 0;
-  text-align: center;
-}
-.svCalendar th a {
-  display: block;
-  padding: .25em;
-  text-align: center;
-}
-.svCalendar td {
-  border: 1px solid;
-  font-size: 9px;
-  height: 60px;
-  line-height: 1;
-  padding: .5em;
-  text-align: left;
-  vertical-align: top;
-  width: 14%;
-}
-.svCalendar td ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.svCalendar td ul li a {
-  border: 0;
-  display: block;
-  margin: 2px 0;
-  padding: 0 0 2px;
-  text-align: left;
-  text-decoration: none;
-}
-.svCalendar td ul li a:hover,
-.svCalendar td ul li a#today {
-  text-decoration: underline;
-}
-.svCalendar .dayofweek td {
-  font-style: normal;
-  font-weight: bold;
-  height: auto;
-  line-height: 1.6;
-  padding: .5em;
-  text-align: center;
-}
-#svCalendarNav th {
-  font-size: .9em;
-  line-height: 1.2;
-}
-#svCalendarNav .dayofweek td {
-  line-height: 1.1;
-}
-#svCalendarNav td {
-  height: auto;
-  text-align: center;
-}
 #datePickerContainer {
   margin: 6px auto;
   padding: 0;
@@ -8696,11 +8630,16 @@ form li .cke_skin_mura table {
 .opacity {
   behavior: url('/default/includes/themes/mura-bootstrap/css/mura/PIE.htc');
 }
-#navStandard,
+#navArchive,
 #navMultilevel,
+#navPeer,
 #navPortal,
+#navSequential,
+#navStandard,
+#navSub,
 #svTagCloud,
-#navSub {
+#svFavoritesList,
+#svPageTools {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -8714,19 +8653,55 @@ form li .cke_skin_mura table {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   padding: 8px 0;
 }
-#navStandard blockquote,
+#navArchive blockquote,
 #navMultilevel blockquote,
+#navPeer blockquote,
 #navPortal blockquote,
+#navSequential blockquote,
+#navStandard blockquote,
+#navSub blockquote,
 #svTagCloud blockquote,
-#navSub blockquote {
+#svFavoritesList blockquote,
+#svPageTools blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
-ul.nav li.dropdown:hover ul.dropdown-menu {
-  display: block;
+.content .svIndex {
+  border-top: 0;
+  padding-top: 0;
 }
-.dropdown-menu {
-  margin-top: -1px;
+.svIndex dl {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.svIndex dd {
+  margin-left: 0;
+}
+.svIndex dt.releaseDate {
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: .25em;
+}
+/* @group Calendar
+	===================================== */
+.svCalendar {
+  text-align: center;
+}
+.svCalendar thead {
+  background: #eee;
+}
+.comments,
+.tags,
+.rating {
+  font-size: 12px;
+  line-height: 12px;
+}
+.pagination {
+  margin: 24px 0 18px !important;
+}
+.pagination a {
+  padding: 0 14px;
 }
 body {
   padding-top: 60px;

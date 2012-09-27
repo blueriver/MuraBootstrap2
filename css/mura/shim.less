@@ -93,7 +93,8 @@
 
 
 	// NAV ELEMENTS
-	#navStandard, #navMultilevel, #navPortal, #svTagCloud, #navSub  {
+	#navArchive, #navMultilevel, #navPeer, #navPortal, #navSequential, #navStandard,
+	#navSub, #svTagCloud, #svFavoritesList, #svPageTools {
 		.well;
 		padding: 8px 0;
 	}
@@ -102,13 +103,58 @@
 	// NAVBAR
 
 
-	// use this to allow to hover dropdown menu. remove to force click
-	ul.nav li.dropdown:hover ul.dropdown-menu {
-	    display: block;
+
+
+	// INDEXES
+	.content .svIndex {
+	 	border-top: 0;
+	 	padding-top: 0;
 	}
 
-	// Need to bring up dropdown-menu to negative pixels
-	.dropdown-menu { margin-top: -1px; }
+	.svIndex {
+
+		dl {
+			border-bottom: 1px solid #eeeeee;
+			padding-bottom: 12px;
+			margin-bottom: 12px;
+		}
+
+		dd { margin-left: 0; }
+
+		dt.releaseDate {
+			font-size: 12px;
+			line-height: 1;
+			margin-bottom: .25em;
+		}
+	}
+
+	/* @group Calendar
+	===================================== */
+	.svCalendar {
+		text-align: center;
+
+		thead {
+			background: #eee;
+
+		}
+	}
+
+
+
+
+	.comments, .tags, .rating {
+	 	font-size: 12px;
+	 	line-height: 12px;
+	}
+
+	.pagination {
+		margin: 24px 0 18px !important;
+
+		 a { padding: 0 14px; }
+	}
+
+
+
 
 
 

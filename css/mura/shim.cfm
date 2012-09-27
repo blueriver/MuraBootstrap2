@@ -94,24 +94,118 @@
 
 
 	// NAV ELEMENTS
-	##navStandard, ##navMultilevel, ##navPortal, ##svTagCloud, ##navSub  {
+	##navArchive, ##navMultilevel, ##navPeer, ##navPortal, ##navSequential, ##navStandard,
+	##navSub, ##svTagCloud, ##svFavoritesList, ##svPageTools {
 		.well;
 		padding: 8px 0;
 	}
 
 
 	// NAVBAR
-
+<!---
 	// use this to allow to hover dropdown menu. remove to force click
 	ul.nav li.dropdown:hover ul.dropdown-menu {
 	    display: block;
 	}
 
 	// Need to bring up dropdown-menu to negative pixels
-	.dropdown-menu { margin-top: -1px; }
+	.dropdown-menu { margin-top: -1px; } --->
 
 
 
+	// INDEXES
+	.content .svIndex {
+	 	border-top: 0;
+	 	padding-top: 0;
+	}
+
+	.svIndex {
+
+		dl {
+			border-bottom: 1px solid ##eeeeee;
+			padding-bottom: 12px;
+			margin-bottom: 12px;
+		}
+
+		dd { margin-left: 0; }
+
+		dt.releaseDate {
+			font-size: 12px;
+			line-height: 1;
+			margin-bottom: .25em;
+		}
+	}
+
+	/* @group Calendar
+	===================================== */
+	.svCalendar {
+		text-align: center;
+
+		thead {
+			background: ##eee;
+
+		}
+	}
+<!---
+	.svCalendar {
+
+		table {
+			width: auto;
+
+			thead {
+				background: ##eee;
+
+				th, th a {
+					padding: .5em;
+					line-height: 1.5;
+					text-align: center;
+				}
+			}
+
+			td, th {
+				border: 0;
+				font-size: 12px;
+			}
+
+			table ##previousMonth a,
+			table ##nextMonth a {
+				font-size: 150%;
+				font-weight: normal;
+				padding: 0;
+				line-height: 1.1;
+			}
+
+			.table tbody tr:hover td,
+			.table tbody tr:hover th {
+				background: ##fff;
+			}
+		}
+	}
+
+	##svCalendarNav {
+		th {
+			padding: 0;
+			line-height: 1;
+
+			a {
+				padding: 2px 2px 4px;
+				line-height: 1;
+			}
+		}
+	} --->
+
+
+
+	.comments, .tags, .rating {
+	 	font-size: 12px;
+	 	line-height: 12px;
+	}
+
+	.pagination {
+		margin: 24px 0 18px !important;
+
+		 a { padding: 0 14px; }
+	}
 
 
 
@@ -243,39 +337,7 @@
 	// 	margin-bottom: 1em !important;
 	// }
 
-	// .content .svIndex {
-	// 	padding-top: 0;
-	// 	border-top: 0;
-	// }
 
-	// .svIndex dl {
-	// 	padding-bottom: 12px;
-	// 	margin-bottom: 12px;
-	// 	border-bottom: 1px solid #eeeeee;
-	// }
-
-	// dd {
-	// 	margin-left: 0;
-	// }
-
-	// .svIndex dt.releaseDate {
-	// 	font-size: 12px;
-	// 	margin-bottom: .25em;
-	// 	line-height: 1;
-	// }
-
-	// .comments, .tags, .rating {
-	// 	font-size: 12px;
-	// 	line-height: 12px;
-	// }
-
-	// .pagination {
-	// 	margin: 24px 0 18px !important;
-
-	// 	 a {
-	// 		padding: 0 14px;
-	// 	}
-	// }
 
 	// .moreResults dt {
 	// 	font-size: 12px;
@@ -310,51 +372,7 @@
 	// 	}
 	// }
 
-	// /* @group Calendar
-	// ===================================== */
 
-	// .svCalendar {
-	// 	thead {
-	// 		background: #eee;
-
-	// 		th, th a {
-	// 			padding: .5em;
-	// 			line-height: 1.5;
-	// 			text-align: center;
-	// 		}
-	// 	}
-
-	// 	td, th {
-	// 		border: 0;
-	// 		font-size: 12px;
-	// 	}
-
-	// 	table ##previousMonth a,
-	// 	table ##nextMonth a {
-	// 		font-size: 150%;
-	// 		font-weight: normal;
-	// 		padding: 0;
-	// 		line-height: 1.1;
-	// 	}
-
-	// 	.table tbody tr:hover td,
-	// 	.table tbody tr:hover th {
-	// 		background: #fff;
-	// 	}
-
-	// }
-
-	// ##svCalendarNav {
-	// 	th {
-	// 		padding: 0;
-	// 		line-height: 1;
-
-	// 		a {
-	// 			padding: 2px 2px 4px;
-	// 			line-height: 1;
-	// 		}
-	// 	}
-	// }
 
 	// .table-bordered {
 	// 	th, td {
