@@ -64,69 +64,64 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 		<p class="response success">#variables.$.rbKey('mailinglist.hasbeenvalidated')#</p>
 	<cfelse>
 
-		  <div class="control-group">
-		    <label class="control-label" for="inputEmail">Email</label>
-		    <div class="controls">
-		      <input type="text" id="inputEmail" placeholder="Email">
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <label class="control-label" for="inputPassword">Password</label>
-		    <div class="controls">
-		      <input type="password" id="inputPassword" placeholder="Password">
-		    </div>
-		  </div>
-		  <div class="control-group">
-		    <div class="controls">
-		      <label class="checkbox">
-		        <input type="checkbox"> Remember me
-		      </label>
-		      <button type="submit" class="btn">Sign in</button>
-		    </div>
-		  </div>
-
-
-		<form id="frmEmailMaster" class="form-horizontal" name="frmEmailMaster" action="?nocache=1" method="post" onsubmit="return validate(this);" novalidate="novalidate" >
+		<form id="frmEmailMaster" name="frmEmailMaster" action="?nocache=1" method="post" onsubmit="return validate(this);" novalidate="novalidate" >
 			<fieldset>
 				<legend>#variables.$.rbKey('mailinglist.mydetails')#</legend>
 				<div class="control-group">
 					<label class="control-label" for="txtNameFirst">#variables.$.rbKey('mailinglist.fname')#<ins> (#variables.$.rbKey('mailinglist.required')#)</ins></label>
-					<input id="txtNameFirst" placeholder="#variables.$.rbKey('mailinglist.fname')#" type="text" name="fname" maxlength="50" required="true" message="#HTMLEditFormat(variables.$.rbKey('mailinglist.fnamerequired'))#" />
+		    		<div class="controls">
+						<input id="txtNameFirst" placeholder="#variables.$.rbKey('mailinglist.fname')#" type="text" name="fname" maxlength="50" required="true" message="#HTMLEditFormat(variables.$.rbKey('mailinglist.fnamerequired'))#" />
+					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" for="txtNameLast">#variables.$.rbKey('mailinglist.lname')#<ins> (#variables.$.rbKey('mailinglist.required')#)</ins></label>
-					<input id="txtNameLast" placeholder="#variables.$.rbKey('mailinglist.lname')#" type="text" name="lname" maxlength="50" required="true" message="#HTMLEditFormat(variables.$.rbKey('mailinglist.lnamerequired'))#" />
+		    		<div class="controls">
+						<input id="txtNameLast" placeholder="#variables.$.rbKey('mailinglist.lname')#" type="text" name="lname" maxlength="50" required="true" message="#HTMLEditFormat(variables.$.rbKey('mailinglist.lnamerequired'))#" />
+					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" for="txtCompany">#variables.$.rbKey('mailinglist.company')#</label>
-					<input id="txtCompany" placeholder="#variables.$.rbKey('mailinglist.company')#" type="text" name="company" maxlength="50" />
+		    		<div class="controls">
+						<input id="txtCompany" placeholder="#variables.$.rbKey('mailinglist.company')#" type="text" name="company" maxlength="50" />
+					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" for="txtEmail">#variables.$.rbKey('mailinglist.email')#<ins> (#variables.$.rbKey('mailinglist.required')#)</ins></label>
-					<input id="txtEmail" placeholder="#variables.$.rbKey('mailinglist.email')#" type="text" name="email" maxlength="50" required="true" validate="email" message="#HTMLEditFormat(variables.$.rbKey('mailinglist.emailvalidate'))#" />
+		    		<div class="controls">
+						<input id="txtEmail" placeholder="#variables.$.rbKey('mailinglist.email')#" type="text" name="email" maxlength="50" required="true" validate="email" message="#HTMLEditFormat(variables.$.rbKey('mailinglist.emailvalidate'))#" />
+					</div>
 				</div>
 			</fieldset>
+
 			<fieldset>
 				<legend>Subscription Settings</legend>
-
-				<ol id="subSettings" class="stack"><cfset variables.loopcount = 1><cfloop query="variables.rslist">
-					<li>
-						<input id="mlid#variables.loopcount#" class="checkbox" type="checkbox" name="mlid" value="#variables.rslist.mlid#" <cfif listfind(variables.$.event('mlid'),variables.rslist.mlid)>checked="checked"</cfif> />
-						<label for="mlid#variables.loopcount#">#variables.rslist.name#</label>
-						<cfif #variables.rslist.description# neq ''><p class="inputNote">#variables.rslist.description#</p></cfif>
-					</li>
-				<cfset variables.loopcount = variables.loopcount + 1></cfloop></ol>
+				<div id="subSettings">
+					<cfset variables.loopcount = 1>
+					<cfloop query="variables.rslist">
+						<div class="control-group">
+							<div class="controls">
+								<label class="checkbox" for="mlid#variables.loopcount#">
+								<input id="mlid#variables.loopcount#" type="checkbox" name="mlid" value="#variables.rslist.mlid#" <cfif listfind(variables.$.event('mlid'),variables.rslist.mlid)>checked="checked"</cfif> />#variables.rslist.name#</label>
+								<cfif #variables.rslist.description# neq ''><p class="help-block">#variables.rslist.description#</p></cfif>
+							</div>
+						</div>
+						<cfset variables.loopcount = variables.loopcount + 1>
+					</cfloop>
+				</div>
 			</fieldset>
-			<div class="buttons">
-				<input type="hidden" name="siteid" value="#variables.$.event('siteID')#" />
-				<input type="hidden" name="doaction" value="masterSubscribe" />
-				<input type="hidden" name="linkServID" value="#variables.$.content('contentID')#" />
-				<input type="submit" class="submit" value="#HTMLEditFormat(variables.$.rbKey('mailinglist.submit'))#" />
+
+			<div class="control-group">
+				<div class="controls">
+					<input type="hidden" name="siteid" value="#variables.$.event('siteID')#" />
+					<input type="hidden" name="doaction" value="masterSubscribe" />
+					<input type="hidden" name="linkServID" value="#variables.$.content('contentID')#" />
+					<button type="submit" class="btn" />#HTMLEditFormat(variables.$.rbKey('mailinglist.submit'))#</button>
+				</div>
 			</div>
-				<cfoutput>#variables.$.dspObject_Include(thefile='dsp_form_protect.cfm')#</cfoutput>
+			<cfoutput>#variables.$.dspObject_Include(thefile='dsp_form_protect.cfm')#</cfoutput>
 		</form>
 	</cfif>
 </div>
