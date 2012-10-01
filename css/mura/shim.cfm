@@ -1,6 +1,6 @@
 <cfoutput>
 
-	// BOOTSTRAP & MURA IMPORTS
+	// BOOTSTRAP and MURA IMPORTS
 	// The imports below bring in a fresh copy of Bootstrap and the core Mura file
 	// NOTE: Alternatively, a static version of Bootstrap can replace first two line
 	// -----------------------------------------------------------------------------
@@ -96,21 +96,19 @@
 	// NAV ELEMENTS
 	##navArchive, ##navMultilevel, ##navPeer, ##navPortal, ##navSequential, ##navStandard,
 	##navSub, ##svTagCloud, ##svFavoritesList, ##svPageTools {
-		.well;
 		padding: 8px 0;
 	}
 
 
-	// NAVBAR
 <!---
-	// use this to allow to hover dropdown menu. remove to force click
-	ul.nav li.dropdown:hover ul.dropdown-menu {
-	    display: block;
-	}
+	// NAVBAR
+	// use this to allow to hover dropdown menu if you don't wnat to use JQuery. Remove to force click
+	ul.nav li.dropdown:hover ul.dropdown-menu { display: block; }
 
 	// Need to bring up dropdown-menu to negative pixels
-	.dropdown-menu { margin-top: -1px; } --->
-
+	.dropdown-menu { margin-top: -1px; }
+	//end NAVBAR
+ --->
 
 
 	// INDEXES
@@ -135,44 +133,40 @@
 			margin-bottom: .25em;
 		}
 	}
+	//end INDEXES
 
-	/* @group Calendar
-	===================================== */
+
+	// CALENDAR
 	.svCalendar {
 		text-align: center;
 
-		thead {
-			background: ##eee;
-
-		}
-	}
-<!---
-	.svCalendar {
-
 		table {
-			width: auto;
 
 			thead {
 				background: ##eee;
 
 				th, th a {
-					padding: .5em;
 					line-height: 1.5;
+					padding: .5em;
 					text-align: center;
 				}
 			}
 
 			td, th {
-				border: 0;
-				font-size: 12px;
+				border-collapse: collapse;
+				border-left: 1px solid ##DDD;
+				border-top: 1px solid ##DDD;
+				border-bottom: 1px solid ##DDD;
+				border-right: 0;
+				font-size: inherit;
 			}
 
 			table ##previousMonth a,
 			table ##nextMonth a {
-				font-size: 150%;
 				font-weight: normal;
-				padding: 0;
+				font-size: 150%;
 				line-height: 1.1;
+				padding: 0;
 			}
 
 			.table tbody tr:hover td,
@@ -184,17 +178,16 @@
 
 	##svCalendarNav {
 		th {
-			padding: 0;
 			line-height: 1;
+			padding: 0;
 
 			a {
-				padding: 2px 2px 4px;
 				line-height: 1;
+				padding: 2px 2px 4px;
 			}
 		}
-	} --->
-
-
+	}
+	//end CALENDAR
 
 	.comments, .tags, .rating {
 	 	font-size: 12px;
@@ -207,7 +200,17 @@
 		 a { padding: 0 14px; }
 	}
 
+	// LOGIN
+	##svLoginContainer {
+		margin: 0;
+		width: auto;
 
+		##login label, ##sendLogin label {
+			float: left;
+		}
+
+
+	}
 
 
 <!---

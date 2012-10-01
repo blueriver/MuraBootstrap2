@@ -318,94 +318,94 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 	}
 	//end Associated Image
 
-	// // Calendar
-	// // Commented out for Bootstrap ease
-	// .svCalendar {
-	// 	text-align: center;
+	// Calendar
+	// Commented out for Bootstrap ease
+	.svCalendar {
+		text-align: center;
 
-	// 	table { width: 100%; }
+		table { width: 100%; }
 
-	// 	th {
-	// 		border: 1px solid;
-	// 		font-size: 1em;
-	// 		font-style: normal;
-	// 		font-weight: bold;
-	// 		line-height: 2.2;
-	// 		padding: 0;
-	// 		text-align: center;
+		th {
+			border: 1px solid;
+			font-size: 1em;
+			font-style: normal;
+			font-weight: bold;
+			line-height: 2.2;
+			padding: 0;
+			text-align: center;
 
-	// 		 a {
-	// 			display: block;
-	// 			padding: .25em;
-	// 			text-align: center;
-	// 			a:hover {}
-	// 		}
-	// 	}
+			 a {
+				display: block;
+				padding: .25em;
+				text-align: center;
+				a:hover {}
+			}
+		}
 
-	// 	td {
-	// 		border: 1px solid;
-	// 		font-size: 9px;
-	// 		height: 60px;
-	// 		line-height: 1;
-	// 		padding: .5em;
-	// 		text-align: left;
-	// 		vertical-align: top;
-	// 		width: 14%;
+		td {
+			border: 1px solid;
+			font-size: 9px;
+			height: 60px;
+			line-height: 1;
+			padding: .5em;
+			text-align: left;
+			vertical-align: top;
+			width: 14%;
 
-	// 		.date {}
+			.date {}
 
-	// 		ul {
-	// 			list-style: none;
-	// 			margin: 0;
-	// 			padding: 0;
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
 
-	// 			li a {
-	// 				border: 0;
-	// 				display: block;
-	// 				margin: 2px 0;
-	// 				padding: 0 0 2px;
-	// 				text-align: left;
-	// 				text-decoration: none;
+				li a {
+					border: 0;
+					display: block;
+					margin: 2px 0;
+					padding: 0 0 2px;
+					text-align: left;
+					text-decoration: none;
 
-	// 				&:hover,
-	// 				&#today { text-decoration: underline; }
-	// 			}
-	// 		}
-	// 	}
-	// 	//end td
+					&:hover,
+					&#today { text-decoration: underline; }
+				}
+			}
+		}
+		//end td
 
-	// 	.dayofweek td {
-	// 		font-style: normal;
-	// 		font-weight: bold;
-	// 		height: auto;
-	// 		line-height: 1.6;
-	// 		padding: .5em;
-	// 		text-align: center;
+		.dayofweek td {
+			font-style: normal;
+			font-weight: bold;
+			height: auto;
+			line-height: 1.6;
+			padding: .5em;
+			text-align: center;
 
-	// 		a {}
-	// 	}
+			a {}
+		}
 
-	// }
-	// //end Calendar
+	}
+	//end Calendar
 
 
-	// // Calendar Nav
-	// #svCalendarNav {
+	// Calendar Nav
+	#svCalendarNav {
 
-	// 	th {
-	// 		font-size: .9em;
-	// 		line-height: 1.2;
-	// 	}
+		th {
+			font-size: .9em;
+			line-height: 1.2;
+		}
 
-	// 	.dayofweek td { line-height: 1.1; }
+		.dayofweek td { line-height: 1.1; }
 
-	// 	td {
-	// 		height: auto;
-	// 		text-align: center;
-	// 	}
+		td {
+			height: auto;
+			text-align: center;
+		}
 
-	// }
-	// //end Calendar Nav
+	}
+	//end Calendar Nav
 
 
 	// Calendar Date Picker
@@ -545,27 +545,28 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 
 
 	// Gallery
+	// TODO: Strip any layout rules, and leave that up to the theme's scaffolding.
 	#svGallery {
 
 		ul {
-			list-style: none;
-			margin: 0;
+			// list-style: none;
+			// margin: 0;
 
 			li {
 				/* width : auto; Width is set dynamically in /includes/display_objects/gallery/htmlhead/gallery.cfm */
 				/* Height is being set by jQuery based on the rendered height of the <li> to avoid float issues. */
-				_height: 1%; /* IE 6 & lower */
-				display: -moz-inline-stack; /* FF 2 */
-				display: inline-block;
-				*display: inline; /* IE 7 & lower */
+				// _height: 1%; /* IE 6 & lower */
+				// display: -moz-inline-stack; /* FF 2 */
+				// display: inline-block;
+				// *display: inline; /* IE 7 & lower */
 				font-size: 1.1em;
-				list-style: none;
-				float: left;
-				margin: 0 2% 0 0;
-				overflow: hidden;
-				padding: 0 0 1.5em;
+				// list-style: none;
+				// float: left;
+				// margin: 0 2% 0 0;
+				// overflow: hidden;
+				// padding: 0 0 1.5em;
 				text-align: center;
-				zoom: 1; /* Trigger hasLayout for IE */
+				// zoom: 1; /* Trigger hasLayout for IE */
 
 				a {
 					display: block;

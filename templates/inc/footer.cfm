@@ -12,9 +12,10 @@
 	<!--- JS - Should be compiled by local compiler or cfstatic
 	=========================================================== --->
 
-    <!--- JQuery --->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="#$.siteConfig('themeAssetPath')#/js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+    <!--- JQuery - Uncomment this if you want to load at footer, but set jsLib to false in theme root contentRenderer.
+    	  Otherwise, you'll end up with two JQuery libraries which will cause conflicts --->
+    <!---<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="#$.siteConfig('themeAssetPath')#/js/vendor/jquery-1.8.0.min.js"><\/script>')</script> --->
 
     <!--- Bootstrap JS - Ordered like Bootstrap for loading --->
 	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/js/bootstrap-transition.js"></script>

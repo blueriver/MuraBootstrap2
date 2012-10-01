@@ -22,6 +22,43 @@
 			<!--- End Bootswatch Options --->
 
 
+			<!--- Bootstrap Gallery Options --->
+			<attributeset name="Bootstrap Gallery Options">
+
+				<attribute
+					name="mbt-gallery-span"
+					label="How many columns per row would you like in your gallery?"
+					type="SelectBox"
+					hint="Each column is equal to a Bootstrap Span, and will default with the smallest image size. Therefore, make the size of the image being set in site settings for the small size image is equal do the width of the column number (span width) you've chosen. Refer to the bootstrap scaffolding documentation page for exact pixel width for each span"
+					defaultValue="span3"
+					required="true"
+					optionList="span1^span2^span3^span4^span5^span6^span7^span8^span9^span10^span11^span12"
+					optionLabelList="1^2^3^4^5^6^7^8^9^10^11^12" />
+
+				<attribute
+					name="mbt-gallery-showTitle"
+					label="How many columns per row would you like in your gallery?"
+					type="SelectBox"
+					hint="This will show or hide a title for each photo in the gallery"
+					defaultValue="true"
+					required="true"
+					optionList="true^false"
+					optionLabelList="Show^Hide" />
+
+				<attribute
+					name="mbt-gallery-showSummary"
+					label="Show summary if there is one?"
+					type="SelectBox"
+					hint="This will show or hide a summary for each photo in the gallery if there is one for the image"
+					defaultValue="false"
+					required="true"
+					optionList="true^false"
+					optionLabelList="Show^Hide" />
+
+			</attributeset>
+			<!--- End Bootstrap Gallery Options --->
+
+
 			<!--- Gray Options --->
 			<attributeset name="Bootstrap Gray Options">
 

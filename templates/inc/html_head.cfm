@@ -25,7 +25,7 @@
     <!---
         <cf_CacheOMatic key="globalheadercss">
             #$.static()
-            .include("/css/theme/")
+            .include("/css/theme/theme.less")
             .renderIncludes("css")#
         </cf_CacheOMatic>
     --->

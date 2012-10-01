@@ -52,17 +52,30 @@
 		<cfargument name="$">
 		<cfset var renderer=$.getContentRenderer()>
 
+		<!--- General Vars --->
+		<cfset renderer.generalWrapperClass="well"/>
+
+		<!--- Heading Vars --->
 		<cfset renderer.headline="h1"/>
 		<cfset renderer.subHead1="h2"/>
 		<cfset renderer.subHead2="h3"/>
 		<cfset renderer.subHead3="h4"/>
 		<cfset renderer.subHead4="h5"/>
 		<cfset renderer.subHead5="h6"/>
+
+		<!--- Nav and List Item Vars --->
+		<cfset renderer.navWrapperClass="well">
 		<cfset renderer.liCurrentClass="active">
 		<cfset renderer.aCurrentClass="active">
 		<cfset renderer.ulTopClass="nav nav-list">
 		<cfset renderer.ulNestedClass="nav nav-list">
-		<cfset renderer.ulPaginationClass="pagination">
+
+		<!--- Pagination Vars --->
+		<cfset renderer.ulPaginationClass="">
+		<cfset renderer.ulPaginationWrapperClass="pagination">
+
+		<!--- Form Vars --->
+		<cfset renderer.formWrapperClass="well"/>
 
 	</cffunction>
 
