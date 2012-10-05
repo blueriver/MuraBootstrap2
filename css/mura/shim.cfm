@@ -80,6 +80,7 @@
 
 	// Shim Variables
 	@themePath:		'#$.siteConfig('themeAssetPath')#';
+	@imagePath:		'#$.siteConfig('themeAssetPath')#/images/';
 	@PIE:			'#$.siteConfig('themeAssetPath')#/css/mura/PIE.htc';
 
 

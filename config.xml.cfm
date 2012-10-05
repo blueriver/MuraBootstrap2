@@ -4,23 +4,8 @@
 <theme>
 
 	<extensions>
-		<extension type="Site">
-			<!--- Bootswatch Options --->
-			<attributeset name="Bootstrap or Bootswatch Options">
 
-				<attribute
-					name="mbt-bootswatch"
-					label="Which Swatch would you like to use, if any?"
-					type="SelectBox"
-					hint="Provides you with a bootswatch option. Defaults to None, which will use the settings from below"
-					defaultValue="None"
-					required="true"
-					optionList="None^Amelia^Cerulean^Cyborg^Journal^Readable^Simplex^Slate^Spacelab^Spruce^Superhero^United"
-					optionLabelList="None^Amelia^Cerulean^Cyborg^Journal^Readable^Simplex^Slate^Spacelab^Spruce^Superhero^United" />
-
-			</attributeset>
-			<!--- End Bootswatch Options --->
-
+		<extension type="Gallery">
 
 			<!--- Bootstrap Gallery Options --->
 			<attributeset name="Bootstrap Gallery Options">
@@ -37,7 +22,7 @@
 
 				<attribute
 					name="mbt-gallery-showTitle"
-					label="How many columns per row would you like in your gallery?"
+					label="Show the title of each image?"
 					type="SelectBox"
 					hint="This will show or hide a title for each photo in the gallery"
 					defaultValue="true"
@@ -57,6 +42,26 @@
 
 			</attributeset>
 			<!--- End Bootstrap Gallery Options --->
+
+		</extension>
+
+
+		<extension type="Site">
+			<!--- Bootswatch Options --->
+			<attributeset name="Bootstrap or Bootswatch Options">
+
+				<attribute
+					name="mbt-bootswatch"
+					label="Which Swatch would you like to use, if any?"
+					type="SelectBox"
+					hint="Provides you with a bootswatch option. Defaults to None, which will use the settings from below"
+					defaultValue="None"
+					required="true"
+					optionList="None^Amelia^Cerulean^Cyborg^Journal^Readable^Simplex^Slate^Spacelab^Spruce^Superhero^United"
+					optionLabelList="None^Amelia^Cerulean^Cyborg^Journal^Readable^Simplex^Slate^Spacelab^Spruce^Superhero^United" />
+
+			</attributeset>
+			<!--- End Bootswatch Options --->
 
 
 			<!--- Gray Options --->
