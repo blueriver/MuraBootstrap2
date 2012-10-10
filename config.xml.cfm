@@ -1,15 +1,78 @@
 <!--
 	This will add Theme Specific Extended Attributes
-
-	For additional
-	1) Uncomment the extensions node below
-	2) Reload Application
-	3) That's it!
 -->
 <theme>
 
 	<extensions>
+
+		<extension type="Gallery">
+
+			<!--- Bootstrap Gallery Options --->
+			<attributeset name="Bootstrap Gallery Options">
+
+				<attribute
+					name="mbt-gallery-span"
+					label="How many columns per row would you like in your gallery?"
+					type="SelectBox"
+					hint="Each column is equal to a Bootstrap Span, and will default with the smallest image size. Therefore, make the size of the image being set in site settings for the small size image is equal do the width of the column number (span width) you've chosen. Refer to the bootstrap scaffolding documentation page for exact pixel width for each span"
+					defaultValue="span3"
+					required="true"
+					optionList="span1^span2^span3^span4^span5^span6^span7^span8^span9^span10^span11^span12"
+					optionLabelList="1^2^3^4^5^6^7^8^9^10^11^12" />
+
+				<attribute
+					name="mbt-gallery-showTitle"
+					label="Show the title of each image?"
+					type="SelectBox"
+					hint="This will show or hide a title for each photo in the gallery"
+					defaultValue="true"
+					required="true"
+					optionList="true^false"
+					optionLabelList="Show^Hide" />
+
+				<attribute
+					name="mbt-gallery-showSummary"
+					label="Show summary if there is one?"
+					type="SelectBox"
+					hint="This will show or hide a summary for each photo in the gallery if there is one for the image"
+					defaultValue="false"
+					required="true"
+					optionList="true^false"
+					optionLabelList="Show^Hide" />
+
+				<!--- <attribute
+					name="mbt-gallery-imgStyle"
+					label="Which image style?"
+					type="SelectBox"
+					hint="This gives you an option of how your images will appear. Default is Polaroid. Circle and Round will not work in IE6-8 (unless you use PIE)"
+					defaultValue="img-polaroid"
+					required="true"
+					optionList="img-polaroid^img-circle^img-rounded"
+					optionLabelList="Polaroid^Circle^Round" /> --->
+
+			</attributeset>
+			<!--- End Bootstrap Gallery Options --->
+
+		</extension>
+
+
 		<extension type="Site">
+			<!--- Bootswatch Options --->
+			<attributeset name="Bootstrap or Bootswatch Options">
+
+				<attribute
+					name="mbt-bootswatch"
+					label="Which Swatch would you like to use, if any?"
+					type="SelectBox"
+					hint="Provides you with a bootswatch option. Defaults to None, which will use the settings from below"
+					defaultValue="None"
+					required="true"
+					optionList="None^Amelia^Cerulean^Cyborg^Journal^Readable^Simplex^Slate^Spacelab^Spruce^Superhero^United"
+					optionLabelList="None^Amelia^Cerulean^Cyborg^Journal^Readable^Simplex^Slate^Spacelab^Spruce^Superhero^United" />
+
+			</attributeset>
+			<!--- End Bootswatch Options --->
+
 
 			<!--- Gray Options --->
 			<attributeset name="Bootstrap Gray Options">
@@ -41,7 +104,6 @@
 					hint="Defaults to #555"
 					defaultValue="#555"
 					required="true" />
-
 
 				<attribute
 					name="mbt-grays-grayLight"
@@ -201,8 +263,8 @@
 				<attribute
 					name="mbt-typography-baseFontSize"
 					label="@baseFontSize"
-					hint="Defaults to 13px"
-					defaultValue="13px"
+					hint="Defaults to 14px"
+					defaultValue="14px"
 					required="true" />
 
 				<attribute
@@ -215,8 +277,8 @@
 				<attribute
 					name="mbt-typography-baseLineHeight"
 					label="@baseLineHeight"
-					hint="Defaults to 18px"
-					defaultValue="18px"
+					hint="Defaults to 20px"
+					defaultValue="20px"
 					required="true" />
 
 				<attribute
@@ -306,8 +368,8 @@
 				<attribute
 					name="mbt-buttons-btnBorder"
 					label="@btnBorder"
-					hint="Defaults to #ccc"
-					defaultValue="#ccc"
+					hint="Defaults to #bbb"
+					defaultValue="#bbb"
 					required="true" />
 
 				<attribute
@@ -383,8 +445,8 @@
 				<attribute
 					name="mbt-buttons-btnInverseBackground"
 					label="@btnInverseBackground"
-					hint="Defaults to @gray"
-					defaultValue="@gray"
+					hint="Defaults to #444"
+					defaultValue="#444"
 					required="true" />
 
 				<attribute
@@ -458,6 +520,20 @@
 					required="true" />
 
 				<attribute
+					name="mbt-dropdowns-dropdownDividerTop"
+					label="@dropdownDividerTop"
+					hint="Defaults to #e5e5e5"
+					defaultValue="#e5e5e5"
+					required="true" />
+
+				<attribute
+					name="mbt-dropdowns-dropdownDividerBottom"
+					label="@dropdownDividerBottom"
+					hint="Defaults to @white"
+					defaultValue="@white"
+					required="true" />
+
+				<attribute
 					name="mbt-dropdowns-dropdownLinkColor"
 					label="@dropdownLinkColor"
 					hint="Defaults to @grayDark"
@@ -472,24 +548,24 @@
 					required="true" />
 
 				<attribute
-					name="mbt-dropdowns-dropdownLinkBackgroundHover"
-					label="@dropdownLinkBackgroundHover"
+					name="mbt-dropdowns-dropdownLinkColorActive"
+					label="@dropdownLinkColorActive"
+					hint="Defaults to @dropdownLinkColor"
+					defaultValue="@dropdownLinkColor"
+					required="true" />
+
+				<attribute
+					name="mbt-dropdowns-dropdownLinkBackgroundActive"
+					label="@dropdownLinkBackgroundActive"
 					hint="Defaults to @linkColor"
 					defaultValue="@linkColor"
 					required="true" />
 
 				<attribute
-					name="mbt-dropdowns-dropdownDividerTop"
-					label="@dropdownDividerTop"
-					hint="Defaults to #e5e5e5"
-					defaultValue="#e5e5e5"
-					required="true" />
-
-				<attribute
-					name="mbt-dropdowns-dropdownDividerBottom"
-					label="@dropdownDividerBottom"
-					hint="Defaults to @white"
-					defaultValue="@white"
+					name="mbt-dropdowns-dropdownLinkBackgroundHover"
+					label="@dropdownLinkBackgroundHover"
+					hint="Defaults to @dropdownLinkBackgroundActive"
+					defaultValue="@dropdownLinkBackgroundActive"
 					required="true" />
 
 			</attributeset>
@@ -517,6 +593,16 @@
 					hint="Defaults to ../../bootstrap/img/glyphicons-halflings-white.png"
 					defaultValue="../../bootstrap/img/glyphicons-halflings-white.png"
 					required="true" />
+
+				<attribute
+					name="mbt-sprites-font-awesome"
+					label="Use Font Awesome Instead of Bootstrap Glyphs?"
+					type="SelectBox"
+					hint="This will bypass using Bootstraps icons, and instead will use Font Awesome. Defaults to No."
+					defaultValue="false"
+					required="true"
+					optionList="false^true"
+					optionLabelList="No^Yes" />
 
 			</attributeset>
 			<!--- End Sprite Icons Path Options --->
@@ -551,8 +637,44 @@
 			<!--- End HR Border Color Options --->
 
 
+			<!--- Horizontal forms & lists Options --->
+			<attributeset name="Horizontal forms and lists Options">
+
+				<attribute
+					name="mbt-hfl-horizontalComponentOffset"
+					label="@horizontalComponentOffset"
+					hint="Defaults to 180px"
+					defaultValue="180px"
+					required="true" />
+
+			</attributeset>
+			<!--- End Horizontal forms & lists Options --->
+
+
+			<!--- Wells --->
+			<attributeset name="Well Options">
+
+				<attribute
+					name="mbt-wells-wellBackground"
+					label="@wellBackground"
+					hint="Defaults to #f5f5f5"
+					defaultValue="#f5f5f5"
+					required="true" />
+
+			</attributeset>
+			<!--- End Horizontal forms & lists Options --->
+
+
 			<!--- Navbar Options --->
 			<attributeset name="Bootstrap Navbar Options">
+
+				<attribute
+					name="mbt-navbar-navbarCollapseWidth"
+					label="@navbarCollapseWidth"
+					hint="Defaults to 979px"
+					defaultValue="979px"
+					required="true" />
+
 
 				<attribute
 					name="mbt-navbar-navbarHeight"
@@ -562,45 +684,53 @@
 					required="true" />
 
 				<attribute
-					name="mbt-navbar-navbarBackground"
-					label="@navbarBackground"
-					hint="Defaults to @grayDarker"
-					defaultValue="@grayDarker"
+					name="mbt-navbar-navbarBackgroundHighlight"
+					label="@navbarBackgroundHighlight"
+					hint="Defaults to #ffffff"
+					defaultValue="#ffffff"
 					required="true" />
 
 				<attribute
-					name="mbt-navbar-navbarBackgroundHighlight"
-					label="@navbarBackgroundHighlight"
-					hint="Defaults to @grayDark"
-					defaultValue="@grayDark"
+					name="mbt-navbar-navbarBackground"
+					label="@navbarBackground"
+					hint="Defaults to darken(@navbarBackgroundHighlight, 5%)"
+					defaultValue="darken(@navbarBackgroundHighlight, 5%)"
 					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarBorder"
+					label="@navbarBorder"
+					hint="Defaults to darken(@navbarBackground, 12%);"
+					defaultValue="darken(@navbarBackground, 12%)"
+					required="true" />
+
 
 				<attribute
 					name="mbt-navbar-navbarText"
 					label="@navbarText"
-					hint="Defaults to @grayLight"
-					defaultValue="@grayLight"
+					hint="Defaults to #777"
+					defaultValue="#777"
 					required="true" />
 
 				<attribute
 					name="mbt-navbar-navbarLinkColor"
 					label="@navbarLinkColor"
-					hint="Defaults to @grayLight"
-					defaultValue="@grayLight"
+					hint="Defaults to #777"
+					defaultValue="#777"
 					required="true" />
 
 				<attribute
 					name="mbt-navbar-navbarLinkColorHover"
 					label="@navbarLinkColorHover"
-					hint="Defaults to @white"
-					defaultValue="@white"
+					hint="Defaults to @grayDark"
+					defaultValue="@grayDark"
 					required="true" />
 
 				<attribute
 					name="mbt-navbar-navbarLinkColorActive"
 					label="@navbarLinkColorActive"
-					hint="Defaults to @navbarLinkColorHover"
-					defaultValue="@navbarLinkColorHover"
+					hint="Defaults to @gray"
+					defaultValue="@gray"
 					required="true" />
 
 				<attribute
@@ -613,37 +743,10 @@
 				<attribute
 					name="mbt-navbar-navbarLinkBackgroundActive"
 					label="@navbarLinkBackgroundActive"
-					hint="Defaults to @navbarBackground"
-					defaultValue="@navbarBackground"
+					hint="Defaults to darken(@navbarBackground, 5%)"
+					defaultValue="darken(@navbarBackground, 5%)"
 					required="true" />
 
-				<attribute
-					name="mbt-navbar-navbarSearchBackground"
-					label="@navbarSearchBackground"
-					hint="Defaults to lighten(@navbarBackground, 25%)"
-					defaultValue="lighten(@navbarBackground, 25%)"
-					required="true" />
-
-				<attribute
-					name="mbt-navbar-navbarSearchBackgroundFocus"
-					label="@navbarSearchBackgroundFocus"
-					hint="Defaults to @white"
-					defaultValue="@white"
-					required="true" />
-
-				<attribute
-					name="mbt-navbar-navbarSearchBorder"
-					label="@navbarSearchBorder"
-					hint="Defaults to darken(@navbarSearchBackground, 30%)"
-					defaultValue="darken(@navbarSearchBackground, 30%)"
-					required="true" />
-
-				<attribute
-					name="mbt-navbar-navbarSearchPlaceholderColor"
-					label="@navbarSearchPlaceholderColor"
-					hint="Defaults to #ccc"
-					defaultValue="#ccc"
-					required="true" />
 
 				<attribute
 					name="mbt-navbar-navbarBrandColor"
@@ -652,8 +755,141 @@
 					defaultValue="@navbarLinkColor"
 					required="true" />
 
+
+				<!--- Inverted navbar --->
+
+				<attribute
+					name="mbt-navbar-navbarInverseBackground"
+					label="@navbarInverseBackground"
+					hint="Defaults to #111111"
+					defaultValue="#111111"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseBackgroundHighlight"
+					label="@navbarInverseBackgroundHighlight"
+					hint="Defaults to #222222"
+					defaultValue="#222222"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseBorder"
+					label="@navbarInverseBorder"
+					hint="Defaults to #252525"
+					defaultValue="#252525"
+					required="true" />
+
+
+				<attribute
+					name="mbt-navbar-navbarInverseText"
+					label="@navbarInverseText"
+					hint="Defaults to @grayLight"
+					defaultValue="@grayLight"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseLinkColor"
+					label="@navbarInverseLinkColor"
+					hint="Defaults to @grayLight"
+					defaultValue="@grayLight"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseLinkColorHover"
+					label="@navbarInverseLinkColorHover"
+					hint="Defaults to @white"
+					defaultValue="@white"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseLinkColorActive"
+					label="@navbarInverseLinkColorActive"
+					hint="Defaults to @navbarInverseLinkColorHover"
+					defaultValue="@navbarInverseLinkColorHover"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseLinkBackgroundHover"
+					label="@navbarInverseLinkBackgroundHover"
+					hint="Defaults to transparent"
+					defaultValue="transparent"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseLinkBackgroundActive"
+					label="@navbarInverseLinkBackgroundActive"
+					hint="Defaults to @navbarInverseBackground"
+					defaultValue="@navbarInverseBackground"
+					required="true" />
+
+
+				<attribute
+					name="mbt-navbar-navbarInverseSearchBackground"
+					label="@navbarInverseSearchBackground"
+					hint="Defaults to lighten(@navbarInverseBackground, 25%)"
+					defaultValue="lighten(@navbarInverseBackground, 25%)"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseSearchBackgroundFocus"
+					label="@navbarInverseSearchBackgroundFocus"
+					hint="Defaults to @white"
+					defaultValue="@white"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseSearchBorder"
+					label="@navbarInverseSearchBorder"
+					hint="Defaults to @navbarInverseBackground"
+					defaultValue="@navbarInverseBackground"
+					required="true" />
+
+				<attribute
+					name="mbt-navbar-navbarInverseSearchPlaceholderColor"
+					label="@navbarInverseSearchPlaceholderColor"
+					hint="Defaults to #ccc"
+					defaultValue="#ccc"
+					required="true" />
+
+
+				<attribute
+
+					name="mbt-navbar-navbarInverseBrandColor"
+					label="@navbarInverseBrandColor"
+					hint="Defaults to @navbarInverseLinkColor"
+					defaultValue="@navbarInverseLinkColor"
+					required="true" />
+
 			</attributeset>
 			<!--- End Navbar Options --->
+
+
+			<!--- Pagination Options --->
+			<attributeset name="Bootstrap Pagination Options">
+
+				<attribute
+					name="mbt-pagination-paginationBackground"
+					label="@paginationBackground"
+					hint="Defaults to #fff"
+					defaultValue="#fff"
+					required="true" />
+
+				<attribute
+					name="mbt-pagination-paginationBorder"
+					label="@paginationBorder"
+					hint="Defaults to #ddd"
+					defaultValue="#ddd"
+					required="true" />
+
+				<attribute
+					name="mbt-pagination-paginationActiveBackground"
+					label="@paginationActiveBackground"
+					hint="Defaults to #f5f5f5"
+					defaultValue="#f5f5f5"
+					required="true" />
+
+			</attributeset>
+			<!--- End Pagination Options --->
 
 
 			<!--- Hero Unit Options --->
@@ -708,6 +944,7 @@
 					defaultValue="darken(spin(@warningBackground, -10), 3%)"
 					required="true" />
 
+
 				<attribute
 					name="mbt-form-errorText"
 					label="@errorText"
@@ -729,6 +966,7 @@
 					defaultValue="darken(spin(@errorBackground, -10), 3%)"
 					required="true" />
 
+
 				<attribute
 					name="mbt-form-successText"
 					label="@successText"
@@ -746,8 +984,8 @@
 				<attribute
 					name="mbt-form-successBorder"
 					label="@successBorder"
-					hint="Defaults to darken(spin(@warningBackground, -10), 3%)"
-					defaultValue="darken(spin(@warningBackground, -10), 3%)"
+					hint="Defaults to darken(spin(@warningBackground, -10), 5%)"
+					defaultValue="darken(spin(@warningBackground, -10), 5%)"
 					required="true" />
 
 				<attribute
@@ -767,13 +1005,93 @@
 				<attribute
 					name="mbt-form-infoBorder"
 					label="@infoBorder"
-					hint="Defaults to darken(spin(@infoBackground, -10), 3%)"
-					defaultValue="darken(spin(@infoBackground, -10), 3%)"
+					hint="Defaults to darken(spin(@infoBackground, -10), 7%)"
+					defaultValue="darken(spin(@infoBackground, -10), 7%)"
 					required="true" />
 
 			</attributeset>
 			<!--- End Form States and Alerts Options --->
 
+
+			<!--- Tooltips and popovers --->
+			<attributeset name="Bootstrap Tooltip and popover Options">
+
+				<attribute
+					name="mbt-tp-tooltipColor"
+					label="@tooltipColor"
+					hint="Defaults to #fff"
+					defaultValue="#fff"
+					required="true" />
+
+				<attribute
+					name="mbt-tp-tooltipBackground"
+					label="@tooltipBackground"
+					hint="Defaults to #000"
+					defaultValue="#000"
+					required="true" />
+
+				<attribute
+					name="mbt-tp-tooltipArrowWidth"
+					label="@tooltipArrowWidth"
+					hint="Defaults to 5px"
+					defaultValue="5px"
+					required="true" />
+
+				<attribute
+					name="mbt-tp-tooltipArrowColor"
+					label="@tooltipArrowColor"
+					hint="Defaults to @tooltipBackground"
+					defaultValue="@tooltipBackground"
+					required="true" />
+
+
+				<attribute
+					name="mbt-tp-popoverBackground"
+					label="@popoverBackground"
+					hint="Defaults to #fff"
+					defaultValue="#fff"
+					required="true" />
+
+				<attribute
+					name="mbt-tp-popoverArrowWidth"
+					label="@popoverArrowWidth"
+					hint="Defaults to 10px"
+					defaultValue="10px"
+					required="true" />
+
+				<attribute
+					name="mbt-tp-popoverArrowColor"
+					label="@popoverArrowColor"
+					hint="Defaults to #fff"
+					defaultValue="#fff"
+					required="true" />
+
+				<attribute
+					name="mbt-tp-popoverTitleBackground"
+					label="@popoverTitleBackground"
+					hint="Defaults to darken(@popoverBackground, 3%)"
+					defaultValue="darken(@popoverBackground, 3%)"
+					required="true" />
+
+
+				<!--- Special enhancement for popovers --->
+				<attribute
+					name="mbt-tp-popoverArrowOuterWidth"
+					label="@popoverArrowOuterWidth"
+					hint="Defaults to @popoverArrowWidth + 1"
+					defaultValue="@popoverArrowWidth + 1"
+					required="true" />
+
+				<attribute
+					name="mbt-tp-popoverArrowOuterColor"
+					label="@popoverArrowOuterColor"
+					hint="Defaults to rgba(0,0,0,.25)"
+					defaultValue="rgba(0,0,0,.25)"
+					required="true" />
+
+
+			</attributeset>
+			<!--- End Tooltips and popovers --->
 
 
 
@@ -806,25 +1124,47 @@
 			</attributeset>
 			<!--- End GRID - Default 940px grid --->
 
-			<!--- GRID - Fluid --->
+
+			<!--- GRID - Default 1200px grid --->
 			<attributeset name="Bootstrap Grid Options">
 
 				<attribute
-					name="mbt-fluid-fluidGridColumnWidth"
-					label="@fluidGridColumnWidth"
-					hint="Defaults to 6.382978723%"
-					defaultValue="6.382978723%"
+					name="mbt-grid-gridColumnWidth1200"
+					label="@gridColumnWidth1200"
+					hint="Defaults to 70px"
+					defaultValue="70px"
 					required="true" />
 
 				<attribute
-					name="mbt-fluid-fluidGridGutterWidth"
-					label="@fluidGridGutterWidth"
-					hint="Defaults to 2.127659574%"
-					defaultValue="2.127659574%"
+					name="mbt-grid-gridGutterWidth1200"
+					label="@gridGutterWidth1200"
+					hint="Defaults to 30px"
+					defaultValue="30px"
 					required="true" />
 
 			</attributeset>
-			<!--- End GRID - Default 940px grid --->
+			<!--- End GRID - Default 1200px grid --->
+
+
+			<!--- GRID - Default 768px-979px grid --->
+			<attributeset name="Bootstrap Grid Options">
+
+				<attribute
+					name="mbt-grid-gridColumnWidth768"
+					label="@gridColumnWidth768"
+					hint="Defaults to 42px"
+					defaultValue="60px"
+					required="true" />
+
+				<attribute
+					name="mbt-grid-gridGutterWidth768"
+					label="@gridGutterWidth768"
+					hint="Defaults to 20px"
+					defaultValue="20px"
+					required="true" />
+
+			</attributeset>
+			<!--- End GRID - Default 768px-979px grid --->
 
 		</extension>
 	</extensions>

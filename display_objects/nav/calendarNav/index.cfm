@@ -27,10 +27,10 @@
 	<cfset navType = "CalendarMonth">
 </cfif>
 </cfsilent>
-<div id="svCalendarNav" class="svCalendar">
+<nav id="svCalendarNav" class="svCalendar">
 <cfset navTools.setParams(navMonth,navDay,navYear,navID,navPath,navType) />
 <cfoutput>#navTools.dspMonth()#</cfoutput>
-</div>
+</nav>
 </cf_CacheOMatic>
 
 
