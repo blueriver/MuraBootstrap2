@@ -3,7 +3,7 @@
 // Mura styles. Edit at your own risk, but we recommend leaving this.
 //--------------------------------------------------------------------
 
-@import "../mura/shim.less";
+@import url("../mura/shim.less");
 
 
 // THEME VARIABLES IMPORT
@@ -12,7 +12,7 @@
 // Extended Attributes
 //--------------------------------------------------------------------
 
-@import "theme-variables.less";
+@import url("theme-variables.less");
 
 /* Bootstrap code examples
    This is just styles for Bootstrap Example Bundle
@@ -148,6 +148,11 @@ form.bs-docs-example {
 }
 
 
+.sysFontAwesome .content li {
+  list-style: none;
+}
+
+
 // THEME STYLES
 // Add all theme-specific styles below
 //--------------------------------------------------------------------
@@ -171,6 +176,6 @@ form.bs-docs-example {
 // for that display, so don't remove that first import.
 //--------------------------------------------------------------------
 
-@import "theme-responsive-980px-min.less";
-@import "theme-responsive-979px-max.less";
-@import "theme-responsive-767px-max.less";
+@import url("theme-responsive-980px-min.less");
+@import url("theme-responsive-979px-max.less");
+@import url("theme-responsive-767px-max.less");

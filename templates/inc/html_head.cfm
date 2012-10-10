@@ -22,6 +22,14 @@
     <!--- Prettify if you want code coloring --->
     <link href="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
+
+    <!--- LESS JS - Processing on the server..... fails - not a good idea anyways! --->
+    <!--- <link rel="stylesheet/less" type="text/css" href="#$.siteConfig('themeAssetPath')#/css/theme/theme.less">
+    <script type="text/javascript" src="#$.siteConfig('themeAssetPath')#/js/vendor/less-1.3.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="#$.siteConfig('themeAssetPath')#/css/theme/theme.less.css"> --->
+
+
+    <!--- CFSTATIC - Processing on the server..... fails - Processes all the LESS files, even if you only request one file --->
     <!---
         <cf_CacheOMatic key="globalheadercss">
             #$.static()

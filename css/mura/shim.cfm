@@ -18,64 +18,64 @@
 		 */
 
 		// CSS Reset
-		@import "../../bootstrap/less/reset.less";
+		@import url("../../bootstrap/less/reset.less");
 
 		// Core variables and mixins
-		@import "../../bootstrap/less/variables.less"; // Modify this for custom colors, font-sizes, etc
-		@import "../../bootstrap/less/mixins.less";
+		@import url("../../bootstrap/less/variables.less"); // Modify this for custom colors, font-sizes, etc
+		@import url("../../bootstrap/less/mixins.less");
 
 		// Grid system and page structure
-		@import "../../bootstrap/less/scaffolding.less";
-		@import "../../bootstrap/less/grid.less";
-		@import "../../bootstrap/less/layouts.less";
+		@import url("../../bootstrap/less/scaffolding.less");
+		@import url("../../bootstrap/less/grid.less");
+		@import url("../../bootstrap/less/layouts.less");
 
 		// Base CSS
-		@import "../../bootstrap/less/type.less";
-		@import "../../bootstrap/less/code.less";
-		@import "../../bootstrap/less/forms.less";
-		@import "../../bootstrap/less/tables.less";
+		@import url("../../bootstrap/less/type.less");
+		@import url("../../bootstrap/less/code.less");
+		@import url("../../bootstrap/less/forms.less");
+		@import url("../../bootstrap/less/tables.less");
 
 		// Components: common
-		@import "../font-awesome/less/font-awesome.less"; //Path needs to change to font awesome
-		@import "../../bootstrap/less/dropdowns.less";
-		@import "../../bootstrap/less/wells.less";
-		@import "../../bootstrap/less/component-animations.less";
-		@import "../../bootstrap/less/close.less";
+		@import url("../font-awesome/less/font-awesome.less"); //Path needs to change to font awesome
+		@import url("../../bootstrap/less/dropdowns.less");
+		@import url("../../bootstrap/less/wells.less");
+		@import url("../../bootstrap/less/component-animations.less");
+		@import url("../../bootstrap/less/close.less");
 
 		// Components: Buttons and Alerts
-		@import "../../bootstrap/less/buttons.less";
-		@import "../../bootstrap/less/button-groups.less";
-		@import "../../bootstrap/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+		@import url("../../bootstrap/less/buttons.less");
+		@import url("../../bootstrap/less/button-groups.less");
+		@import url("../../bootstrap/less/alerts.less"); // Note: alerts share common CSS with buttons and thus have styles in buttons.less
 
 		// Components: Nav
-		@import "../../bootstrap/less/navs.less";
-		@import "../../bootstrap/less/navbar.less";
-		@import "../../bootstrap/less/breadcrumbs.less";
-		@import "../../bootstrap/less/pagination.less";
-		@import "../../bootstrap/less/pager.less";
+		@import url("../../bootstrap/less/navs.less");
+		@import url("../../bootstrap/less/navbar.less");
+		@import url("../../bootstrap/less/breadcrumbs.less");
+		@import url("../../bootstrap/less/pagination.less");
+		@import url("../../bootstrap/less/pager.less");
 
 		// Components: Popovers
-		@import "../../bootstrap/less/modals.less";
-		@import "../../bootstrap/less/tooltip.less";
-		@import "../../bootstrap/less/popovers.less";
+		@import url("../../bootstrap/less/modals.less");
+		@import url("../../bootstrap/less/tooltip.less");
+		@import url("../../bootstrap/less/popovers.less");
 
 		// Components: Misc
-		@import "../../bootstrap/less/thumbnails.less";
-		@import "../../bootstrap/less/labels-badges.less";
-		@import "../../bootstrap/less/progress-bars.less";
-		@import "../../bootstrap/less/accordion.less";
-		@import "../../bootstrap/less/carousel.less";
-		@import "../../bootstrap/less/hero-unit.less";
+		@import url("../../bootstrap/less/thumbnails.less");
+		@import url("../../bootstrap/less/labels-badges.less");
+		@import url("../../bootstrap/less/progress-bars.less");
+		@import url("../../bootstrap/less/accordion.less");
+		@import url("../../bootstrap/less/carousel.less");
+		@import url("../../bootstrap/less/hero-unit.less");
 
 		// Utility classes
-		@import "../../bootstrap/less/utilities.less"; // Has to be last to override when necessary
+		@import url("../../bootstrap/less/utilities.less"); // Has to be last to override when necessary
 
 	<cfelse>
-		@import "../../bootstrap/less/bootstrap.less";
+		@import url("../../bootstrap/less/bootstrap.less");
 	</cfif>
 
-	@import "../../bootstrap/less/responsive.less";
-	@import "mura.less";
+	@import url("../../bootstrap/less/responsive.less");
+	@import url("mura.less");
 
 
 	// Shim Variables
@@ -448,14 +448,7 @@
 	// 	width: 95%;
 	// }
 
-	// .req label {
-	// 	background: none;
 
-	// 	&:after {
-	// 		content: " *";
-	//     	color: red;
-	//     }
-	// }
 
 	// p.required {
 	// 	display: inline-block;

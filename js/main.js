@@ -27,6 +27,35 @@ $(window).load(function () {
 		// $('.dropdown-toggle').dropdown()
 
 
+	//-----------------------------------------------------------------------------------
+	//	SubNav - taken from BootSwatch; used for example
+	//-----------------------------------------------------------------------------------
+
+		// var $win = $(window)
+		//   , $nav = $('.subnav')
+		//   , navHeight = $('.navbar').first().height()
+		//   , navTop = $('.subnav').length && $('.subnav').offset().top - navHeight
+		//   , isFixed = 0
+
+		// processScroll()
+
+		// $win.on('scroll', processScroll)
+
+		// function processScroll() {
+		//   var i, scrollTop = $win.scrollTop()
+		//   if (scrollTop >= navTop && !isFixed) {
+		//     isFixed = 1
+		//     $nav.addClass('subnav-fixed')
+		//   } else if (scrollTop <= navTop && isFixed) {
+		//     isFixed = 0
+		//     $nav.removeClass('subnav-fixed')
+		//   }
+		// }
+
+		$('.submenu').scrollspy();
+
+
+
 
 	// //----------------------------------------------------------------------------------------------------
 	// //	Placeholder Support - http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
@@ -182,23 +211,6 @@ $(window).load(function () {
 		// $(".chzn-select").chosen();
 
 
-	//-----------------------------------------------------------------------------------
-	//	Jump to the Top - custom, no URL
-	//-----------------------------------------------------------------------------------
-
-		var topLink = jQuery('#back-to-top');
-		function jumpToTop(topLink) {
-			if(jQuery(window).scrollTop() > 0) {topLink.fadeIn(150);}
-			else {topLink.fadeOut(150);}
-		}
-
-		jQuery(window).scroll( function() {jumpToTop(topLink);});
-
-		topLink.find('a').click( function() {
-			jQuery('html, body').stop().animate({scrollTop:0}, 450);
-			return false;
-		});
-
 
 
 	//-----------------------------------------------------------------------------------
@@ -232,6 +244,7 @@ $(window).load(function () {
 	// 		});
 	// 	});
 });
+
 
 
 //-----------------------------------------------------------------------------------

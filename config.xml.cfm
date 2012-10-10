@@ -701,7 +701,7 @@
 					name="mbt-navbar-navbarBorder"
 					label="@navbarBorder"
 					hint="Defaults to darken(@navbarBackground, 12%);"
-					defaultValue="darken(@navbarBackground, 12%);"
+					defaultValue="darken(@navbarBackground, 12%)"
 					required="true" />
 
 
@@ -824,29 +824,29 @@
 
 
 				<attribute
-					name="mbt-navbar-navbarSearchBackground"
-					label="@navbarSearchBackground"
+					name="mbt-navbar-navbarInverseSearchBackground"
+					label="@navbarInverseSearchBackground"
 					hint="Defaults to lighten(@navbarInverseBackground, 25%)"
 					defaultValue="lighten(@navbarInverseBackground, 25%)"
 					required="true" />
 
 				<attribute
-					name="mbt-navbar-navbarSearchBackgroundFocus"
-					label="@navbarSearchBackgroundFocus"
+					name="mbt-navbar-navbarInverseSearchBackgroundFocus"
+					label="@navbarInverseSearchBackgroundFocus"
 					hint="Defaults to @white"
 					defaultValue="@white"
 					required="true" />
 
 				<attribute
-					name="mbt-navbar-navbarSearchBorder"
-					label="@navbarSearchBorder"
+					name="mbt-navbar-navbarInverseSearchBorder"
+					label="@navbarInverseSearchBorder"
 					hint="Defaults to @navbarInverseBackground"
 					defaultValue="@navbarInverseBackground"
 					required="true" />
 
 				<attribute
-					name="mbt-navbar-navbarSearchPlaceholderColor"
-					label="@navbarSearchPlaceholderColor"
+					name="mbt-navbar-navbarInverseSearchPlaceholderColor"
+					label="@navbarInverseSearchPlaceholderColor"
 					hint="Defaults to #ccc"
 					defaultValue="#ccc"
 					required="true" />
