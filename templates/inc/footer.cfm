@@ -35,6 +35,9 @@
 	<!--- Prettify if you want code coloring --->
 	<script src="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/js/google-code-prettify/prettify.js"></script>
 
+	<!--- UI To Top - Use if you want a "back to top" button added to the body bottom --->
+	<script src="#$.siteConfig('themeAssetPath')#/js/vendor/jquery-uitotop.js"></script>
+
     <!--- Main JS - Site Specific Scripts --->
 	<script src="#$.siteConfig('themeAssetPath')#/js/main.js"></script>
 

@@ -166,11 +166,15 @@
 			--------------------------------------------------------------------------------------------------------------------->
 			@dropdownBackground:            #$.siteConfig('mbt-dropdowns-dropdownBackground')#;
 			@dropdownBorder:                #$.siteConfig('mbt-dropdowns-dropdownBorder')#;
-			@dropdownLinkColor:             #$.siteConfig('mbt-dropdowns-dropdownLinkColor')#;
-			@dropdownLinkColorHover:        #$.siteConfig('mbt-dropdowns-dropdownLinkColorHover')#;
-			@dropdownLinkBackgroundHover:   #$.siteConfig('mbt-dropdowns-dropdownLinkBackgroundHover')#;
 			@dropdownLinkBackgroundHover:   #$.siteConfig('mbt-dropdowns-dropdownDividerTop')#;
 			@dropdownDividerBottom:  		#$.siteConfig('mbt-dropdowns-dropdownDividerBottom')#;
+
+			@dropdownLinkColor:             #$.siteConfig('mbt-dropdowns-dropdownLinkColor')#;
+			@dropdownLinkColorHover:        #$.siteConfig('mbt-dropdowns-dropdownLinkColorHover')#;
+			@dropdownLinkColorActive:   	#$.siteConfig('mbt-dropdowns-dropdownLinkColorActive')#;
+
+			@dropdownLinkBackgroundActive:   #$.siteConfig('mbt-dropdowns-dropdownLinkBackgroundActive')#;
+			@dropdownLinkBackgroundHover:   #$.siteConfig('mbt-dropdowns-dropdownLinkBackgroundHover')#;
 
 
 
@@ -207,11 +211,24 @@
 			@hrBorder:                #$.siteConfig('mbt-hr-hrBorder')#;
 
 
+			<!--- Horizontal forms & lists
+			--------------------------------------------------------------------------------------------------------------------->
+			@horizontalComponentOffset:       #$.siteConfig('mbt-hfl-horizontalComponentOffset')#;
+
+
+			<!--- Wells
+			--------------------------------------------------------------------------------------------------------------------->
+			@wellBackground:       			  #$.siteConfig('mbt-wells-wellBackground')#;
+
+
 			<!--- Navbar
 			--------------------------------------------------------------------------------------------------------------------->
+			@navbarCollapseWidth:             #$.siteConfig('mbt-navbar-navbarCollapseWidth')#;
+
 			@navbarHeight:                    #$.siteConfig('mbt-navbar-navbarHeight')#;
-			@navbarBackground:                #$.siteConfig('mbt-navbar-navbarBackground')#;
 			@navbarBackgroundHighlight:       #$.siteConfig('mbt-navbar-navbarBackgroundHighlight')#;
+			@navbarBackground:                #$.siteConfig('mbt-navbar-navbarBackground')#;
+			@navbarBorder:                	  #$.siteConfig('mbt-navbar-navbarBorder')#;
 
 			@navbarText:                      #$.siteConfig('mbt-navbar-navbarText')#;
 			@navbarLinkColor:                 #$.siteConfig('mbt-navbar-navbarLinkColor')#;
@@ -220,11 +237,34 @@
 			@navbarLinkBackgroundHover:       #$.siteConfig('mbt-navbar-navbarLinkBackgroundHover')#;
 			@navbarLinkBackgroundActive:      #$.siteConfig('mbt-navbar-navbarLinkBackgroundActive')#;
 
-			@navbarSearchBackground:          #$.siteConfig('mbt-navbar-navbarSearchBackgroundFocus')#;
-			@navbarSearchBackgroundFocus:     #$.siteConfig('mbt-navbar-navbarSearchBackgroundFocus')#;
-			@navbarSearchBorder:              #$.siteConfig('mbt-navbar-navbarSearchBorder')#;
-			@navbarSearchPlaceholderColor:    #$.siteConfig('mbt-navbar-navbarSearchPlaceholderColor')#;
 			@navbarBrandColor:                #$.siteConfig('mbt-navbar-navbarBrandColor')#;
+
+			<!--- Inverted navbar --->
+			@navbarInverseBackground:         #$.siteConfig('mbt-navbar-navbarInverseBackground')#;
+			@navbarInverseBackgroundHighlight: #$.siteConfig('mbt-navbar-navbarInverseBackgroundHighlight')#;
+			@navbarInverseBorder:                #$.siteConfig('mbt-navbar-navbarInverseBorder')#;
+
+			@navbarInverseText:               #$.siteConfig('mbt-navbar-navbarInverseText')#;		@navbarInverseLinkColor:          #$.siteConfig('mbt-navbar-navbarInverseLinkColor')#;
+			@navbarInverseLinkColorHover:     #$.siteConfig('mbt-navbar-navbarInverseLinkColorHover')#;
+			@navbarInverseLinkColorActive:    #$.siteConfig('mbt-navbar-navbarInverseLinkColorActive')#;
+			@navbarInverseLinkBackgroundHover: #$.siteConfig('mbt-navbar-navbarInverseLinkBackgroundHover')#;
+			@navbarInverseLinkBackgroundActive: #$.siteConfig('mbt-navbar-navbarInverseLinkBackgroundActive')#;
+
+
+			@navbarInverseSearchBackground:   #$.siteConfig('mbt-navbar-navbarInverseSearchBackgroundFocus')#;
+			@navbarInverseSearchBackgroundFocus:#$.siteConfig('mbt-navbar-navbarInverseSearchBackgroundFocus')#;
+			@navbarInverseSearchBorder:       #$.siteConfig('mbt-navbar-navbarInverseSearchBorder')#;
+			@navbarInverseSearchPlaceholderColor: #$.siteConfig('mbt-navbar-navbarInverseSearchPlaceholderColor')#;
+
+			@navbarInverseBrandColor: 		  #$.siteConfig('mbt-navbar-navbarInverseBrandColor')#;
+
+
+
+			<!--- Pagination
+			--------------------------------------------------------------------------------------------------------------------->
+			@paginationBackground:              #$.siteConfig('mbt-pagination-paginationBackground')#;
+			@paginationBorder:            		#$.siteConfig('mbt-pagination-paginationBorder')#;
+			@paginationActiveBackground:        #$.siteConfig('mbt-pagination-paginationActiveBackground')#;
 
 
 			<!--- Hero unit
@@ -253,6 +293,22 @@
 			@infoBorder:              #$.siteConfig('mbt-form-infoBorder')#;
 
 
+			<!--- Form states and alerts
+			--------------------------------------------------------------------------------------------------------------------->
+			@tooltipColor:            #$.siteConfig('mbt-tp-tooltipColor')#;
+			@tooltipBackground:       #$.siteConfig('mbt-tp-tooltipBackground')#;
+			@tooltipArrowWidth:       #$.siteConfig('mbt-tp-tooltipArrowWidth')#;
+			@tooltipArrowColor:       #$.siteConfig('mbt-tp-tooltipArrowColor')#;
+
+			@popoverBackground:       #$.siteConfig('mbt-tp-popoverBackground')#;
+			@popoverArrowWidth:       #$.siteConfig('mbt-tp-popoverArrowWidth')#;
+			@popoverArrowColor:       #$.siteConfig('mbt-tp-popoverArrowColor')#;
+			@popoverTitleBackground:  #$.siteConfig('mbt-tp-popoverTitleBackground')#;
+
+			@popoverArrowOuterWidth:  #$.siteConfig('mbt-tp-popoverArrowOuterWidth')#;
+			@popoverArrowOuterColor:  #$.siteConfig('mbt-tp-popoverArrowOuterColor')#;
+
+
 
 
 			<!--- GRID
@@ -268,13 +324,13 @@
 
 
 			// 1200px min
-			@gridColumnWidth1200:     70px;
-			@gridGutterWidth1200:     30px;
+			@gridColumnWidth1200:     #$.siteConfig('mbt-grid-gridColumnWidth1200')#;
+			@gridGutterWidth1200:     #$.siteConfig('mbt-grid-gridGutterWidth1200')#;
 			@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
 
 			// 768px-979px
-			@gridColumnWidth768:      42px;
-			@gridGutterWidth768:      20px;
+			@gridColumnWidth768:      #$.siteConfig('mbt-grid-gridColumnWidth768')#;
+			@gridGutterWidth768:      #$.siteConfig('mbt-grid-gridGutterWidth768')#;
 			@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
 
 

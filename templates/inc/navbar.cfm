@@ -10,7 +10,7 @@
           <span class="icon-bar"></span>
         </a>
         <a class="brand" href="#$.createHREF(filename='')#">Project name</a>
-        <div class="nav-collapse collapse">
+        <div class="nav-collapse collapse"><!---dropdown-submenu --->
           <cf_CacheOMatic key="dspPrimaryNav#$.content('contentid')#">
             #$.dspPrimaryNav(
               viewDepth="1",
@@ -21,8 +21,10 @@
               ulTopClass="nav",
               ulNestedClass="dropdown-menu",
               liHasKidsClass="dropdown",
+              liHasKidsCustomString='',
+              liNestedClass='',
               aHasKidsClass="dropdown-toggle",
-              aHasKidsCustomString='data-toggle="dropdown"',
+              aHasKidsCustomString='role="button" data-toggle="dropdown" data-target="##" ',
               liCurrentClass="active",
               aCurrentClass=""
             )#

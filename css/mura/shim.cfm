@@ -97,9 +97,12 @@
 	// NAV ELEMENTS
 	##navArchive, ##navMultilevel, ##navPeer, ##navPortal, ##navSequential, ##navStandard,
 	##navSub, ##svTagCloud, ##svFavoritesList, ##svPageTools {
+		margin-bottom: @baseLineHeight;
 		padding: 8px 0;
 	}
 
+	// Hide login in navbar unless on 1200px or larger
+	.navbar ##login { display: none; }
 
 <!---
 	// NAVBAR
@@ -209,10 +212,18 @@
 		##login label, ##sendLogin label {
 			float: left;
 		}
-
-
 	}
 
+
+	form .required {
+	    font-weight: bold;
+
+		label:after {
+		    color: ##e32;
+		    content: '*';
+		    display:inline;
+		}
+	}
 
 <!---
 	// // Shim between default Mura CMS styles and Bootstrap

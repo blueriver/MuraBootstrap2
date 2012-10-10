@@ -56,20 +56,11 @@ $(window).load(function () {
 	// 	});
 
 
-	// $(function() {
-	//   // Setup drop down menu
-	//   $('.dropdown-toggle').dropdown();
-	//  
-	//   // Fix input element click problem
-	//   $('.dropdown input, .dropdown label').click(function(e) {
-	//     e.stopPropagation();
-	//   });
-	// });
-
 	//-----------------------------------------------------------------------------------
 	//	Remove Margin From Last P - http://css-tricks.com/snippets/css/remove-margins-first-element/
 	//-----------------------------------------------------------------------------------
 	//	$(".container p:last-child, .super-container p:last-child, .footer-super-container p:last-child").css("margin-bottom", 0);
+
 
 	//-----------------------------------------------------------------------------------
 	//	PrettyPhoto - http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
@@ -89,8 +80,6 @@ $(window).load(function () {
 			// $("ul.social img").tipsy({gravity: 's', fade: true, delayIn: 2000, delayOut: 200});
 			// $("a.popLink").tipsy({gravity: 's', fade: true, delayIn: 2000, delayOut: 200});
 			// $(".gallery-item img").tipsy({gravity: 's', fade: true, delayIn: 3000, delayOut: 200});
-
-
 
 
 	//-----------------------------------------------------------------------------------
@@ -136,9 +125,6 @@ $(window).load(function () {
 			// 	widgetTrigger.addClass('close');
 
 			// });
-
-
-
 
 
 	//-----------------------------------------------------------------------------------
