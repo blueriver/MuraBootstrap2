@@ -3,8 +3,8 @@
 
     <!--- META
     ================================================== --->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>#HTMLEditFormat($.content('HTMLTitle'))# - #HTMLEditFormat($.siteConfig('site'))#</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="#HTMLEditFormat($.getMetaDesc())#">
@@ -16,16 +16,24 @@
     <!--- CSS
     ================================================== --->
 
-    <!---- Min Mura styles ---->
-    <link href="#$.siteConfig('assetPath')#/css/mura.min.css" rel="stylesheet">
-
     <!--- Theme styles - includes Twitter Bootstrap & any modifications, along with responsive styles & fonts --->
     <link href="#$.siteConfig('themeAssetPath')#/css/theme/theme.css" rel="stylesheet">
 
+    <!--- Prettify if you want code coloring --->
+    <link href="#$.siteConfig('themeAssetPath')#/bootstrap/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+
+    <!--- LESS JS - Processing on the server..... fails - not a good idea anyways! --->
+    <!--- <link rel="stylesheet/less" type="text/css" href="#$.siteConfig('themeAssetPath')#/css/theme/theme.less">
+    <script type="text/javascript" src="#$.siteConfig('themeAssetPath')#/js/vendor/less-1.3.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="#$.siteConfig('themeAssetPath')#/css/theme/theme.less.css"> --->
+
+
+    <!--- CFSTATIC - Processing on the server..... fails - Processes all the LESS files, even if you only request one file --->
     <!---
         <cf_CacheOMatic key="globalheadercss">
             #$.static()
-            .include("/css/theme/")
+            .include("/css/theme/theme.less")
             .renderIncludes("css")#
         </cf_CacheOMatic>
     --->
@@ -34,7 +42,7 @@
     <!--- IE SHIM - for IE6-8 support of HTML5 elements
     ================================================== --->
     <!--[if lt IE 9]>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
 
@@ -53,25 +61,6 @@
     <cfloop query="rs">
     <link rel="alternate" type="application/rss+xml" title="#HTMLEditFormat($.siteConfig('site'))# - #HTMLEditFormat(rs.name)#" href="#XMLFormat('http://#listFirst(cgi.http_host,":")##$.globalConfig('context')#/tasks/feed/?feedID=#rs.feedID#')#" />
     </cfloop>
-
-    <!--- JQUERY - should go in footer.
-    ================================================== --->
-    <!--- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --->
-    <script src="//code.jquery.com/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="#$.siteConfig('themeAssetPath')#/js/jquery.js"><\/script>')</script>
-
-
-    <!--- GOOGLE ANALYTICS
-    ==================================================
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
-    --->
-
-  </head>
 
   </head>
 </cfoutput>
