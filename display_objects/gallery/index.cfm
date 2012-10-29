@@ -143,7 +143,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 			</cfif>
 			</cfsilent>
 			<cfoutput>
-			<li class="#$.siteConfig('mbt-gallery-span')#">
+			<li class="#variables.item.getValue('mbt-gallery-span')#">
 
 				<!--- Uncomment this if you want to use polaroid style for those images with summaries --->
 				<!---
@@ -155,15 +155,15 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 				<!--- Comment this a tag out and use the above if you want polaroid --->
 				<a href="#variables.item.getImageURL(size='large')#" title="#HTMLEditFormat(variables.item.getValue('title'))#" rel="shadowbox[gallery]" class="thumbnail"><img src="#variables.item.getImageURL(argumentCollection=imageArgs)#" alt="#HTMLEditFormat(variables.item.getValue('title'))#"/></a>
 
-			 	<cfloop list="#variables.$.content("displayList")#" index="field">
+			 	<cfloop list="#variables.item.getValue("displayList")#" index="field">
 			 		<cfif
-			 			$.siteConfig('mbt-gallery-showTitle') neq false or
-			 			$.siteConfig('mbt-gallery-showSummary') neq false>
+			 			variables.item.getValue('mbt-gallery-showTitle') neq false or
+			 			variables.item.getValue('mbt-gallery-showSummary') neq false>
 			 			 <dl>
 			 		</cfif>
 					<cfswitch expression="#field#">
 						<cfcase value="Title">
-						 	<cfif $.siteConfig('mbt-gallery-showTitle') neq false>
+						 	<cfif variables.item.getValue('mbt-gallery-showTitle') neq false>
 								<dt>
 								 	<cfif listFindNoCase(variables.$.content("displayList"),"comments")>
 								 		<a href="?linkServID=#variables.item.getValue('contentid')#&categoryID=#HTMLEditFormat(variables.$.event('categoryID'))#&relatedID=#HTMLEditFormat(request.relatedID)#" title="#HTMLEditFormat(variables.item.getValue('title'))#">#HTMLEditFormat(variables.item.getValue('menutitle'))#</a>
@@ -174,7 +174,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 							</cfif>
 						</cfcase>
 						<cfcase value="Summary">
-						 	<cfif variables.item.getValue('summary') neq "" and variables.item.getValue('summary') neq "<p></p>" and $.siteConfig('mbt-gallery-showSummary') neq false>
+						 	<cfif variables.item.getValue('summary') neq "" and variables.item.getValue('summary') neq "<p></p>" and variables.item.getValue('mbt-gallery-showSummary') neq false>
 							 	<dd variables.class="summary">
 							 	#variables.item.getValue('summary')#
 							 	</dd>
@@ -210,8 +210,8 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 						</cfdefaultcase>
 					</cfswitch>
 			 		<cfif
-			 			$.siteConfig('mbt-gallery-showTitle') neq false or
-			 			$.siteConfig('mbt-gallery-showSummary') neq false>
+			 			variables.item.getValue('mbt-gallery-showTitle') neq false or
+			 			variables.item.getValue('mbt-gallery-showSummary') neq false>
 						</dl>
 			 		</cfif>
 				 </cfloop>

@@ -10,4 +10,5 @@
         	</cfif>
       	</header>
      </cfif>
+</div>
 </cfoutput>
