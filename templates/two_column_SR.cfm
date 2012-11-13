@@ -15,7 +15,10 @@
 				    #$.dspObjects(3)#
 				</div><!--/span-->
 			</div><!--/row-->
+		</div>
 		<cfinclude template="inc/footer.cfm">
 	</body>
 </html>
+
+
 </cfoutput>

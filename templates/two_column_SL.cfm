@@ -6,7 +6,7 @@
 		<cfinclude template="inc/navbar.cfm">
 		<div class="container">
       		<div class="row">
-				<div class="span3 sidebar">
+				<div class="span3">
 				    #$.dspObjects(1)#
 				</div><!--/span-->
 				<div class="span9 content">
@@ -15,6 +15,7 @@
 					#$.dspObjects(2)#
 		        </div><!--/span-->
 			</div><!--/row-->
+		</div>
 		<cfinclude template="inc/footer.cfm">
 	</body>
 </html>
