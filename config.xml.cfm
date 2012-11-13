@@ -5,6 +5,8 @@
 
 	<extensions>
 
+
+
 		<extension type="Gallery">
 
 			<!--- Bootstrap Gallery Options --->
