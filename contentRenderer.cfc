@@ -47,15 +47,6 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 
 <cfcomponent extends="mura.cfobject">
 
-<!---
-	<!--- Add shadow box to footer instead of header. This allows us to add JQuery to the footer as well --->
-	<cffunction name="loadShadowboxJS" returntype="void" output="false">
-		<cfset loadJSLib() />
-		<cfset addToHTMLFootQueue("#$.siteConfig('assetPath')#/includes/display_objects/htmlhead/shadowbox-jquery.cfm")>
-		<cfset addToHTMLFootQueue("#$.siteConfig('assetPath')#/includes/display_objects/htmlhead/shadowbox.cfm")>
-	</cffunction>
-
-	<!--- Add theme-specific methods here ---> --->
-
+	<!--- Add theme-specific methods here --->
 
 </cfcomponent>

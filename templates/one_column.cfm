@@ -1,8 +1,6 @@
 <cfoutput>
-<!DOCTYPE html>
-<html lang="en">
-<cfinclude template="inc/html_head.cfm">
-	<body id="#$.getTopID()#" class="#$.createCSSid($.content('menuTitle'))#" data-spy="scroll" data-target=".subnav" data-offset="50">
+	<cfinclude template="inc/html_head.cfm">
+	<body id="#$.getTopID()#" class="#$.createCSSid($.content('menuTitle'))#">
 		<cfinclude template="inc/navbar.cfm">
 		<div class="container">
 			<div class="content">
@@ -10,7 +8,6 @@
 					#$.dspBody(body=$.content('body'),pageTitle=$.content('title'),crumbList=0,showMetaImage=1)#
 					#$.dspObjects(2)#
 			</div>
-		<cfinclude template="inc/footer.cfm">
-	</body>
-</html>
+		</div><!-- /.container -->
+	<cfinclude template="inc/footer.cfm">
 </cfoutput>

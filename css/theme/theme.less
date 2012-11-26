@@ -1,181 +1,181 @@
-// MURA IMPORT
-// This Shim file needed for to bring in all the base Bootstrap and
-// Mura styles. Edit at your own risk, but we recommend leaving this.
-//--------------------------------------------------------------------
+// VARIABLES
+// =========================================================
+@baseLineHeight:		20px;
 
-@import url("../mura/shim.less");
+// Grays
+// -------------------------
+@black: 				#000;
+@grayDarker: 			#222;
+@grayDark: 				#333;
+@gray: 					#555;
+@grayLight: 			#999;
+@grayLighter: 			#eee;
+@white: 				#fff;
 
 
-// THEME VARIABLES IMPORT
-// This file is optional (as its part of Bootstrap by default), but
-// we've included it directly from variables set in the Site Setting's
-// Extended Attributes
-//--------------------------------------------------------------------
+// OVERRIDES
+// =========================================================
 
-@import url("theme-variables.less");
-
-/* Bootstrap code examples
-   This is just styles for Bootstrap Example Bundle
--------------------------------------------------- */
-
-/* Base class */
-.bs-docs-example {
-  position: relative;
-  margin: 15px 0;
-  padding: 39px 19px 14px;
-  *padding-top: 19px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+/* Font Awesome: Remove Bullets on Lists */
+ul.the-icons, ul.icons {
+	list-style-type: none;
+	margin-left: 2em;
+	text-indent: -0.8em;
+}
+a#logout {
+	float: right;
 }
 
-/* Echo out a label for the example */
-.bs-docs-example:after {
-  content: "Example";
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  padding: 3px 7px;
-  font-size: 12px;
-  font-weight: bold;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  color: #9da0a4;
-  -webkit-border-radius: 4px 0 4px 0;
-     -moz-border-radius: 4px 0 4px 0;
-          border-radius: 4px 0 4px 0;
-}
-
-/* Remove spacing between an example and it's code */
-.bs-docs-example + .prettyprint {
-  margin-top: -20px;
-  padding-top: 15px;
-}
-
-/* Tweak examples
-------------------------- */
-.bs-docs-example > p:last-child {
-  margin-bottom: 0;
-}
-.bs-docs-example .table,
-.bs-docs-example .progress,
-.bs-docs-example .well,
-.bs-docs-example .alert,
-.bs-docs-example .hero-unit,
-.bs-docs-example .pagination,
-.bs-docs-example .navbar,
-.bs-docs-example > .nav,
-.bs-docs-example blockquote {
-  margin-bottom: 5px;
-}
-.bs-docs-example .pagination {
-  margin-top: 0;
-}
-.bs-navbar-top-example,
-.bs-navbar-bottom-example {
-  z-index: 1;
-  padding: 0;
-  height: 90px;
-  overflow: hidden; /* cut the drop shadows off */
-}
-.bs-navbar-top-example .navbar-fixed-top,
-.bs-navbar-bottom-example .navbar-fixed-bottom {
-  margin-left: 0;
-  margin-right: 0;
-}
-.bs-navbar-top-example {
-  -webkit-border-radius: 0 0 4px 4px;
-     -moz-border-radius: 0 0 4px 4px;
-          border-radius: 0 0 4px 4px;
-}
-.bs-navbar-top-example:after {
-  top: auto;
-  bottom: -1px;
-  -webkit-border-radius: 0 4px 0 4px;
-     -moz-border-radius: 0 4px 0 4px;
-          border-radius: 0 4px 0 4px;
-}
-.bs-navbar-bottom-example {
-  -webkit-border-radius: 4px 4px 0 0;
-     -moz-border-radius: 4px 4px 0 0;
-          border-radius: 4px 4px 0 0;
-}
-.bs-navbar-bottom-example .navbar {
-  margin-bottom: 0;
-}
-form.bs-docs-example {
-  padding-bottom: 19px;
+body {
+	padding-top: 0;
 }
 
 
-/* EXAMPLE CSS
-|--------------------------------------------------------------------------
-| UItoTop jQuery Plugin 1.2
-| http://www.mattvarone.com/web-design/uitotop-jquery-plugin/
-|--------------------------------------------------------------------------
-*/
-
-#toTop {
-  display:none;
-  text-decoration:none;
-  position:fixed;
-  bottom:10px;
-  right:10px;
-  overflow:hidden;
-  width:51px;
-  height:51px;
-  border:none;
-  text-indent:100%;
-  background:url('@{themePath}/ico/ui.totop.png') no-repeat left top;
+// NAV ELEMENTS
+#navArchive, #navMultilevel, #navPeer, #navPortal, #navSequential, #navStandard,
+#navSub, #svTagCloud, #svFavoritesList, #svPageTools {
+	margin-bottom: @baseLineHeight;
+	padding: 8px 0;
 }
 
-#toTopHover {
-  background:url('@{themePath}/ico/ui.totop.png') no-repeat left -51px;
-  width:51px;
-  height:51px;
-  display:block;
-  overflow:hidden;
-  float:left;
-  opacity: 0;
-  -moz-opacity: 0;
-  filter:alpha(opacity=0);
+// Hide login in navbar unless on 1200px or larger
+//.navbar #login { display: none; }
+
+
+// INDEXES
+.content .svIndex {
+ 	border-top: 0;
+ 	padding-top: 0;
 }
 
-#toTop:active, #toTop:focus {
-  outline:none;
-}
+.svIndex {
 
-
-.sysFontAwesome .content li {
-  list-style: none;
-}
-
-
-// THEME STYLES
-// Add all theme-specific styles below
-//--------------------------------------------------------------------
-
-	// If using a fixed navbar top, we need padding
-	body {
-		padding-top: 60px;
-		padding-bottom: 40px;
+	dl {
+		border-bottom: 1px solid @grayLighter;
+		padding-bottom: 12px;
+		margin-bottom: 12px;
 	}
 
+	dd { margin-left: 0; }
+
+	dt.releaseDate {
+		font-size: 12px;
+		line-height: 1;
+		margin-bottom: .25em;
+	}
+}
+//end INDEXES
+
+
+// CALENDAR
+.svCalendar {
+	text-align: center;
+
+	table {
+
+		thead {
+			background: @grayLighter;
+
+			th, th a {
+				line-height: 1.5;
+				padding: .5em;
+				text-align: center;
+			}
+		}
+
+		td, th {
+			border-collapse: collapse;
+			border-left: 1px solid @grayLighter;
+			border-top: 1px solid @grayLighter;
+			border-bottom: 1px solid @grayLighter;
+			border-right: 0;
+			font-size: inherit;
+		}
+
+		table #previousMonth a,
+		table #nextMonth a {
+			font-weight: normal;
+			font-size: 150%;
+			line-height: 1.1;
+			padding: 0;
+		}
+
+		.table tbody tr:hover td,
+		.table tbody tr:hover th {
+			background: @white;
+		}
+	}
+}
+
+#svCalendarNav {
+	th {
+		line-height: 1;
+		padding: 0;
+
+		a {
+			line-height: 1;
+			padding: 2px 2px 4px;
+		}
+	}
+}
+//end CALENDAR
+
+.comments, .tags, .rating {
+ 	font-size: 12px;
+ 	line-height: 12px;
+}
+
+.pagination {
+	margin: 24px 0 18px !important;
+
+	 a { padding: 0 14px; }
+}
+
+// LOGIN
+#svLoginContainer {
+	margin: 0;
+	width: auto;
+
+	#login label, #sendLogin label {
+		float: left;
+	}
+}
 
 
 
 
-// RESPONSIVE IMPORTS
-// The following .less files import both Mura and Theme styles needed
-// for proper responsive rendering. If you need to edit any styles for
-// a specific display size, then edit the respective theme-responsive
-// Less file, which can be found in theis same folder.
-// Note: you'll notice these first include styles that Mura requires
-// for that display, so don't remove that first import.
-//--------------------------------------------------------------------
+// RESPONSIVE
+// =========================================================
 
-@import url("theme-responsive-980px-min.less");
-@import url("theme-responsive-979px-max.less");
-@import url("theme-responsive-767px-max.less");
+/* Large desktop */
+@media (min-width: 1200px) {
+
+	body {
+		padding-top:5em;
+	}
+
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+
+	body {
+		padding-top:5em;
+	}
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}
+
+
+
+

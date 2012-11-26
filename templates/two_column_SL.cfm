@@ -1,12 +1,10 @@
 <cfoutput>
-<!DOCTYPE html>
-<html lang="en">
-<cfinclude template="inc/html_head.cfm">
+	<cfinclude template="inc/html_head.cfm">
 	<body id="#$.getTopID()#" class="#$.createCSSid($.content('menuTitle'))#">
 		<cfinclude template="inc/navbar.cfm">
 		<div class="container">
       		<div class="row">
-				<div class="span3">
+				<div class="span3 sidebar">
 				    #$.dspObjects(1)#
 				</div><!--/span-->
 				<div class="span9 content">
@@ -15,8 +13,6 @@
 					#$.dspObjects(2)#
 		        </div><!--/span-->
 			</div><!--/row-->
-		</div>
-		<cfinclude template="inc/footer.cfm">
-	</body>
-</html>
+		</div><!-- /.container -->
+	<cfinclude template="inc/footer.cfm">
 </cfoutput>
