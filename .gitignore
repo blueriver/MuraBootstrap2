@@ -2,6 +2,8 @@
 /compiled/
 *.less.css
 
+/css/mura
+
 # OS or Editor folders
 *~
 .DS_Store
