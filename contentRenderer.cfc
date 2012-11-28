@@ -47,15 +47,113 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 
 <cfcomponent extends="mura.cfobject">
 
-<!---
-	<!--- Add shadow box to footer instead of header. This allows us to add JQuery to the footer as well --->
-	<cffunction name="loadShadowboxJS" returntype="void" output="false">
-		<cfset loadJSLib() />
-		<cfset addToHTMLFootQueue("#$.siteConfig('assetPath')#/includes/display_objects/htmlhead/shadowbox-jquery.cfm")>
-		<cfset addToHTMLFootQueue("#$.siteConfig('assetPath')#/includes/display_objects/htmlhead/shadowbox.cfm")>
+	<!--- Add theme-specific methods here --->
+
+	<cffunction name="dspCarouselByFeedName" output="false">
+		<cfargument name="feedName" type="string" default="Slideshow" />
+		<cfargument name="showCaption" type="boolean" default="true" />
+		<cfargument name="cssID" type="string" default="myCarousel" />
+		<cfargument name="size" type="string" default="custom" hint="If you want to use a custom height/width, then use 'custom' ... otherwise, you can use 'small, medium, large' OR any other predefined custom image size 'name' you created via the back-end administrator." />
+		<cfargument name="width" type="numeric" default="1280" hint="width in pixels" />
+		<cfargument name="height" type="numeric" default="500" hint="height in pixels" />
+		<cfargument name="interval" type="any" default="5000" hint="Use either milliseconds OR use 'false' to NOT auto-advance to next slide." />
+		<cfargument name="autoStart" type="boolean" default="true" />
+		<cfscript>
+			var local = {};
+			local.imageArgs = {};
+
+			if ( not ListFindNoCase('small,medium,large,custom', arguments.size) and variables.$.getBean('imageSize').loadBy(name=arguments.size,siteID=variables.$.event('siteID')).getIsNew() ) {
+				arguments.size = 'custom';
+			};
+
+			if ( not Len(Trim(arguments.size)) or LCase(arguments.size) eq 'custom' ) {
+				local.imageArgs.width = Val(arguments.width);
+				local.imageArgs.height = Val(arguments.height);
+			} else {
+				local.imageArgs.size = arguments.size;
+			};
+		</cfscript>
+		<cfsavecontent variable="local.str"><cfoutput>
+			<!--- BEGIN: Bootstrap Carousel --->
+			<!--- IMPORTANT: This will only output items that have associated images --->
+			<cfset local.feed = variables.$.getBean('feed').loadBy(name=arguments.feedName)>
+			<cfset local.iterator = local.feed.getIterator()>
+			<cfif local.iterator.hasNext()>
+				<div id="#arguments.cssID#" class="carousel slide" data-interval="#arguments.interval#">
+					<!--- Carousel items --->
+					<div class="carousel-inner">
+						<cfset local.idx = 0>
+						<cfloop condition="local.iterator.hasNext()">
+							<cfset local.item=iterator.next()>
+							<cfif ListFindNoCase('jpg,jpeg,gif,png', ListLast(local.item.getImageURL(), '.'))>
+								<cfset local.idx++>
+								<!--- row-fluid class on this fixes Firefox bug where slide height gets wonky on transition due to resizing of image via media queries --->
+								<div class="row-fluid item<cfif local.idx eq 1> active</cfif>">
+									<img src="#local.item.getImageURL(argumentCollection=local.imageArgs)#" alt="#HTMLEditFormat(local.item.getTitle())#">
+									<cfif arguments.showCaption>
+										<div class="carousel-caption">
+											<h4><a href="#local.item.getURL()#">#HTMLEditFormat(local.item.getTitle())#</a></h4>
+											#local.item.getSummary()#
+										</div>
+									</cfif>
+								</div>
+							</cfif>
+						</cfloop>
+					</div>
+					<cfif local.idx>
+						<!--- Carousel nav --->
+						<cfif local.idx gt 1>
+							<a class="left carousel-control" href="###arguments.cssID#" data-slide="prev">&lsaquo;</a>
+							<a class="right carousel-control" href="###arguments.cssID#" data-slide="next">&rsaquo;</a>
+							<!--- AutoStart --->
+							<cfif arguments.autoStart>
+								<script>jQuery(document).ready(function($){$('###arguments.cssID#').carousel({interval:#arguments.interval#});});</script>
+							</cfif>
+						</cfif>
+					<cfelse>
+						<div class="alert alert-info alert-block">
+							<button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+							<h4>Oh snap!</h4>
+							Your feed has no items <em>with images</em>.
+						</div>
+					</cfif>
+				</div>
+			<cfelse>
+				<div class="alert alert-info alert-block">
+					<button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+					<h4>Heads up!</h4>
+					Your feed has no items.
+				</div>
+			</cfif>
+			<!--- // END: Bootstrap Carousel --->
+		</cfoutput></cfsavecontent>
+		<cfreturn local.str />
 	</cffunction>
 
-	<!--- Add theme-specific methods here ---> --->
+	<cffunction name="getMBUseFluid" output="false">
+		<cfscript>
+			var local = {};
 
+			try {
+				local.useFluid = YesNoFormat(variables.$.siteConfig('mbUseFluid'));
+			} catch(any e) {
+				return false;
+			};
+
+			if ( local.useFluid ) {
+				return true;
+			} else {
+				return false;
+			};
+		</cfscript>
+	</cffunction>
+
+	<cffunction name="getMBContainerClass" output="false">
+		<cfreturn IIF(getMBUseFluid(), DE('container-fluid'), DE('container'))>
+	</cffunction>
+
+	<cffunction name="getMBRowClass" output="false">
+		<cfreturn IIF(getMBUseFluid(), DE('row-fluid'), DE('row'))>
+	</cffunction>
 
 </cfcomponent>
