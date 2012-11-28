@@ -1,22 +1,19 @@
 <cfoutput>
-<!DOCTYPE html>
-<html lang="en">
-<cfinclude template="inc/html_head.cfm">
+	<cfinclude template="inc/html_head.cfm" />
 	<body id="#$.getTopID()#" class="#$.createCSSid($.content('menuTitle'))#">
-		<cfinclude template="inc/navbar.cfm">
-		<div class="container">
-      		<div class="row">
-				<div class="span3">
+		<div class="#$.getMBContainerClass()#">
+			<cfinclude template="inc/navbar.cfm" />
+      		<div class="#$.getMBRowClass()#">
+				<aside class="span3 sidebar">
 				    #$.dspObjects(1)#
-				</div><!--/span-->
-				<div class="span9 content">
-					<cfinclude template="inc/breadcrumb.cfm">
+				</aside><!-- /.span -->
+				<section class="span9 content">
+					<cfinclude template="inc/breadcrumb.cfm" />
 					#$.dspBody(body=$.content('body'),pageTitle=$.content('title'),crumbList=0,showMetaImage=1)#
 					#$.dspObjects(2)#
-		        </div><!--/span-->
-			</div><!--/row-->
-		</div>
-		<cfinclude template="inc/footer.cfm">
-	</body>
-</html>
+		        </section><!-- /.span -->
+			</div><!-- /.row -->
+			<cfinclude template="inc/footer.cfm" />
+		</div><!-- /.container -->
+	<cfinclude template="inc/html_foot.cfm" />
 </cfoutput>
