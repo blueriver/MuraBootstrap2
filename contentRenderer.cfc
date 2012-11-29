@@ -48,7 +48,6 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 <cfcomponent extends="mura.cfobject">
 
 	<!--- Add theme-specific methods here --->
-<<<<<<< HEAD
 
 	<cffunction name="dspCarouselByFeedName" output="false">
 		<cfargument name="feedName" type="string" default="Slideshow" />
@@ -156,7 +155,5 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 	<cffunction name="getMBRowClass" output="false">
 		<cfreturn IIF(getMBUseFluid(), DE('row-fluid'), DE('row'))>
 	</cffunction>
-=======
->>>>>>> 5746afa9802138d1444257ae1b9c9fd059e4da71
 
 </cfcomponent>
